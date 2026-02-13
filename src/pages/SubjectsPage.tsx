@@ -7,9 +7,11 @@ function SubjectsPage() {
 
     return (
         <>
-            <h1>Matérias</h1>
+            <h1 className="mb-5">Matérias</h1>
             <section>
-                {subjects_array.map((item) => <Subjects teacher={item.teacher} subject={item.subject} desc={item.desc} news={item.news} key={item.id} days={item.days} />)}
+                <ul className="subjects__list">
+                    {subjects_array.slice().sort((a,b) => Number(b.news) - Number(a.news)).map((item) => <Subjects teacher={item.teacher} subject={item.subject} desc={item.desc} news={item.news} key={item.id} days={item.days} link={item.link} />)}
+                </ul>
             </section>
         </>
 

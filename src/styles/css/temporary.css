@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
 *,
 *::before,
 *::after {
@@ -18,7 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    font-family: "Kdam Thmor Pro", sans-serif;
+ 
 }
 
 main {
@@ -32,7 +35,8 @@ main {
 
 .content {
     flex-grow: 1;
-    width: 90%;
+    width: 85%;
+    margin: 3rem 0 10rem 0;
 }
 
 .content h1 {
@@ -47,7 +51,7 @@ main {
     padding: 0 8rem;
     align-items: center;
     width: 100%;
-    height: 7rem;
+    min-height: 7rem;
     background-color: rgb(220, 222, 223);
 }
 
@@ -62,4 +66,64 @@ main {
     background-color: rgb(220, 222, 223);
     width: 100%;
     text-align: center;
+}
+
+
+.subjects__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.subjects__list li {
+    background-color: rgb(220, 222, 223);
+    padding: 2.2rem;
+    border: 1px solid rgb(193, 195, 196);
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.subjects__header h2 {
+    text-transform: uppercase;
+}
+
+.subjects__text {
+    font-size: 1.6rem;
+}
+
+.timeline {
+    background-color: rgb(220, 222, 223);
+    padding: 2.2rem;
+    border: 1px solid rgb(193, 195, 196);
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline h2 {
+    font-size: 2.4rem;
+}
+
+.timeline span {
+    font-size: 2rem;
+}
+
+.homework {
+    background-color: rgb(220, 222, 223);
+    padding: 2.2rem;
+    border: 1px solid rgb(193, 195, 196);
+    border-radius: .8rem;
+    width: 40%;
+}
+
+.section__weekly {
+    gap: 15rem;
+}
+
+.section__weekly > div {
+    width: 50%;
 }

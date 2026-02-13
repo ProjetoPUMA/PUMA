@@ -26,9 +26,9 @@ function Timeline() {
     const days = (timeRemaning.days ?? 0) % 7;
 
     return (
-        <div>
+        <div className='timeline'>
             <h2>Tempo restante até o {!hasStarted ? 'começo' : 'fim'} d{timeline_obj.event}</h2>
-            <span>{weeks} semanas | {days !== 0 ? `${days} dias |` : null} {timeRemaning.minutes} minutos</span>
+            <span>{weeks !== 0 ? `${weeks} semanas |` : null}  {days !== 0 ? `${days} dias |` : null} {timeRemaning.minutes !== 0 ? `${timeRemaning.minutes} minutos` : null}</span>
         </div>
     )
 }
