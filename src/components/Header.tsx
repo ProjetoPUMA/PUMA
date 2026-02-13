@@ -7,16 +7,16 @@ function Header() {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/">Mural</NavLink>
+                        <NavLink to="/PUMA">Mural</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/materias">Matérias</NavLink>
+                        <NavLink to="/PUMA/materias">Matérias</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/documentos">Documentos</NavLink>
+                        <NavLink to="/PUMA/documentos">Documentos</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/calendarios">Horários e Calendário</NavLink>
+                        <NavLink to="/PUMA/calendarios">Horários e Calendário</NavLink>
                     </li>
                 </ul>
             </nav>
