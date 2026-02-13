@@ -1,6 +1,8 @@
+import { useState } from "react";
 import HomeWork from "../components/HomeWork"
+import Modal from "../components/Modal";
 import Timeline from "../components/Timeline"
-import { homeworks_array } from "../data/data"
+import { homeworks_array, tests_array } from "../data/data"
 import { getWeek, getYear } from "date-fns";
 
 function HomePage() {
@@ -13,6 +15,8 @@ function HomePage() {
         )
     })
 
+    const [isWModalOpen, setIsWModalOpen] = useState<boolean>(false);
+    const [isTModalOpen, setIsTModalOpen] = useState<boolean>(false);
     
 
 
@@ -27,7 +31,7 @@ function HomePage() {
                 <div>
                     <div className="flex justify-content-between mb-5">
                         <h3>Tarefas da Semana</h3>
-                        <button>Ver tudo</button>
+                        <button onClick={()=> setIsWModalOpen(true)}>Ver tudo</button>
                     </div>
                     {weeklyActivities.length === 0 ? 'Nenhuma tarefa com prazo de entrega para essa semana' : <ul>
                         {weeklyActivities.map((item)=><HomeWork key={item.id} news={item.news} desc={item.desc} subject={item.subject} date={item.due_date} />)}
@@ -36,15 +40,16 @@ function HomePage() {
                 <div>
                     <div className="flex justify-content-between mb-5">
                         <h3>Provas da Semana</h3>
-                        <button>Ver tudo</button>
+                        <button onClick={()=> setIsTModalOpen(true)}>Ver tudo</button>
                     </div>
                     {weeklyActivities.length === 0 ? 'Nnenhuma prova programada para essa semana' : <ul>
                         {weeklyActivities.map((item)=><HomeWork key={item.id} news={item.news} desc={item.desc} subject={item.subject} date={item.due_date} />)}
                     </ul>}
                 </div>
-
                 
             </section>
+            {isWModalOpen && <Modal data={homeworks_array}  setState={setIsWModalOpen} />}
+            {isTModalOpen && <Modal data={tests_array} tests setState={setIsTModalOpen} />}
         </>
     )
 }

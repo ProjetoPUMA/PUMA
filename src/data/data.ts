@@ -102,7 +102,7 @@ export const subjects_array = [
 export const homeworks_array = [
     {
         id: 1,
-        due_date: new Date(2026, 1, 19),
+        due_date: new Date(2026, 1,19),
         subject: 'Sistemas da Informação',
         news: true,
         desc: 'Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.'
