@@ -10,12 +10,11 @@ function App() {
 
   return (
       <Routes>
-        <Route path="/" element={<DefaultLayout />}>
+        <Route path="PUMA" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
           <Route path="materias" element={<SubjectsPage />} />
           <Route path="documentos" element={<DocumentsPage />} />
           <Route path="calendarios" element={<CalendarsPage />} />
-
         </Route>
       </Routes>
       
