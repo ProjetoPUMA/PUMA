@@ -10,7 +10,7 @@ export const subjects_array = [
         teacher: 'A Definir',
         subject: 'Engenharia de Software I',
         desc: 'A definir',
-        link: '',
+        link: 'https://drive.google.com/drive/folders/1_OgFnkUL8DfG4twlTBzIjzt5bYWPxeMf?usp=drive_link',
         news: false,
         classes: {
             mon: '7h10 - 08h50',
@@ -58,7 +58,7 @@ export const subjects_array = [
         teacher: 'Eliane Penha Mergulhão Dias',
         subject: 'Comunicação e Expressão',
         desc: 'Prática de redação e gêneros textuais.',
-        link: '',
+        link: 'https://drive.google.com/drive/folders/1hkbTPX6UFCEpDCjW8eN00TzKBgzKCFWx?usp=sharing',
         news: false,
         classes: {
             tue: '10h55 - 12h35',
@@ -74,8 +74,8 @@ export const subjects_array = [
         teacher: 'Claudio Etelvino de Lima',
         subject: 'Sistemas de Informação',
         desc: 'Focada na prática da API e na aprendizagem de banco de dados.',
-        link: '',
-        news: true,
+        link: 'https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link',
+        news: false,
         classes: {
             thu: '07h10 - 10h55',
         },
@@ -88,8 +88,22 @@ export const subjects_array = [
         teacher: 'Dercy Felix da Silva',
         subject: 'Contabilidade',
         desc: 'A definir',
-        link: '',
+        link: 'https://drive.google.com/drive/folders/1wju7D3JPGN_tOTYnX_Ixeds6s1DXCI0Z?usp=drive_link',
         news: false,
+        classes: {
+            thu: '10h05 - 11h45',
+        },
+        days: [
+            'Sexta-feira',
+        ]
+    },
+    {
+        id: 7,
+        teacher: 'Merlúcia Gavião',
+        subject: 'Inglês',
+        desc: 'Aulas sobre proficiência na lingua inglesa.',
+        link: 'https://drive.google.com/drive/folders/1tHTnSA6ZFSl6ytK3QJOJMWCoWAYQ9wJf?usp=drive_link',
+        news: true,
         classes: {
             thu: '10h05 - 11h45',
         },
@@ -103,10 +117,21 @@ export const homeworks_array = [
     {
         id: 1,
         due_date: new Date(2026, 1,19),
-        subject: 'Sistemas da Informação',
-        news: true,
-        desc: 'Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.'
+        subject: 'Sistemas de Informação',
+        news: false,
+        desc: 'Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.',
+        hasInstructions: true,
+        fileID: "1qo8_PeJl2j2fdisbvDrk77GMihIDI18r",
 
+    },
+    {
+        id: 2,
+        due_date: new Date(2026, 1,20),
+        subject: 'Inglês',
+        news: true,
+        desc: 'Páginas 18 e 19 do American English File para a próxima aula. Copiar o texto e circular os cognatos.',
+        hasInstructions: false,
+        fileID: undefined
     }
 ]
 
@@ -122,7 +147,8 @@ export const tests_array = [
             'Assunto 3',
             'Assunto 4'
         ],
-        link: '#'
+        link: '#',
+        hasInstructions: false,
     }
 ]
 
