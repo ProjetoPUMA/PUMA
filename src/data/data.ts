@@ -199,11 +199,13 @@ export const tests_array = [
 export const works_array = [
     {
         id: 1,
-        due_date: new Date('2026-02-16'),
+        due_date: new Date(2026, 1, 15),
         subject: 'Matéria teste',
         title: 'Trabalho de Web',
         news: false,
-        desc: 'Essa é a descrição do trabalho'
+        desc: 'Essa é a descrição do trabalho',
+        hasInstructions: true,
+        fileID: ''
     }
 ]
 

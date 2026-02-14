@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
-function HomeWork({date, subject, news, desc}: {date: Date, subject: string, news: boolean, desc: string}) {
+function HomeWork({date, subject, news, desc}: {date: Date, subject: string, news: boolean, desc?: string}) {
   
     const formatedDate = format(date, 'dd/MM/yyyy', {locale: ptBR})
 
