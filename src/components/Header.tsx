@@ -13,10 +13,10 @@ function Header() {
                         <NavLink to="/PUMA/materias">Matérias</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/PUMA/documentos">Documentos</NavLink>
+                        <NavLink to="/PUMA/calendarios">Horários e Calendário</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/PUMA/calendarios">Horários e Calendário</NavLink>
+                        <NavLink to="/PUMA/documentos">Documentos</NavLink>
                     </li>
                 </ul>
             </nav>

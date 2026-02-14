@@ -1,6 +1,90 @@
+import { subjects_array } from "../data/data"
+
 function CalendarsPage() {
+    const daysWeek = [
+        {
+            day: "Segunda-Feira",
+            day_week: 'mon'
+        },
+        {
+            day: "Terça-Feira",
+            day_week: 'tue'
+        },
+        {
+            day: "Quarta-Feira",
+            day_week: 'wed'
+        },
+        {
+            day: "Quinta-Feira",
+            day_week: 'thu'
+        },
+        {
+            day: "Sexta-Feira",
+            day_week: 'fri'
+        },
+    ]
+
+    const schedule = daysWeek.map((currentDay) => {
+        const classesOfDay = subjects_array
+            .filter((subject) => 
+                subject.classes.some((cls) => cls.day === currentDay.day_week)
+            )
+            .map((subject) => {
+                const classInfo = subject.classes.find((cls) => cls.day === currentDay.day_week);
+                        
+                return {
+                    name: subject.subject, 
+                    teacher: subject.teacher,
+                    start: classInfo?.start,
+                    end: classInfo?.end,
+                };
+        });
+        classesOfDay.sort((a, b) => (a.start || '').localeCompare((b.start || '')));
+        return {
+            dayName: currentDay.day,
+            classes: classesOfDay
+        };
+    });
+
+
     return (
-        <h1 className="mb-5">Horários e Calendários</h1>
+        <>
+            <h1 className="mb-5">Horários e Calendários</h1>
+            <div className="flex justify-content-between mb-8">
+                <div>
+                    <h2>Sala de Aula: 107</h2>
+                    <h2>Laboratório: 401</h2>
+                </div>
+                <button>Clique aqui para ver os horários de ônibus!</button>
+            </div>
+            <section className="flex align-items-start justify-content-between gap-5">
+                {schedule.map((day, index)=> (
+                    <div className="flex flex-column gap-6">
+                        <div key={index}>
+                            <h3>{day.dayName}</h3>
+                        </div>
+                        <ul className="schedule__list flex flex-column gap-5">
+                            {day.classes.map((cls, index)=> {
+                                const clsStart = cls.start?.replace(/^0/, '').replace(':', 'h');
+                                const clsEnd = cls.end?.replace(/^0/, '').replace(':', 'h');
+
+                                return (
+                                <li className="flex flex-column gap-4 justify-content-between" key={index}>
+                                    <div>
+                                        <h4>Prof. {cls.teacher.split(' ')[0]}</h4>
+                                        <h2 >{cls.name}</h2>
+                                    </div>
+                                    <div>
+                                        <span>{clsStart}</span>
+                                        - <span>{clsEnd}</span>
+                                    </div>
+                                </li>
+                            )})}
+                        </ul>
+                    </div>
+                ))}
+            </section>
+        </>
     )
 }
 

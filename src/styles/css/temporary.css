@@ -168,3 +168,21 @@ main {
     margin-top: auto;
     align-self: flex-end;
 }
+
+/* SCHEDULE */
+
+.schedule__list {
+    list-style: none;
+}
+
+.schedule__list li {
+    background-color: rgb(220, 222, 223);
+    padding: 2.2rem;
+    border: 1px solid rgb(193, 195, 196);
+    border-radius: .8rem;
+    min-height: 18rem;
+}
+
+.schedule__list li h2 {
+    text-transform: uppercase;
+}

@@ -12,10 +12,18 @@ export const subjects_array = [
         desc: 'A definir',
         link: 'https://drive.google.com/drive/folders/1_OgFnkUL8DfG4twlTBzIjzt5bYWPxeMf?usp=drive_link',
         news: false,
-        classes: {
-            mon: '7h10 - 08h50',
-            tue: '7h10 - 8h50',
-        },
+        classes: [
+            {
+                day: 'mon',
+                start: '07:10',
+                end: '08:50'
+            },
+            {
+                day: 'tue',
+                start: '07:10',
+                end: '08:50'
+            }
+        ],
         days: [
             'Segunda-feira',
             'Terça-feira'
@@ -28,10 +36,18 @@ export const subjects_array = [
         desc: 'Focada na aprendizagem da linguagem JAVA e da integração de sistemas CRUD com banco de dados.',
         link: 'https://drive.google.com/drive/folders/1ZRFhcHtuXjg3m25ohmVwfDRFy4T5H59Z?usp=drive_link',
         news: false,
-        classes: {
-            mon: '9h15 - 10h55',
-            wed: '7h10 - 8h50',
-        },
+        classes: [
+            {
+                day: 'mon',
+                start: '09:15',
+                end: '10:55'
+            },
+            {
+                day: 'wed',
+                start: '07:10',
+                end: '08:50'
+            }
+        ],
         days: [
             'Segunda-feira',
             'Quarta-feira'
@@ -44,10 +60,18 @@ export const subjects_array = [
         desc: 'Teoria e prática de cálculo de funções, limites, derivadas e integrais.',
         link: 'https://drive.google.com/drive/folders/1Bi2lptTcjr4Aa77ecE-4raAaEhKCcSN1?usp=drive_link',
         news: false,
-        classes: {
-            tue: '9h15 - 10h55',
-            wed: '9h15 - 10h55',
-        },
+        classes: [
+            {
+                day: 'tue',
+                start: '09:15',
+                end: '10:55'
+            },
+            {
+                day: 'wed',
+                start: '09:15',
+                end: '10:55'
+            }
+        ],
         days: [
             'Terça-feira',
             'Quarta-feira'
@@ -60,10 +84,18 @@ export const subjects_array = [
         desc: 'Prática de redação e gêneros textuais.',
         link: 'https://drive.google.com/drive/folders/1hkbTPX6UFCEpDCjW8eN00TzKBgzKCFWx?usp=sharing',
         news: false,
-        classes: {
-            tue: '10h55 - 12h35',
-            thu: '10h55 - 12h35',
-        },
+        classes: [
+            {
+                day: 'tue',
+                start: '10:55',
+                end: '12:35',
+            },
+            {
+                day: 'thu',
+                start: '10:55',
+                end: '12:35',
+            }
+        ],
         days: [
             'Terça-feira',
             'Quinta-feira'
@@ -76,9 +108,13 @@ export const subjects_array = [
         desc: 'Focada na prática da API e na aprendizagem de banco de dados.',
         link: 'https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link',
         news: false,
-        classes: {
-            thu: '07h10 - 10h55',
-        },
+        classes: [
+            {
+                day: 'thu',
+                start: '07:10',
+                end: '10:55',
+            },
+        ],
         days: [
             'Quinta-feira'
         ]
@@ -90,9 +126,13 @@ export const subjects_array = [
         desc: 'A definir',
         link: 'https://drive.google.com/drive/folders/1wju7D3JPGN_tOTYnX_Ixeds6s1DXCI0Z?usp=drive_link',
         news: false,
-        classes: {
-            thu: '10h05 - 11h45',
-        },
+        classes: [
+            {
+                day: 'fri',
+                start: '09:15',
+                end: '10:55'
+            },
+        ],
         days: [
             'Sexta-feira',
         ]
@@ -104,9 +144,13 @@ export const subjects_array = [
         desc: 'Aulas sobre proficiência na lingua inglesa.',
         link: 'https://drive.google.com/drive/folders/1tHTnSA6ZFSl6ytK3QJOJMWCoWAYQ9wJf?usp=drive_link',
         news: true,
-        classes: {
-            thu: '10h05 - 11h45',
-        },
+        classes: [
+            {
+                day: 'fri',
+                start: '07:10',
+                end: '08:50'
+            },
+        ],
         days: [
             'Sexta-feira',
         ]
