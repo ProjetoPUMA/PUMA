@@ -229,3 +229,14 @@ main {
     border-radius: 50%;
     padding: 1rem;
 }
+
+.sx-react-calendar-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  height: 800px;
+  max-height: 90vh;
+}
+
+.section__schedule {
+    margin-bottom: 10rem;
+}
