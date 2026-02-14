@@ -5,9 +5,6 @@ function HomeWork({date, subject, news, desc}: {date: Date, subject: string, new
   
     const formatedDate = format(date, 'dd/MM/yyyy', {locale: ptBR})
 
-    
-
-
 
     return (
         <li className='flex flex-column gap-3 homework'>

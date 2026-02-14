@@ -7,9 +7,9 @@ export const timeline_obj = {
 export const subjects_array = [
     {
         id: 1,
-        teacher: 'A Definir',
+        teacher: 'Indefinido',
         subject: 'Engenharia de Software I',
-        desc: 'A definir',
+        desc: 'Aula sobre conceitos de banco de dados junto com a parte do cliente das API (PO)',
         link: 'https://drive.google.com/drive/folders/1_OgFnkUL8DfG4twlTBzIjzt5bYWPxeMf?usp=drive_link',
         news: false,
         classes: [
@@ -33,7 +33,7 @@ export const subjects_array = [
         id: 2,
         teacher: 'Juliana Fornin Pasquini Martinez',
         subject: 'Linguagem de Programação',
-        desc: 'Focada na aprendizagem da linguagem JAVA e da integração de sistemas CRUD com banco de dados.',
+        desc: 'Focada na aprendizagem da linguagem JAVA e da integração de sistemas CRUD com banco de dados',
         link: 'https://drive.google.com/drive/folders/1ZRFhcHtuXjg3m25ohmVwfDRFy4T5H59Z?usp=drive_link',
         news: false,
         classes: [
@@ -57,7 +57,7 @@ export const subjects_array = [
         id: 3,
         teacher: 'Nanci de Oliveira',
         subject: 'Cálculo',
-        desc: 'Teoria e prática de cálculo de funções, limites, derivadas e integrais.',
+        desc: 'Teoria e prática de cálculo de funções, limites, derivadas e integrais',
         link: 'https://drive.google.com/drive/folders/1Bi2lptTcjr4Aa77ecE-4raAaEhKCcSN1?usp=drive_link',
         news: false,
         classes: [
@@ -81,7 +81,7 @@ export const subjects_array = [
         id: 4,
         teacher: 'Eliane Penha Mergulhão Dias',
         subject: 'Comunicação e Expressão',
-        desc: 'Prática de redação e gêneros textuais.',
+        desc: 'Prática de redação e gêneros textuais',
         link: 'https://drive.google.com/drive/folders/1hkbTPX6UFCEpDCjW8eN00TzKBgzKCFWx?usp=sharing',
         news: false,
         classes: [
@@ -105,7 +105,7 @@ export const subjects_array = [
         id: 5,
         teacher: 'Claudio Etelvino de Lima',
         subject: 'Sistemas de Informação',
-        desc: 'Focada na prática da API e na aprendizagem de banco de dados.',
+        desc: 'Focada na prática da API e na aprendizagem de banco de dados',
         link: 'https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link',
         news: false,
         classes: [
@@ -123,7 +123,7 @@ export const subjects_array = [
         id: 6,
         teacher: 'Dercy Felix da Silva',
         subject: 'Contabilidade',
-        desc: 'A definir',
+        desc: 'Conteúdo aborda conceitos de contabilidade, como representações gráficas de balanço patrimonial',
         link: 'https://drive.google.com/drive/folders/1wju7D3JPGN_tOTYnX_Ixeds6s1DXCI0Z?usp=drive_link',
         news: false,
         classes: [
@@ -196,7 +196,7 @@ export const tests_array = [
     }
 ]
 
-export const works = [
+export const works_array = [
     {
         id: 1,
         due_date: new Date('2026-02-16'),
@@ -204,5 +204,18 @@ export const works = [
         title: 'Trabalho de Web',
         news: false,
         desc: 'Essa é a descrição do trabalho'
+    }
+]
+
+export const documents_array = [
+    {
+        name: 'Novo Regulamento das Fatecs',
+        desc: 'Informação sobre o novo regulamento das Fatecs que entrou em vigor para os Cursos Superiores de Tecnologia a partir do ano letivo de 2026',
+        fileID: '13ug1FDuN_aA7wVVcFnrMMQ4znzznDzEy'
+    },
+    {
+        name: 'Calendário 2026',
+        desc: 'Informação sobre todos os eventos do ano letivo de 2026',
+        fileID: '1-CU17PzYKXjhzS-O81nne747Kx2eAQQt'
     }
 ]

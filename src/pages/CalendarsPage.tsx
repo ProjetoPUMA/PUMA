@@ -1,6 +1,11 @@
 import { subjects_array } from "../data/data"
 
 function CalendarsPage() {
+    const roomInfo = {
+        room: '107 | Primeiro andar',
+        lab: '401 | Quarto andar'
+    }
+
     const daysWeek = [
         {
             day: "Segunda-Feira",
@@ -52,8 +57,8 @@ function CalendarsPage() {
             <h1 className="mb-5">Horários e Calendários</h1>
             <div className="flex justify-content-between mb-8">
                 <div>
-                    <h2>Sala de Aula: 107</h2>
-                    <h2>Laboratório: 401</h2>
+                    <h2>Sala de Aula: {roomInfo.room}</h2>
+                    <h2>Laboratório: {roomInfo.lab}</h2>
                 </div>
                 <button>Clique aqui para ver os horários de ônibus!</button>
             </div>

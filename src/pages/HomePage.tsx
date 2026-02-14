@@ -48,6 +48,9 @@ function HomePage() {
                 </div>
                 
             </section>
+            <section className="mt-8">
+                <h3 className="mb-5">Trabalhos perto do prazo:</h3>
+            </section>
             {isWModalOpen && <Modal data={homeworks_array}  setState={setIsWModalOpen} />}
             {isTModalOpen && <Modal data={tests_array} tests setState={setIsTModalOpen} />}
         </>
