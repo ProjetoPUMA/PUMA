@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { subjects_array } from "../data/data"
+import BusModal from "../components/BusModal";
 
 function CalendarsPage() {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+
+
     const roomInfo = {
         room: '107 | Primeiro andar',
         lab: '401 | Quarto andar'
@@ -60,7 +65,7 @@ function CalendarsPage() {
                     <h2>Sala de Aula: {roomInfo.room}</h2>
                     <h2>Laboratório: {roomInfo.lab}</h2>
                 </div>
-                <button>Clique aqui para ver os horários de ônibus!</button>
+                <button onClick={()=> setIsModalOpen(true)}>Clique aqui para ver os horários de ônibus!</button>
             </div>
             <section className="flex align-items-start justify-content-between gap-5">
                 {schedule.map((day, index)=> (
@@ -89,6 +94,7 @@ function CalendarsPage() {
                     </div>
                 ))}
             </section>
+            {isModalOpen && <BusModal setState={setIsModalOpen} />}
         </>
     )
 }
