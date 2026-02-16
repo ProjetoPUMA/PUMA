@@ -25,8 +25,6 @@ function Modal({
   setState: React.Dispatch<React.SetStateAction<boolean>>;
   works?: boolean;
 }) {
-  console.log(data.filter((item) => item.news));
-
   const [isExpiredClicked, setIsExpiredClicked] = useState<boolean>(false);
   const [showAll, setShowAll] = useState<boolean>(true);
   const expired_array = data.filter(
@@ -40,6 +38,9 @@ function Modal({
     : showAll
       ? data
       : notExpired_array;
+
+  console.log("ta expirado", isExpiredClicked);
+  console.log("mostrando todos", showAll);
 
   return (
     <div className="modal__background">
@@ -58,7 +59,14 @@ function Modal({
           </p>
         </div>
         <div className="flex gap-5 justify-content-center pb-5">
-          <span onClick={() => setShowAll(true)}>Todas</span>
+          <span
+            onClick={() => {
+              setShowAll(true);
+              setIsExpiredClicked(false);
+            }}
+          >
+            Todas
+          </span>
           <span
             onClick={() => {
               setIsExpiredClicked(false);
