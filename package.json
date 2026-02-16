@@ -17,6 +17,7 @@
     "@schedule-x/event-modal": "^4.1.0",
     "@schedule-x/react": "^4.1.0",
     "@schedule-x/theme-default": "^4.1.0",
+    "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "gh-pages": "^6.3.0",
     "primeflex": "^4.0.0",

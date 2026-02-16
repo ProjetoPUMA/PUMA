@@ -162,7 +162,7 @@ export const homeworks_array = [
         id: 1,
         due_date: new Date(2026, 1,19),
         subject: 'Sistemas de Informação',
-        news: false,
+        news: true,
         desc: 'Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.',
         hasInstructions: true,
         fileID: "1qo8_PeJl2j2fdisbvDrk77GMihIDI18r",
@@ -172,17 +172,35 @@ export const homeworks_array = [
         id: 2,
         due_date: new Date(2026, 1,20),
         subject: 'Inglês',
-        news: true,
+        news: false,
         desc: 'Páginas 18 e 19 do American English File para a próxima aula. Copiar o texto e circular os cognatos.',
         hasInstructions: false,
         fileID: undefined
-    }
+    },
+    {
+        id: 3,
+        due_date: new Date(2026, 1,16),
+        subject: 'Tarefa expirada',
+        news: false,
+        desc: 'Essa tarefa já passou do prazo, está na lista apenas para testes.',
+        hasInstructions: false,
+        fileID: undefined
+    },
+    {
+        id: 4,
+        due_date: new Date(2026, 1,15),
+        subject: 'Tarefa expirada',
+        news: false,
+        desc: 'Essa tarefa já passou do prazo, está na lista apenas para testes.',
+        hasInstructions: false,
+        fileID: undefined
+    },
 ]
 
 export const tests_array = [
     {
         id: 1,
-        due_date: new Date('2026-02-16'),
+        due_date: new Date(2026, 1, 17),
         subject: 'Matéria teste',
         news: false,
         content: [
@@ -191,9 +209,23 @@ export const tests_array = [
             'Assunto 3',
             'Assunto 4'
         ],
-        link: '#',
+        fileID: '#',
         hasInstructions: false,
-    }
+    },
+    {
+        id: 2,
+        due_date: new Date(2026, 0, 16),
+        subject: 'Matéria expirada',
+        news: false,
+        content: [
+            'Assunto 1',
+            'Assunto 2',
+            'Assunto 3',
+            'Assunto 4'
+        ],
+        fileID: '#',
+        hasInstructions: false,
+    },
 ]
 
 export const works_array = [
