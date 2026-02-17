@@ -1,4 +1,12 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
 
 *,
 *::before,
@@ -44,6 +52,32 @@ main {
   align-self: flex-start;
 }
 
+.btn-all {
+  position: relative;
+}
+
+.btn-news::after {
+  content: "!";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -1rem;
+  right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.footer {
+  padding: 2rem 0;
+  width: 100%;
+  text-align: center;
+}
+
 .header {
   align-self: flex-start;
   display: flex;
@@ -54,60 +88,10 @@ main {
   min-height: 7rem;
   background-color: rgb(220, 222, 223);
 }
-
 .header ul {
   display: flex;
   list-style: none;
   gap: 1rem;
-}
-
-.footer {
-  padding: 2rem 0;
-  width: 100%;
-  text-align: center;
-}
-
-.subjects__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-.subjects__list li {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.subjects__header h2 {
-  text-transform: uppercase;
-}
-
-.subjects__text {
-  font-size: 1.6rem;
-}
-
-.timeline {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.timeline h2 {
-  font-size: 2.4rem;
-}
-
-.timeline span {
-  font-size: 2rem;
 }
 
 .homework {
@@ -116,10 +100,6 @@ main {
   border: 1px solid rgb(193, 195, 196);
   border-radius: 0.8rem;
   width: 40%;
-  position: relative;
-}
-
-.modal--item {
   position: relative;
 }
 
@@ -150,27 +130,6 @@ main {
 .homework--expired {
   color: gray;
 }
-
-.section__weekly {
-  gap: 15rem;
-}
-
-.section__weekly > div {
-  width: 50%;
-}
-
-.home__lists {
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-}
-
-.home__lists > li {
-  min-width: 23rem !important;
-  height: 25rem !important;
-}
-
-/* MODAL */
 
 .modal__background {
   width: 100%;
@@ -225,22 +184,26 @@ main {
   text-align: center;
 }
 
-/* SCHEDULE */
-
-.schedule__list {
-  list-style: none;
+.modal--item {
+  position: relative;
 }
 
-.schedule__list li {
+.timeline {
   background-color: rgb(220, 222, 223);
   padding: 2.2rem;
   border: 1px solid rgb(193, 195, 196);
   border-radius: 0.8rem;
-  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.schedule__list li h2 {
-  text-transform: uppercase;
+.timeline h2 {
+  font-size: 2.4rem;
+}
+
+.timeline span {
+  font-size: 2rem;
 }
 
 .documents__list li {
@@ -249,6 +212,25 @@ main {
   border: 1px solid rgb(193, 195, 196);
   border-radius: 0.8rem;
   width: 100%;
+}
+
+.section__weekly {
+  gap: 15rem;
+}
+
+.section__weekly > div {
+  width: 50%;
+}
+
+.home__lists {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.home__lists > li {
+  min-width: 23rem !important;
+  height: 25rem !important;
 }
 
 .works__list {
@@ -267,24 +249,20 @@ main {
   text-transform: uppercase;
 }
 
-.btn-all {
-  position: relative;
+.schedule__list {
+  list-style: none;
 }
 
-.btn-news::after {
-  content: "!";
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  background-color: black;
-  color: white;
-  top: -1rem;
-  right: -1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  padding: 1rem;
+.schedule__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  min-height: 18rem;
+}
+
+.schedule__list li h2 {
+  text-transform: uppercase;
 }
 
 .sx-react-calendar-wrapper {
@@ -298,12 +276,29 @@ main {
   margin-bottom: 10rem;
 }
 
-/* UTILITIES */
-
-.h-100 {
-  height: 100%;
+.subjects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  list-style: none;
 }
 
-.w-100 {
-  width: 100%;
+.subjects__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
+
+.subjects__header h2 {
+  text-transform: uppercase;
+}
+
+.subjects__text {
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

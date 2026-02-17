@@ -1,0 +1,19 @@
+.btn-all {
+  position: relative;
+}
+
+.btn-news::after {
+  content: "!";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -1rem;
+  right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}

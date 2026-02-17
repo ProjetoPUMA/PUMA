@@ -1,0 +1,24 @@
+.subjects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.subjects__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.subjects__header h2 {
+  text-transform: uppercase;
+}
+
+.subjects__text {
+  font-size: 1.6rem;
+}

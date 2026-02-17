@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px --> 1rem
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  position: relative;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+  width: 85%;
+  margin: 3rem 0 10rem 0;
+}
+
+.content h1 {
+  align-self: flex-start;
+}

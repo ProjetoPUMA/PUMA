@@ -1,0 +1,16 @@
+.header {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  align-items: center;
+  width: 100%;
+  min-height: 7rem;
+  background-color: rgb(220, 222, 223);
+
+  & ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+}

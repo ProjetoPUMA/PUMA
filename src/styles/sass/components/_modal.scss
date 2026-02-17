@@ -1,0 +1,56 @@
+.modal__background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.229);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.modal__container {
+  height: 60rem;
+  width: 50rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__container ul {
+  list-style: none;
+  width: 90%;
+  margin: auto;
+}
+
+.modal__title {
+  padding: 0.5rem 3rem 0rem 3rem;
+}
+
+.modal__close {
+  align-self: flex-end;
+  margin: 3rem 3rem 0;
+}
+
+.modal__body {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.modal__footer {
+  margin-top: auto;
+  align-self: flex-end;
+  padding: 1.8rem 3rem 3rem 3rem;
+}
+
+.modal__message {
+  width: 90%;
+  text-align: center;
+}
+
+.modal--item {
+  position: relative;
+}

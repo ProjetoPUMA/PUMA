@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+// ABSTRACTS
+@import "abstracts/utilities";
+@import "abstracts/variables";
+
+// BASE
+@import "base/base";
+
+// COMPONENTS
+@import "components/button";
+@import "components/footer";
+@import "components/header";
+@import "components/homework";
+@import "components/modal";
+@import "components/timeline";
+
+// PAGES
+
+@import "pages/documents";
+@import "pages/home";
+@import "pages/schedule";
+@import "pages/subjects";

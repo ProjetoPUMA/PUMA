@@ -1,0 +1,34 @@
+.section__weekly {
+  gap: 15rem;
+}
+
+.section__weekly > div {
+  width: 50%;
+}
+
+.home__lists {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.home__lists > li {
+  min-width: 23rem !important;
+  height: 25rem !important;
+}
+
+.works__list {
+  list-style: none;
+}
+
+.works__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  width: 100%;
+}
+
+.works__list li h3 {
+  text-transform: uppercase;
+}
