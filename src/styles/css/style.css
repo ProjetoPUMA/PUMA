@@ -24,7 +24,7 @@ body {
   box-sizing: border-box;
   font-size: 1.4rem;
   font-weight: 400;
-  background-color: #F9ECBF;
+  background-color: #f9ecbf;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,7 +35,7 @@ body {
 main {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
@@ -44,7 +44,7 @@ main {
 
 .content {
   flex-grow: 1;
-  width: 85%;
+  width: 90%;
   margin: 3rem 0 10rem 0;
 }
 
@@ -79,72 +79,105 @@ main {
 }
 
 .header {
-  gap: 3rem;
-  margin-top: 4rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 10rem 8rem;
-  align-items: center;
-  min-width: 95%;
-  min-height: 7rem;
-  background-color: #A2AFA1;
-  border: 8px solid #1B1215;
-}
-
-.header ul {
-  display: flex;
-  list-style: none;
   gap: 1rem;
+  align-items: center;
+  width: 90%;
+  padding-top: 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.Date {
+.header__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a2afa1;
+  border: 5px solid #1b1215;
+  height: 16rem;
+}
+
+.header__name {
+  font-size: 3rem;
+}
+
+.header__nav {
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+.header__nav ul {
+  display: flex;
+  gap: 0;
+  text-transform: uppercase;
+}
+
+.header__nav li {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
   margin-left: 3rem;
-  width: 49rem; 
-  height: 23.5rem;
-  font-size: 2rem; 
+  width: 30rem;
+  font-size: 2rem;
   transform: rotate(-7.435deg);
-  border: 15px dashed #000;
-  background: #EECE79;
+  padding: 1rem 2rem;
+  border: 8px dashed #000;
+  background: #eece79;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.date h2 {
+  font-size: 6rem;
 }
 
 .logo {
-  max-width: 33rem;
+  max-width: 25rem;
+  margin-top: 10rem;
+
   height: auto;
 }
-.logo img{
-  margin-left: 2rem;
+.logo img {
   width: 100%;
   height: 100%;
 }
 
 .title {
-  max-width: 100rem;
-  height: auto;
+  width: auto;
+  height: 10rem;
 }
-.title img{
+.title img {
   width: 100%;
   height: 100%;
 }
 
-
-main{
+main {
   position: relative;
+  overflow: hidden;
 }
 
-.dotted::after{
+.dotted::after {
   content: "";
   width: 100%;
-	aspect-ratio: 1;
-	background-image: url("/noisefigma3.png");
-  opacity: 0.4;
-  mix-blend-mode:multiply;
-	background-size: auto;
-	background-repeat: round;
+  height: 1000%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background-image: url("/noisefigma3.png");
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  background-size: auto;
+  background-repeat: round;
   position: absolute;
   top: 0;
+  pointer-events: none;
 }
 
 .homework {
