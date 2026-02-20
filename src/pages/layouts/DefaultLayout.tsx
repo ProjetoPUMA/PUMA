@@ -3,7 +3,7 @@ import Header from "../../components/Header"
 
 function DefaultLayout() {
     return (
-        <main>
+        <main className="dotted">
            <Header />
            <section className="content">
                 <Outlet />
