@@ -8,6 +8,22 @@
   width: 100%;
 }
 
+@font-face {
+  font-family: "KottaOne";
+  src: url(fonts/KottaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Lemon";
+  src: url(fonts/Lemon-Regular.ttf);
+}
+@font-face {
+  font-family: "VintageTypist";
+  src: url(fonts/VintageTypist.otf);
+}
+@font-face {
+  font-family: "ZalandoSans";
+  src: url(fonts/ZalandoSans-Bold.otf);
+}
 *,
 *::before,
 *::after {
@@ -22,7 +38,7 @@
   height: 1000%;
   overflow: hidden;
   aspect-ratio: 1;
-  background-image: url("/noisefigma3.png");
+  background-image: url("noisefigma3.png");
   opacity: 0.2;
   mix-blend-mode: multiply;
   background-size: auto;
@@ -39,12 +55,12 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 500;
   background-color: #f9ecbf;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "KottaOne", sans-serif;
   position: relative;
 }
 
@@ -135,10 +151,18 @@ main {
 .header__nav li {
   text-decoration: none;
   display: flex;
-  border: 5px solid #1b1215;
+  border-top: 5px solid #1b1215;
+  border-bottom: 5px solid #1b1215;
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+.header__nav li:not(.header__nav li:first-child) {
+  border-right: 5px solid #1b1215;
+}
+.header__nav li:first-child {
+  border-right: 5px solid #1b1215;
+  border-left: 5px solid #1b1215;
 }
 .header__date {
   margin-left: 3rem;

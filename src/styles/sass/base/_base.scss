@@ -12,7 +12,7 @@
   height: 1000%;
   overflow: hidden;
   aspect-ratio: 1;
-  background-image: url("/noisefigma3.png");
+  background-image: url("noisefigma3.png");
   opacity: 0.2;
   mix-blend-mode: multiply;
   background-size: auto;
@@ -29,12 +29,12 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.4rem;
-  font-weight: 400;
-  background-color: #f9ecbf;
+  font-weight: 500; // Se mudar pra 600, conseguimos um bold do kotta-one
+  background-color: $primary-light;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: $kotta-one;
   position: relative;
 }
 

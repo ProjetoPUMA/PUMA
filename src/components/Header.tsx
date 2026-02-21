@@ -1,18 +1,20 @@
+import classNames from "classnames";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function Header() {
   const today = new Date();
+  const location = useLocation();
 
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__logo">
-          <img src="./puma header.svg" alt="" />
+          <img src="puma_header.svg" alt="" />
         </div>
         <div className="header__title">
-          <img src="./title header.svg" alt="" />
+          <img src="title_header.svg" alt="" />
         </div>
         <div className="header__date">
           <span>Data:</span>
@@ -25,7 +27,17 @@ function Header() {
       <nav className="header__nav">
         <ul>
           <li>
-            <NavLink to="/PUMA">Mural</NavLink>
+            <Link
+              className={classNames({
+                active:
+                  location.pathname !== "/PUMA/materias" &&
+                  location.pathname !== "/PUMA/calendarios" &&
+                  location.pathname !== "/PUMA/documentos",
+              })}
+              to="/PUMA"
+            >
+              Mural
+            </Link>
           </li>
           <li>
             <NavLink to="/PUMA/materias">Matérias</NavLink>

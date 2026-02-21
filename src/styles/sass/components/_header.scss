@@ -13,8 +13,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: #a2afa1;
-    border: 5px solid #1b1215;
+    background-color: $primary-blue;
+    border: 5px solid $primary-dark;
     height: 16rem;
   }
 
@@ -32,7 +32,7 @@
       text-transform: uppercase;
     }
     & a {
-      color: #1b1215;
+      color: $primary-dark;
       text-decoration: none;
       &.active {
         text-decoration: underline;
@@ -41,10 +41,20 @@
     & li {
       text-decoration: none;
       display: flex;
-      border: 5px solid #1b1215;
+      border-top: $border;
+      border-bottom: $border;
       width: 100%;
       align-items: center;
       justify-content: center;
+
+      &:not(&:first-child) {
+        border-right: $border;
+      }
+
+      &:first-child {
+        border-right: $border;
+        border-left: $border;
+      }
     }
   }
 
@@ -55,7 +65,7 @@
     transform: rotate(-7.435deg);
     padding: 1rem 2rem;
     border: 8px dashed #000;
-    background: #eece79;
+    background: $primary-yellow;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
