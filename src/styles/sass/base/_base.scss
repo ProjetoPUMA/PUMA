@@ -46,6 +46,7 @@ main {
   align-items: center;
   gap: 3rem;
   position: relative;
+  overflow: hidden;
 }
 
 .content {
@@ -57,4 +58,3 @@ main {
     align-self: flex-start;
   }
 }
-

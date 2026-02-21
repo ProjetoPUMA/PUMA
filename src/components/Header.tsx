@@ -8,13 +8,13 @@ function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        <div className="logo">
+        <div className="header__logo">
           <img src="./puma header.svg" alt="" />
         </div>
-        <div className="title">
+        <div className="header__title">
           <img src="./title header.svg" alt="" />
         </div>
-        <div className="date">
+        <div className="header__date">
           <span>Data:</span>
           <h2>{format(today, "dd/MM", { locale: ptBR })}</h2>
         </div>

@@ -9,23 +9,23 @@
   justify-content: center;
 
   &__container {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #a2afa1;
-      border: 5px solid #1b1215;
-      height: 16rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a2afa1;
+    border: 5px solid #1b1215;
+    height: 16rem;
   }
-  
+
   &__name {
     font-size: 3rem;
   }
-  
+
   &__nav {
     font-size: 2.5rem;
-    width: 100%;  
-    
+    width: 100%;
+
     & ul {
       display: flex;
       gap: 0;
@@ -34,9 +34,9 @@
     & a {
       color: #1b1215;
       text-decoration: none;
-          &.active{
-          text-decoration: underline;
-          }
+      &.active {
+        text-decoration: underline;
+      }
     }
     & li {
       text-decoration: none;
@@ -47,46 +47,43 @@
       justify-content: center;
     }
   }
-  
-}
 
-.date {
-  margin-left: 3rem;
-  width: 30rem;
-  font-size: 2rem;
-  transform: rotate(-7.435deg);
-  padding: 1rem 2rem;
-  border: 8px dashed #000;
-  background: #eece79;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &__date {
+    margin-left: 3rem;
+    width: 30rem;
+    font-size: 2rem;
+    transform: rotate(-7.435deg);
+    padding: 1rem 2rem;
+    border: 8px dashed #000;
+    background: #eece79;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-  & h2 {
-    font-size: 6rem;
+    & h2 {
+      font-size: 6rem;
+    }
   }
 
-}
+  &__logo {
+    max-width: 25rem;
+    margin-top: 10rem;
 
-.logo {
-  max-width: 25rem;
-  margin-top: 10rem;
+    height: auto;
 
-  height: auto;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-  & img {
-    width: 100%;
-    height: 100%;
+  &__title {
+    width: auto;
+    height: 10rem;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
-
-.title {
-  width: auto;
-  height: 10rem;
-  
-  & img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
