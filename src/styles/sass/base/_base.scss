@@ -6,6 +6,22 @@
   box-sizing: inherit;
 }
 
+.dotted::after {
+  content: "";
+  width: 100%;
+  height: 1000%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background-image: url("/noisefigma3.png");
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  background-size: auto;
+  background-repeat: round;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
 html {
   font-size: 62.5%; // 10px --> 1rem
 }
@@ -14,7 +30,7 @@ body {
   box-sizing: border-box;
   font-size: 1.4rem;
   font-weight: 400;
-  background-color: white;
+  background-color: #f9ecbf;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +41,7 @@ body {
 main {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
@@ -34,10 +50,11 @@ main {
 
 .content {
   flex-grow: 1;
-  width: 85%;
+  width: 90%;
   margin: 3rem 0 10rem 0;
+
+  & h1 {
+    align-self: flex-start;
+  }
 }
 
-.content h1 {
-  align-self: flex-start;
-}

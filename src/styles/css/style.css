@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap";
 .h-100 {
   height: 100%;
 }
@@ -14,6 +14,22 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+.dotted::after {
+  content: "";
+  width: 100%;
+  height: 1000%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background-image: url("/noisefigma3.png");
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  background-size: auto;
+  background-repeat: round;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
 }
 
 html {
@@ -47,7 +63,6 @@ main {
   width: 90%;
   margin: 3rem 0 10rem 0;
 }
-
 .content h1 {
   align-self: flex-start;
 }
@@ -88,7 +103,6 @@ main {
   flex-direction: column;
   justify-content: center;
 }
-
 .header__container {
   display: flex;
   width: 100%;
@@ -98,25 +112,29 @@ main {
   border: 5px solid #1b1215;
   height: 16rem;
 }
-
 .header__name {
   font-size: 3rem;
 }
-
 .header__nav {
   font-size: 2.5rem;
   width: 100%;
 }
-
 .header__nav ul {
   display: flex;
   gap: 0;
   text-transform: uppercase;
 }
-
+.header__nav a {
+  color: #1b1215;
+  text-decoration: none;
+}
+.header__nav a.active {
+  text-decoration: underline;
+}
 .header__nav li {
+  text-decoration: none;
   display: flex;
-  border: 1px solid red;
+  border: 5px solid #1b1215;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -134,7 +152,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .date h2 {
   font-size: 6rem;
 }
@@ -142,7 +159,6 @@ main {
 .logo {
   max-width: 25rem;
   margin-top: 10rem;
-
   height: auto;
 }
 .logo img {
@@ -157,27 +173,6 @@ main {
 .title img {
   width: 100%;
   height: 100%;
-}
-
-main {
-  position: relative;
-  overflow: hidden;
-}
-
-.dotted::after {
-  content: "";
-  width: 100%;
-  height: 1000%;
-  overflow: hidden;
-  aspect-ratio: 1;
-  background-image: url("/noisefigma3.png");
-  opacity: 0.2;
-  mix-blend-mode: multiply;
-  background-size: auto;
-  background-repeat: round;
-  position: absolute;
-  top: 0;
-  pointer-events: none;
 }
 
 .homework {
