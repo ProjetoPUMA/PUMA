@@ -1,0 +1,42 @@
+.sx__event-modal {
+  &-default {
+    background-color: $primary-light;
+    overflow: hidden;
+    border: 1px solid black;
+  }
+
+  &__title,
+  &__time,
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__time {
+    font-size: 1.3rem;
+    color: $primary-sat-green;
+    font-family: $zalando-sans;
+    font-weight: 600;
+  }
+
+  &__description {
+    color: $primary-green;
+    font-family: $zalando-sans;
+    font-size: 1.2rem;
+  }
+}
+
+.sx__has-icon .sx__event-icon {
+  background-color: $primary-sat-green !important;
+}
+
+.sx__has-icon svg.sx__event-icon {
+  opacity: 0.3;
+  background-color: transparent !important;
+}

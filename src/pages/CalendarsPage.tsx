@@ -7,8 +7,8 @@ function CalendarsPage() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const roomInfo = {
-    room: "107 | Primeiro andar",
-    lab: "401 | Quarto andar",
+    room: "107",
+    lab: "402",
   };
 
   const daysWeek = [
@@ -60,19 +60,21 @@ function CalendarsPage() {
 
   return (
     <>
-      <h1 className="mb-5">Horários</h1>
-      <div className="flex justify-content-between mb-8">
-        <div>
-          <h2>Sala de Aula: {roomInfo.room}</h2>
-          <h2>Laboratório: {roomInfo.lab}</h2>
+      <h1 className="schedule__title flex justify-content-between align-items-center">
+        Horários
+        <div className="flex gap-5">
+          <span>Sala de Aula: {roomInfo.room}</span>
+          <span>Laboratório: {roomInfo.lab}</span>
         </div>
+      </h1>
+      {/* <div className="flex justify-content-between mb-8">
         <button onClick={() => setIsModalOpen(true)}>
           Clique aqui para ver os horários de ônibus!
         </button>
-      </div>
+      </div> */}
       <section className="flex align-items-start justify-content-between gap-5 section__schedule">
         {schedule.map((day, index) => (
-          <div className="flex flex-column gap-6">
+          <div className="flex flex-column gap-6 mt-7">
             <div key={index}>
               <h3>{day.dayName}</h3>
             </div>
@@ -100,7 +102,7 @@ function CalendarsPage() {
           </div>
         ))}
       </section>
-      <h1 className="mb-5">Calendário Letivo 2026</h1>
+      <h1 className="schedule__title">Calendário Letivo 2026</h1>
       <section>
         <Calendar />
       </section>
