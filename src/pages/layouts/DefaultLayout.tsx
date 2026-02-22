@@ -1,19 +1,21 @@
-import { Outlet } from "react-router-dom"
-import Header from "../../components/Header"
+import { Outlet } from "react-router-dom";
+import Header from "../../components/Header";
 
 function DefaultLayout() {
-    return (
-        <main className="dotted">
-           <Header />
-           <section className="content">
-                <Outlet />
-           </section> 
-           <footer className="footer">
-            <img src="public/colors footer.svg" alt="" />
-            ©Projeto P.U.M.A. 2026 | Todos os direitos reservados
-            </footer>
-        </main>
-    )
+  return (
+    <main className="dotted">
+      <Header />
+      <section className="content">
+        <Outlet />
+      </section>
+      <footer className="footer">
+        <div className="footer__img-container">
+          <img src="public/colors footer.svg" alt="" />
+        </div>
+        <p>©Projeto P.U.M.A. 2026 | Todos os direitos reservados</p>
+      </footer>
+    </main>
+  );
 }
 
-export default DefaultLayout
+export default DefaultLayout;
