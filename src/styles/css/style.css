@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap";
 .h-100 {
   height: 100%;
 }
@@ -8,12 +8,44 @@
   width: 100%;
 }
 
+@font-face {
+  font-family: "KottaOne";
+  src: url(fonts/KottaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Lemon";
+  src: url(fonts/Lemon-Regular.ttf);
+}
+@font-face {
+  font-family: "VintageTypist";
+  src: url(fonts/VintageTypist.otf);
+}
+@font-face {
+  font-family: "ZalandoSans";
+  src: url(fonts/ZalandoSans-Bold.otf);
+}
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+.dotted::after {
+  content: "";
+  width: 100%;
+  height: 1000%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background-image: url("noisefigma3.png");
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  background-size: auto;
+  background-repeat: round;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
 }
 
 html {
@@ -23,31 +55,31 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.4rem;
-  font-weight: 400;
-  background-color: white;
+  font-weight: 500;
+  background-color: #f9ecbf;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "KottaOne", sans-serif;
   position: relative;
 }
 
 main {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
   position: relative;
+  overflow: hidden;
 }
 
 .content {
   flex-grow: 1;
-  width: 85%;
+  width: 90%;
   margin: 3rem 0 10rem 0;
 }
-
 .content h1 {
   align-self: flex-start;
 }
@@ -73,25 +105,114 @@ main {
 }
 
 .footer {
+  font-family: "KottaOne", sans-serif;
   padding: 2rem 0;
   width: 100%;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  display: flex;
+  font-family: "KottaOne", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.footer img {
+  width: 10%;
+  height: 100%;
 }
 
 .header {
-  align-self: flex-start;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 8rem;
-  align-items: center;
-  width: 100%;
-  min-height: 7rem;
-  background-color: rgb(220, 222, 223);
-}
-.header ul {
-  display: flex;
-  list-style: none;
   gap: 1rem;
+  align-items: center;
+  width: 90%;
+  padding-top: 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a2afa1;
+  border: 5px solid #1b1215;
+  height: 16rem;
+}
+.header__name {
+  font-family: "KottaOne", sans-serif;
+  font-size: 3rem;
+  margin-top: rem;
+}
+.header__nav {
+  font-family: "ZalandoSans", sans-serif;
+  font-weight: 700;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  width: 100%;
+}
+.header__nav ul {
+  display: flex;
+  gap: 0;
+  text-transform: uppercase;
+}
+.header__nav a {
+  color: #1b1215;
+  text-decoration: none;
+}
+.header__nav a.active {
+  text-decoration: underline;
+}
+.header__nav li {
+  text-decoration: none;
+  display: flex;
+  border-top: 5px solid #1b1215;
+  border-bottom: 5px solid #1b1215;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header__nav li:not(.header__nav li:first-child) {
+  border-right: 5px solid #1b1215;
+}
+.header__nav li:first-child {
+  border-right: 5px solid #1b1215;
+  border-left: 5px solid #1b1215;
+}
+.header__date {
+  margin-left: 3rem;
+  width: 30rem;
+  font-size: 2rem;
+  font-family: "Lemon", sans-serif;
+  transform: rotate(-7.435deg);
+  padding: 1rem 2rem;
+  border: 8px dashed #1b1215;
+  background: #eece79;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__date h2 {
+  font-size: 6rem;
+}
+.header__logo {
+  max-width: 25rem;
+  margin-top: 10rem;
+  height: auto;
+}
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+.header__title {
+  width: auto;
+  height: 10rem;
+}
+.header__title img {
+  width: 100%;
+  height: 100%;
 }
 
 .homework {

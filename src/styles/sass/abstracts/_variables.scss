@@ -1,0 +1,50 @@
+// FONT-FAMILIES
+
+@font-face {
+  font-family: "KottaOne";
+  src: url(fonts/KottaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lemon";
+  src: url(fonts/Lemon-Regular.ttf);
+}
+
+@font-face {
+  font-family: "VintageTypist";
+  src: url(fonts/VintageTypist.otf);
+}
+
+@font-face {
+  font-family: "ZalandoSans";
+  src: url(fonts/ZalandoSans-Bold.otf);
+}
+
+$kotta-one: "KottaOne", sans-serif;
+$lemon: "Lemon", sans-serif;
+$vintage-type: "VintageTypist", sans-serif;
+$zalando-sans: "ZalandoSans", sans-serif;
+
+$font-default-size: 1.6rem;
+
+// COLORS
+$primary-dark: #1b1215;
+$primary-light: #f9ecbf;
+$primary-yellow: #eece79;
+$primary-red: #ea6169;
+$primary-pink: #f1c4ad;
+$primary-green: #c7be8f;
+$primary-sat-green: #9ca756;
+$primary-blue: #a2afa1;
+$primary-sat-blue: #3c8f94;
+
+$surface-0: #ffff;
+$surface-1000: #0000;
+
+// UTILITES
+
+$transition: all 0.2s ease;
+
+//BORDER
+
+$border: 5px solid $primary-dark;
