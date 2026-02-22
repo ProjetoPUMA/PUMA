@@ -1,9 +1,30 @@
+.selected_page a {
+  text-decoration: underline;
+}
+
 .section__weekly {
-  gap: 15rem;
+  font-size: 2.4rem;
+  height: 50rem;
+  border: $border;
+  padding: 1rem;
+  &__inside{
+    &:first-child {
+      padding-right: 1rem;
+      border-right: $border;
+      border-right-style: dashed;
+      }
+    &:not(&:first-child){
+      padding-left: 1rem;
+    }
+  }
+
+}
+.weekly_HT{
+  border: 2px;
 }
 
 .section__weekly > div {
-  width: 50%;
+  width: 100%;
 }
 
 .home__lists {
@@ -22,13 +43,20 @@
 }
 
 .works__list li {
-  background-color: rgb(220, 222, 223);
+  background-color: rgb(20, 138, 197);
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
+  border: 1px solid rgb(0, 192, 0);
   border-radius: 0.8rem;
   width: 100%;
 }
 
 .works__list li h3 {
   text-transform: uppercase;
+}
+
+.Trabalhos {
+  font-size: 2.4rem;
+  & p {
+    font-size: 2.4rem;
+  }
 }

@@ -1,5 +1,9 @@
 .btn-all {
   position: relative;
+  border-bottom: $border;
+  text-decoration: dashed;
+  color: $primary-dark;
+  cursor: pointer;
 }
 
 .btn-news::after {

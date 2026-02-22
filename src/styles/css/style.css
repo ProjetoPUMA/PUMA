@@ -86,6 +86,10 @@ main {
 
 .btn-all {
   position: relative;
+  border-bottom: 5px solid #1b1215;
+  text-decoration: dashed;
+  color: #1b1215;
+  cursor: pointer;
 }
 
 .btn-news::after {
@@ -169,6 +173,8 @@ main {
   text-decoration: none;
   display: flex;
   border-top: 5px solid #1b1215;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   border-bottom: 5px solid #1b1215;
   width: 100%;
   align-items: center;
@@ -255,8 +261,9 @@ main {
 .modal__background {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.229);
+  background-color: rgba(57, 44, 44, 0.421);
   position: fixed;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,8 +274,8 @@ main {
 .modal__container {
   height: 60rem;
   width: 50rem;
-  background-color: white;
-  border-radius: 1rem;
+  background-color: #eece79;
+  border: 5px dashed #1b1215;
   display: flex;
   flex-direction: column;
 }
@@ -280,12 +287,15 @@ main {
 }
 
 .modal__title {
-  padding: 0.5rem 3rem 0rem 3rem;
+  padding: 1.5rem 3rem 0rem 3rem;
+}
+.modal__title h1 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__close {
-  align-self: flex-end;
-  margin: 3rem 3rem 0;
+  cursor: pointer;
 }
 
 .modal__body {
@@ -310,13 +320,38 @@ main {
 }
 
 .timeline {
-  background-color: rgb(220, 222, 223);
+  background-color: #ea6169;
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
+  border: 5px solid #1b1215;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.timeline_title {
+  background-color: #1b1215;
+  text-transform: uppercase;
+  font-family: "KottaOne", sans-serif;
+  color: #ea6169;
+  font-weight: 900;
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  border: 5px solid #1b1215;
+  gap: 2rem;
+}
+
+.inner_border {
+  border: 5px solid #1b1215;
+  background-color: #f1c4ad;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: 900;
+}
+
+.weekly_HT {
+  border: 2px;
 }
 
 .timeline h2 {
@@ -335,12 +370,31 @@ main {
   width: 100%;
 }
 
+.selected_page a {
+  text-decoration: underline;
+}
+
 .section__weekly {
-  gap: 15rem;
+  font-size: 2.4rem;
+  height: 50rem;
+  border: 5px solid #1b1215;
+  padding: 1rem;
+}
+.section__weekly__inside:first-child {
+  padding-right: 1rem;
+  border-right: 5px solid #1b1215;
+  border-right-style: dashed;
+}
+.section__weekly__inside:not(.section__weekly__inside:first-child) {
+  padding-left: 1rem;
+}
+
+.weekly_HT {
+  border: 2px;
 }
 
 .section__weekly > div {
-  width: 50%;
+  width: 100%;
 }
 
 .home__lists {
@@ -359,15 +413,22 @@ main {
 }
 
 .works__list li {
-  background-color: rgb(220, 222, 223);
+  background-color: rgb(20, 138, 197);
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
+  border: 1px solid rgb(0, 192, 0);
   border-radius: 0.8rem;
   width: 100%;
 }
 
 .works__list li h3 {
   text-transform: uppercase;
+}
+
+.Trabalhos {
+  font-size: 2.4rem;
+}
+.Trabalhos p {
+  font-size: 2.4rem;
 }
 
 .schedule__list {

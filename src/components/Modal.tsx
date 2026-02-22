@@ -45,12 +45,10 @@ function Modal({
   return (
     <div className="modal__background">
       <div className="modal__container">
-        <button onClick={() => setState(false)} className="modal__close">
-          X
-        </button>
         <div className="modal__title mb-5">
           <h1>
             Todas {tests ? "as Provas" : works ? "os Trabalhos" : "as Tarefas"}
+            <h3 onClick={() => setState(false)} className="modal__close"> X </h3>
           </h1>
           <p>
             {data.filter((item) => item.news).length !== 0
@@ -181,7 +179,6 @@ function Modal({
           )}
         </div>
         <div className="modal__footer">
-          <button onClick={() => setState(false)}>voltar</button>
         </div>
       </div>
     </div>

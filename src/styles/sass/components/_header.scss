@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: $primary-blue;
-    border: 5px solid $primary-dark;
+    border: $border;
     height: 16rem;
   }
 
@@ -47,11 +47,13 @@
       text-decoration: none;
       display: flex;
       border-top: $border;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
       border-bottom: $border;
       width: 100%;
       align-items: center;
       justify-content: center;
-
+    
       &:not(&:first-child) {
         border-right: $border;
       }
