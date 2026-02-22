@@ -3,27 +3,36 @@ import { documents_array } from "../data/data";
 
 function DocumentsPage() {
   return (
-    <>
-      <h1 className="mb-5">Documentos importantes da Fatec</h1>
-      <section>
-        <ul className="documents__list flex flex-column align-items-center gap-6">
-          {documents_array.map((doc, index) => (
-            <li
-              className={`flex justify-content-between documents__container--${String(doc.id)}`}
-              key={index}
-            >
-              <div>
+    <section>
+      <ul className="documents__list flex flex-column align-items-center gap-4">
+        {documents_array.map((doc, index) => (
+          <li
+            className={`flex flex-column justify-content-between documents__container documents__container--${String(doc.id)}`}
+            key={index}
+          >
+            <div className="documents__title align-self-end">
+              <span>arquivo_0{doc.id}</span>
+            </div>
+            <div className="documents__body">
+              <div className="flex justify-content-between">
                 <h2>{doc.name}</h2>
-                <p>{doc.desc}</p>
+                <DownloadButton
+                  className="align-self-center"
+                  fileID={doc.fileID}
+                >
+                  Baixar
+                </DownloadButton>
               </div>
-              <DownloadButton className="align-self-center" fileID={doc.fileID}>
-                Baixar
-              </DownloadButton>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </>
+              <div className="flex documents__code">
+                <img src="bar_code.svg" alt="código de barras" />
+                <img src="bar_code.svg" alt="código de barras" />
+              </div>
+              <p>{doc.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

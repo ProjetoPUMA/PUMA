@@ -7,6 +7,12 @@
 // BASE
 @import "base/base";
 
+// PAGES
+@import "pages/documents";
+@import "pages/home";
+@import "pages/schedule";
+@import "pages/subjects";
+
 // COMPONENTS
 @import "components/button";
 @import "components/footer";
@@ -17,9 +23,4 @@
 @import "components/calendar";
 @import "components/datepicker";
 @import "components/event-modal";
-
-// PAGES
-@import "pages/documents";
-@import "pages/home";
-@import "pages/schedule";
-@import "pages/subjects";
+@import "components/documents-card";
