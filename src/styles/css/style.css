@@ -85,6 +85,99 @@ main {
   align-self: flex-start;
 }
 
+.section__weekly {
+  gap: 15rem;
+}
+
+.section__weekly > div {
+  width: 50%;
+}
+
+.home__lists {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.home__lists > li {
+  min-width: 23rem !important;
+  height: 25rem !important;
+}
+
+.works__list {
+  list-style: none;
+}
+
+.works__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  width: 100%;
+}
+
+.works__list li h3 {
+  text-transform: uppercase;
+}
+
+.schedule__list {
+  list-style: none;
+}
+.schedule__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  min-height: 18rem;
+}
+.schedule__list li h2 {
+  text-transform: uppercase;
+}
+.schedule__title {
+  width: 100%;
+  border-bottom: 3px solid #1b1215;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  -webkit-text-stroke-width: 1px;
+}
+.schedule__title span {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.section__schedule {
+  margin-bottom: 10rem;
+}
+
+.subjects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.subjects__list li {
+  background-color: rgb(220, 222, 223);
+  padding: 2.2rem;
+  border: 1px solid rgb(193, 195, 196);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.subjects__header h2 {
+  text-transform: uppercase;
+}
+
+.subjects__text {
+  font-size: 1.6rem;
+}
+
 .btn-all {
   position: relative;
 }
@@ -546,105 +639,65 @@ main {
   background-color: transparent !important;
 }
 
-.documents__list li {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
+.documents__container {
   width: 100%;
+  border: 3.5px solid black;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
-
-.section__weekly {
-  gap: 15rem;
+.documents__container--1 {
+  background-color: #f9ecbf;
 }
-
-.section__weekly > div {
-  width: 50%;
+.documents__container--1 .documents__title {
+  background-color: #1b1215;
+  color: #f9ecbf;
 }
-
-.home__lists {
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
+.documents__container--2 {
+  background-color: #eece79;
 }
-
-.home__lists > li {
-  min-width: 23rem !important;
-  height: 25rem !important;
-}
-
-.works__list {
-  list-style: none;
-}
-
-.works__list li {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
-  width: 100%;
-}
-
-.works__list li h3 {
-  text-transform: uppercase;
-}
-
-.schedule__list {
-  list-style: none;
-}
-.schedule__list li {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
-  min-height: 18rem;
-}
-.schedule__list li h2 {
-  text-transform: uppercase;
-}
-.schedule__title {
-  width: 100%;
-  border-bottom: 3px solid #1b1215;
-  padding-bottom: 1rem;
-  margin-bottom: 4rem;
-  text-transform: uppercase;
+.documents__container--2 .documents__title {
   letter-spacing: 1px;
+  -webkit-text-stroke: 1px;
+}
+
+.documents__body {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-weight: 600;
+}
+.documents__body a {
+  font-size: 1.8rem;
+  color: #1b1215;
+  transition: all 0.2s ease;
+}
+.documents__body a:hover {
+  color: #a2afa1;
+}
+.documents__body h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
   -webkit-text-stroke-width: 1px;
 }
-.schedule__title span {
-  text-transform: capitalize;
-  font-weight: 500;
-  font-size: 1.8rem;
-}
-
-.section__schedule {
-  margin-bottom: 10rem;
-}
-
-.subjects__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-.subjects__list li {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.subjects__header h2 {
-  text-transform: uppercase;
-}
-
-.subjects__text {
+.documents__body p {
   font-size: 1.6rem;
+  width: 60%;
+}
+.documents__body img {
+  height: 3.5rem;
+}
+.documents__title {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2.2rem 1rem 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.documents__code {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
