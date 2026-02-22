@@ -413,10 +413,11 @@ main {
 }
 
 .works__list li {
-  background-color: rgb(20, 138, 197);
+  background-color: #eece79;
+  font-weight: 900;
+  font-size: 2.4rem;
   padding: 2.2rem;
-  border: 1px solid rgb(0, 192, 0);
-  border-radius: 0.8rem;
+  border: 5px solid #1b1215;
   width: 100%;
 }
 
@@ -425,9 +426,6 @@ main {
 }
 
 .Trabalhos {
-  font-size: 2.4rem;
-}
-.Trabalhos p {
   font-size: 2.4rem;
 }
 
