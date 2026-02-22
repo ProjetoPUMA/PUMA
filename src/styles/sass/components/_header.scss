@@ -19,10 +19,15 @@
   }
 
   &__name {
+    font-family:$kotta-one;
     font-size: 3rem;
+    margin-top: rem;
   }
 
   &__nav {
+    font-family: $zalando-sans;
+    font-weight: 700;
+    margin-top: 1rem;
     font-size: 2.5rem;
     width: 100%;
 
@@ -62,9 +67,10 @@
     margin-left: 3rem;
     width: 30rem;
     font-size: 2rem;
+    font-family: $lemon;
     transform: rotate(-7.435deg);
     padding: 1rem 2rem;
-    border: 8px dashed #000;
+    border: 8px dashed $primary-dark;
     background: $primary-yellow;
     display: flex;
     flex-direction: column;
