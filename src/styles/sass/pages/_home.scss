@@ -24,18 +24,20 @@
 }
 
 .section__weekly > div {
+  overflow-y: auto;
   width: 100%;
 }
 
 .home__lists {
   overflow-x: auto;
   overflow-y: hidden;
+  height: 80%;
   width: 100%;
 }
 
 .home__lists > li {
-  min-width: 23rem !important;
-  height: 25rem !important;
+  min-width: 32rem !important;
+  height: auto !important;
 }
 
 .works__list {
@@ -49,6 +51,9 @@
   padding: 2.2rem;
   border: $border;
   width: 100%;
+  & a {
+    color: $primary-dark
+  }
 }
 
 .works__list li h3 {

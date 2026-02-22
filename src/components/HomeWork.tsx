@@ -22,7 +22,7 @@ function HomeWork({
   hasInstructions: boolean;
   fileID?: string;
 }) {
-  const formatedDate = format(date, "dd/MM/yyyy", { locale: ptBR });
+  const formatedDate = format(date, "dd/MM", { locale: ptBR });
   console.log(news);
 
   return (
@@ -30,6 +30,7 @@ function HomeWork({
       className={classNames("flex flex-column gap-4 pt-5 homework", {
         "homework--news": news,
         "homework--attention": isToday(date),
+        "weekly__test": works,
       })}
     >
       <div>
