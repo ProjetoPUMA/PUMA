@@ -6,6 +6,80 @@ export const timeline_obj = {
 
 export const subjects_array = [
   {
+    id: 3,
+    teacher: "Nanci de Oliveira",
+    subject: "Cálculo",
+    desc: "Teoria e prática de cálculo de funções, limites, derivadas e integrais",
+    link: "https://drive.google.com/drive/folders/1Bi2lptTcjr4Aa77ecE-4raAaEhKCcSN1?usp=drive_link",
+    news: false,
+    classes: [
+      {
+        day: "tue",
+        start: "09:15",
+        end: "10:55",
+      },
+      {
+        day: "wed",
+        start: "09:15",
+        end: "10:55",
+      },
+    ],
+    days: ["Terça-feira", "Quarta-feira"],
+  },
+  {
+    id: 5,
+    teacher: "Claudio Etelvino de Lima",
+    subject: "Sistemas de Informação",
+    desc: "Focada na prática da API e na aprendizagem de banco de dados",
+    link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
+    news: false,
+    classes: [
+      {
+        day: "thu",
+        start: "07:10",
+        end: "10:55",
+      },
+    ],
+    days: ["Quinta-feira"],
+  },
+  {
+    id: 7,
+    teacher: "Merlúcia Gavião",
+    subject: "Inglês",
+    desc: "Aulas sobre proficiência na lingua inglesa.",
+    link: "https://drive.google.com/drive/folders/1tHTnSA6ZFSl6ytK3QJOJMWCoWAYQ9wJf?usp=drive_link",
+    news: false,
+    classes: [
+      {
+        day: "fri",
+        start: "07:10",
+        end: "08:50",
+      },
+    ],
+    days: ["Sexta-feira"],
+  },
+  {
+    id: 4,
+    teacher: "Eliane Penha Mergulhão Dias",
+    subject: "Comunicação e Expressão",
+    desc: "Prática de redação e gêneros textuais",
+    link: "https://drive.google.com/drive/folders/1hkbTPX6UFCEpDCjW8eN00TzKBgzKCFWx?usp=sharing",
+    news: false,
+    classes: [
+      {
+        day: "tue",
+        start: "10:55",
+        end: "12:35",
+      },
+      {
+        day: "thu",
+        start: "10:55",
+        end: "12:35",
+      },
+    ],
+    days: ["Terça-feira", "Quinta-feira"],
+  },
+  {
     id: 1,
     teacher: "Indefinido",
     subject: "Engenharia de Software I",
@@ -47,64 +121,7 @@ export const subjects_array = [
     ],
     days: ["Segunda-feira", "Quarta-feira"],
   },
-  {
-    id: 3,
-    teacher: "Nanci de Oliveira",
-    subject: "Cálculo",
-    desc: "Teoria e prática de cálculo de funções, limites, derivadas e integrais",
-    link: "https://drive.google.com/drive/folders/1Bi2lptTcjr4Aa77ecE-4raAaEhKCcSN1?usp=drive_link",
-    news: false,
-    classes: [
-      {
-        day: "tue",
-        start: "09:15",
-        end: "10:55",
-      },
-      {
-        day: "wed",
-        start: "09:15",
-        end: "10:55",
-      },
-    ],
-    days: ["Terça-feira", "Quarta-feira"],
-  },
-  {
-    id: 4,
-    teacher: "Eliane Penha Mergulhão Dias",
-    subject: "Comunicação e Expressão",
-    desc: "Prática de redação e gêneros textuais",
-    link: "https://drive.google.com/drive/folders/1hkbTPX6UFCEpDCjW8eN00TzKBgzKCFWx?usp=sharing",
-    news: false,
-    classes: [
-      {
-        day: "tue",
-        start: "10:55",
-        end: "12:35",
-      },
-      {
-        day: "thu",
-        start: "10:55",
-        end: "12:35",
-      },
-    ],
-    days: ["Terça-feira", "Quinta-feira"],
-  },
-  {
-    id: 5,
-    teacher: "Claudio Etelvino de Lima",
-    subject: "Sistemas de Informação",
-    desc: "Focada na prática da API e na aprendizagem de banco de dados",
-    link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
-    news: false,
-    classes: [
-      {
-        day: "thu",
-        start: "07:10",
-        end: "10:55",
-      },
-    ],
-    days: ["Quinta-feira"],
-  },
+
   {
     id: 6,
     teacher: "Dercy Felix da Silva",
@@ -117,22 +134,6 @@ export const subjects_array = [
         day: "fri",
         start: "09:15",
         end: "10:55",
-      },
-    ],
-    days: ["Sexta-feira"],
-  },
-  {
-    id: 7,
-    teacher: "Merlúcia Gavião",
-    subject: "Inglês",
-    desc: "Aulas sobre proficiência na lingua inglesa.",
-    link: "https://drive.google.com/drive/folders/1tHTnSA6ZFSl6ytK3QJOJMWCoWAYQ9wJf?usp=drive_link",
-    news: true,
-    classes: [
-      {
-        day: "fri",
-        start: "07:10",
-        end: "08:50",
       },
     ],
     days: ["Sexta-feira"],
