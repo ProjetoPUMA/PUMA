@@ -142,7 +142,7 @@ export const subjects_array = [
 export const homeworks_array = [
   {
     id: 1,
-    due_date: new Date(2026, 1, 19),
+    due_date: new Date(2026, 1, 25),
     subject: "Sistemas de Informação",
     news: true,
     desc: "Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.",
@@ -151,7 +151,7 @@ export const homeworks_array = [
   },
   {
     id: 2,
-    due_date: new Date(2026, 1, 20),
+    due_date: new Date(2026, 1, 25),
     subject: "Inglês",
     news: false,
     desc: "Páginas 18 e 19 do American English File para a próxima aula. Copiar o texto e circular os cognatos.",
@@ -160,7 +160,7 @@ export const homeworks_array = [
   },
   {
     id: 3,
-    due_date: new Date(2026, 1, 16),
+    due_date: new Date(2026, 1, 25),
     subject: "Tarefa expira hoje",
     news: false,
     desc: "Essa tarefa está no último dia de seu prazo.",
@@ -169,7 +169,7 @@ export const homeworks_array = [
   },
   {
     id: 4,
-    due_date: new Date(2026, 1, 15),
+    due_date: new Date(2026, 1, 25),
     subject: "Tarefa expirada",
     news: false,
     desc: "Essa tarefa já passou do prazo, está na lista apenas para testes.",
@@ -180,8 +180,35 @@ export const homeworks_array = [
 
 export const tests_array = [
   {
+    id: 4,
+    due_date: new Date(2026, 1, 25),
+    subject: "Matéria teste",
+    news: false,
+    content: ["Assunto 1", "Assunto 2", "Assunto 3", "Assunto 4"],
+    fileID: "#",
+    hasInstructions: false,
+  },
+  {
+    id: 3,
+    due_date: new Date(2026, 1, 25),
+    subject: "Matéria teste",
+    news: false,
+    content: ["Assunto 1", "Assunto 2", "Assunto 3", "Assunto 4"],
+    fileID: "#",
+    hasInstructions: false,
+  },
+  {
+    id: 5,
+    due_date: new Date(2026, 1, 25),
+    subject: "Matéria teste",
+    news: false,
+    content: ["Assunto 1", "Assunto 2", "Assunto 3", "Assunto 4"],
+    fileID: "#",
+    hasInstructions: false,
+  },
+  {
     id: 1,
-    due_date: new Date(2026, 1, 17),
+    due_date: new Date(2026, 1, 25),
     subject: "Matéria teste",
     news: false,
     content: ["Assunto 1", "Assunto 2", "Assunto 3", "Assunto 4"],
@@ -202,7 +229,7 @@ export const tests_array = [
 export const works_array = [
   {
     id: 1,
-    due_date: new Date(2026, 1, 15),
+    due_date: new Date(2026, 1, 23),
     subject: "Matéria teste",
     title: "Trabalho de Web",
     news: false,
@@ -214,13 +241,11 @@ export const works_array = [
 
 export const documents_array = [
   {
-    id: 1,
     name: "Novo Regulamento das Fatecs",
     desc: "Informação sobre o novo regulamento das Fatecs que entrou em vigor para os Cursos Superiores de Tecnologia a partir do ano letivo de 2026",
     fileID: "13ug1FDuN_aA7wVVcFnrMMQ4znzznDzEy",
   },
   {
-    id: 2,
     name: "Calendário 2026",
     desc: "Informação sobre todos os eventos do ano letivo de 2026",
     fileID: "1-CU17PzYKXjhzS-O81nne747Kx2eAQQt",

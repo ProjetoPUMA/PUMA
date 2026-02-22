@@ -125,14 +125,17 @@ main {
   list-style: none;
 }
 .schedule__list li {
-  background-color: rgb(220, 222, 223);
+  background-color: #eece79;
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
+  border: 3.3px solid #1b1215;
   min-height: 18rem;
 }
 .schedule__list li h2 {
   text-transform: uppercase;
+}
+.schedule__list span {
+  font-size: 2.4rem;
+  font-weight: 900;
 }
 .schedule__title {
   width: 100%;
@@ -148,6 +151,10 @@ main {
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1.8rem;
+}
+
+.order {
+  width: 25rem;
 }
 
 .section__schedule {
@@ -450,7 +457,7 @@ main {
 .timeline {
   background-color: rgb(220, 222, 223);
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
+  border: 3.3px solid #1b1215;
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;

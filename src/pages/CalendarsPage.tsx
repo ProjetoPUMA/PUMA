@@ -74,9 +74,9 @@ function CalendarsPage() {
       </div> */}
       <section className="flex align-items-start justify-content-between gap-5 section__schedule">
         {schedule.map((day, index) => (
-          <div className="flex flex-column gap-6 mt-7">
+          <div className="flex flex-column order gap-3 mt-7">
             <div key={index}>
-              <h3>{day.dayName}</h3>
+              <h2>{day.dayName}</h2>
             </div>
             <ul
               className={`schedule__list schedule__list--${index + 1} flex flex-column gap-5`}
@@ -87,15 +87,15 @@ function CalendarsPage() {
 
                 return (
                   <li
-                    className={`flex flex-column gap-4 justify-content-between schedule__container--${index + 1}`}
+                    className={`flex flex-column gap-4 justify-content-between schedule__coontainer--${index + 1}`}
                     key={index}
                   >
                     <div>
                       <h4>Prof. {cls.teacher.split(" ")[0]}</h4>
                       <h2>{cls.name}</h2>
                     </div>
-                    <div>
-                      <span>{clsStart}</span>- <span>{clsEnd}</span>
+                    <div className="schedule__hours">
+                      <span>{clsStart}</span> <span> - </span> <span>{clsEnd}</span>
                     </div>
                   </li>
                 );
