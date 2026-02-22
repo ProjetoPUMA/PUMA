@@ -7,6 +7,7 @@ function Subjects({
   desc,
   news,
   link,
+  id,
 }: {
   teacher: string;
   days: string[];
@@ -14,11 +15,12 @@ function Subjects({
   desc: string;
   news: boolean;
   link?: string;
+  id: number;
 }) {
-  console.log(link);
+  const new_ID = String(id);
 
   return (
-    <li>
+    <li className={`schedule__container--${new_ID}`}>
       <div className="subjects__header flex flex-column gap-1">
         <div className="flex w-100 justify-content-between">
           <h4>{teacher}</h4>

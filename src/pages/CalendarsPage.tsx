@@ -78,14 +78,16 @@ function CalendarsPage() {
             <div key={index}>
               <h3>{day.dayName}</h3>
             </div>
-            <ul className="schedule__list flex flex-column gap-5">
+            <ul
+              className={`schedule__list schedule__list--${index + 1} flex flex-column gap-5`}
+            >
               {day.classes.map((cls, index) => {
                 const clsStart = cls.start?.replace(/^0/, "").replace(":", "h");
                 const clsEnd = cls.end?.replace(/^0/, "").replace(":", "h");
 
                 return (
                   <li
-                    className="flex flex-column gap-4 justify-content-between"
+                    className={`flex flex-column gap-4 justify-content-between schedule__container--${index + 1}`}
                     key={index}
                   >
                     <div>
