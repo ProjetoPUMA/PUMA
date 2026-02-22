@@ -8,7 +8,10 @@ function DocumentsPage() {
       <section>
         <ul className="documents__list flex flex-column align-items-center gap-6">
           {documents_array.map((doc, index) => (
-            <li className="flex justify-content-between" key={index}>
+            <li
+              className={`flex justify-content-between documents__container--${String(doc.id)}`}
+              key={index}
+            >
               <div>
                 <h2>{doc.name}</h2>
                 <p>{doc.desc}</p>

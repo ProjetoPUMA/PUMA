@@ -214,11 +214,13 @@ export const works_array = [
 
 export const documents_array = [
   {
+    id: 1,
     name: "Novo Regulamento das Fatecs",
     desc: "Informação sobre o novo regulamento das Fatecs que entrou em vigor para os Cursos Superiores de Tecnologia a partir do ano letivo de 2026",
     fileID: "13ug1FDuN_aA7wVVcFnrMMQ4znzznDzEy",
   },
   {
+    id: 2,
     name: "Calendário 2026",
     desc: "Informação sobre todos os eventos do ano letivo de 2026",
     fileID: "1-CU17PzYKXjhzS-O81nne747Kx2eAQQt",
