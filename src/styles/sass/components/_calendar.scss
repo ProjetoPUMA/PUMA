@@ -1,0 +1,157 @@
+.sx {
+  &__calendar {
+    background-color: transparent;
+    border: none;
+
+    &-header {
+      border-radius: 1.6rem;
+      border: 4px solid #000;
+      background-color: $primary-green;
+      padding: 2.5rem;
+
+      & .sx__today-button {
+        background-color: $primary-dark;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $primary-light;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        border: none;
+        transition: $transition;
+
+        &:hover {
+          background-color: lighten($primary-dark, 10%);
+          color: $primary-light;
+        }
+      }
+
+      & .sx__date-input {
+        background-color: $primary-dark;
+        color: $primary-light;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 1.8rem;
+        border: 2px solid transparent;
+
+        &-chevron-wrapper {
+          background-color: $primary-light;
+          padding: 5px;
+          border-radius: 50%;
+        }
+
+        &--active .sx__date-input {
+          border-color: $primary-light;
+          outline: none;
+        }
+
+        &:focus {
+          border: 2px solid $primary-light;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__date-input-label {
+    display: none;
+  }
+
+  &__forward-backward-navigation {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__chevron-wrapper {
+    background-color: $primary-light;
+
+    &:hover,
+    &:focus {
+      background-color: darken($primary-light, 10%);
+    }
+
+    & .sx__chevron {
+      width: 1rem;
+      height: 1rem;
+      border-width: 0.3rem 0.3rem 0 0;
+    }
+  }
+
+  &__range-heading {
+    font-size: 2.5rem;
+    max-width: 100%;
+    font-family: $lemon;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: $primary-dark;
+    margin-left: 2rem;
+  }
+
+  &__view-container {
+    border-radius: 1.6rem;
+    border: 4px solid #000;
+    background-color: $primary-green;
+    border-top: none;
+  }
+
+  &__month-grid-week {
+    border-color: $primary-sat-green;
+    border-width: 2px;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  // BODY STYLES
+
+  &__month-grid-day__header-day-name {
+    font-size: 1.6rem;
+    padding: 5px 0 15px 0;
+    color: $primary-dark;
+    font-weight: 600;
+  }
+
+  &__month-grid-day__header-date {
+    background-color: $primary-light;
+    height: 7rem;
+    width: 7rem;
+    font-size: 3rem;
+    font-family: $lemon;
+    color: $primary-dark;
+  }
+
+  &__month-grid-day:not(:last-child) {
+    border-color: $primary-sat-green;
+    border-width: 2px;
+  }
+
+  &__month-grid-day__header-date.sx__is-today {
+    background-color: $primary-sat-green;
+    color: $primary-light;
+  }
+
+  &__month-grid-event {
+    background-color: $primary-sat-green !important;
+    border-color: $primary-dark !important;
+    color: $primary-dark !important;
+    font-size: 1.6rem;
+    font-family: $vintage-type;
+    padding: 2rem;
+    display: flex;
+    z-index: 0;
+  }
+
+  &__month-grid-day__events {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  &__month-grid-day {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.is-leading-or-trailing .sx__month-grid-day__header-date {
+  color: $primary-green;
+}

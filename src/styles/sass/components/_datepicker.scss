@@ -1,0 +1,66 @@
+.sx__date-picker {
+  &-popup {
+    background-color: $primary-light;
+    border: 1px solid black;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
+
+    & .sx__chevron-wrapper {
+      background-color: $primary-dark;
+      padding: 0;
+      min-height: 2.2rem;
+      min-width: 2.2rem;
+      & .sx__chevron {
+        width: 0.6rem;
+        height: 0.6rem;
+        border-width: 0.2rem 0.2rem 0 0;
+        border-color: $primary-light;
+      }
+    }
+  }
+
+  &__month-view-header__month-year {
+    color: $primary-dark;
+    text-transform: capitalize;
+    font-weight: 600;
+    pointer-events: none;
+
+    &:hover {
+      color: $primary-sat-green;
+    }
+  }
+
+  &__month-view-header .sx__chevron-wrapper:hover {
+    background-color: $primary-sat-green;
+  }
+
+  &__day {
+    &.sx__date-picker__day--today {
+      background-color: $primary-sat-green;
+      color: $primary-light;
+    }
+
+    &-name {
+      color: $primary-sat-green;
+      text-transform: uppercase;
+    }
+
+    &.is-leading-or-trailing {
+      color: $primary-green;
+    }
+
+    &.sx__date-picker__day--selected {
+      background-color: $primary-green;
+      color: $primary-dark;
+    }
+
+    &:hover {
+      background-color: $primary-yellow;
+    }
+
+    &:focus {
+      outline: 2px solid $primary-sat-green;
+    }
+  }
+}

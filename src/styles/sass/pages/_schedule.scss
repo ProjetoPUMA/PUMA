@@ -1,26 +1,43 @@
-.schedule__list {
-  list-style: none;
-}
+.schedule {
+  &__list {
+    list-style: none;
 
-.schedule__list li {
-  background-color: rgb(220, 222, 223);
-  padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
-  min-height: 18rem;
-}
+    & li {
+      background-color: $primary-yellow;
+      padding: 2.2rem;
+      border: $border;
+      min-height: 18rem;
 
-.schedule__list li h2 {
-  text-transform: uppercase;
-}
+      & h2 {
+        text-transform: uppercase;
+      }
+    }
+    & span{
+      font-size: 2.4rem;
+      font-weight: 900;
+    }
+  }
 
-.sx-react-calendar-wrapper {
-  width: 100%;
-  max-width: 100vw;
-  height: 800px;
-  max-height: 90vh;
-}
+  &__title {
+    width: 100%;
+    border-bottom: 3px solid $primary-dark;
+    padding-bottom: 1rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    -webkit-text-stroke-width: 1px;
 
+    & span {
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+  }
+}
+.order {
+  width: 25rem;
+}
 .section__schedule {
   margin-bottom: 10rem;
 }

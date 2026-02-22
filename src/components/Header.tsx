@@ -10,17 +10,24 @@ function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        <div className="header__logo">
-          <img src="puma_header.svg" alt="" />
-        </div>
-        <div className="header__title">
-          <img src="title_header.svg" alt="" />
-        </div>
-        <div className="header__date">
-          <span>Data:</span>
-          <h2>{format(today, "dd/MM", { locale: ptBR })}</h2>
+        <div className="header__title-container">
+          <div className="header__logo">
+            <img
+              // src={`${location.pathname === "/PUMA/materias" || location.pathname === "/PUMA/documentos" ? "puma_subjects.svg" : location.pathname === "/PUMA/calendarios" ? "puma_calendar.svg" : "puma_header.svg"}`}
+              src="puma_header.svg"
+              alt="puma"
+            />
+          </div>
+          <div className="header__title">
+            <img src="title_header.svg" alt="" />
+          </div>
+          <div className="header__date">
+            <span>Data:</span>
+            <h2>{format(today, "dd/MM", { locale: ptBR })}</h2>
+          </div>
         </div>
       </div>
+
       <h2 className="header__name">
         PLATAFORMA UNIFICADA DE MATERIAIS ACADÊMICOS
       </h2>
@@ -34,7 +41,7 @@ function Header() {
                   location.pathname !== "/PUMA/calendarios" &&
                   location.pathname !== "/PUMA/documentos",
               })}
-              to="/PUMA"
+              to="/PUMA/"
             >
               Mural
             </Link>
@@ -42,8 +49,8 @@ function Header() {
           <li>
             <NavLink to="/PUMA/materias">Matérias</NavLink>
           </li>
-          <li>
-            <NavLink to="/PUMA/calendarios">Horários e Calendário</NavLink>
+          <li className="header__nav--calendar">
+            <NavLink to="/PUMA/calendarios">Horários e Calendários</NavLink>
           </li>
           <li>
             <NavLink to="/PUMA/documentos">Documentos</NavLink>
