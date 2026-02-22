@@ -60,23 +60,23 @@ function HomePage() {
 
   return (
     <>
-      <h1 className="mb-5">Atualizações Importantes</h1>
+      <h1 className="timeline_title">Atualizações Importantes</h1>
       <section>
         <Timeline />
       </section>
       <section className="mt-8 flex justify-content-between section__weekly">
-        <div>
+        <div className="section__weekly__inside">
           <div className="flex justify-content-between mb-5">
-            <h3>Tarefas da Semana</h3>
-            <button
+            <h2>Tarefas da Semana</h2>
+            <h3
               className={classNames("btn-all", { "btn-news": hasHWnews })}
               onClick={() => setIsWModalOpen(true)}
             >
-              Ver tudo
-            </button>
+              Ver tudo&gt;&gt;
+            </h3>
           </div>
           {weeklyHomeworks.length === 0 ? (
-            <p>Nenhuma tarefa com o prazo de entrega para esta semana</p>
+            <p>Nenhuma tarefa programada para esta semana</p>
           ) : (
             <ul className="flex gap-5 home__lists">
               {weeklyHomeworks
@@ -109,15 +109,15 @@ function HomePage() {
             </ul>
           )}
         </div>
-        <div>
+        <div className="section__weekly__inside">
           <div className="flex justify-content-between mb-5">
-            <h3>Provas da Semana</h3>
-            <button
+            <h2 className="weekly_HT">Provas da Semana</h2>
+            <h3
               className={hasTnews ? "btn-all btn-news" : "btn-all"}
               onClick={() => setIsTModalOpen(true)}
             >
-              Ver tudo
-            </button>
+              Ver tudo&gt;&gt;
+            </h3>
           </div>
           {weeklyTests.length === 0 ? (
             <p>Nenhuma prova programada para esta semana</p>
@@ -149,17 +149,17 @@ function HomePage() {
         </div>
       </section>
       <section className="mt-8">
-        <div className="flex justify-content-between mb-5">
-          <h3>Trabalhos perto do prazo:</h3>
-          <button
+        <div className="Trabalhos flex justify-content-between mb-5">
+          <h2>Trabalhos perto do prazo:</h2>
+          <h2
             className={hasWnews ? "btn-all btn-news" : "btn-all"}
             onClick={() => setIsWKModalOpen(true)}
           >
-            Ver tudo
-          </button>
+            Ver tudo&gt;&gt;
+          </h2>
         </div>
         {fiveDaysWork.length === 0 ? (
-          <p>
+          <p className="Trabalhos">
             Nenhum trabalho com prazo de entrega entre hoje e os próximos 5
             dias.
           </p>

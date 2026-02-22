@@ -1,11 +1,34 @@
 .timeline {
-  background-color: rgb(220, 222, 223);
+  background-color: $primary-red;
   padding: 2.2rem;
-  border: $border;
-  border-radius: 0.8rem;
+  border: 5px solid $primary-dark;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.timeline_title {
+  background-color: $primary-dark;
+  text-transform: uppercase;
+  font-family: $kotta-one;
+  color: $primary-red;
+  font-weight: 900;
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  border: 5px solid $primary-dark;
+  gap: 2rem;
+}
+.inner_border{
+  border: 5px solid $primary-dark;
+  background-color: $primary-pink;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: 900;
+}
+
+.weekly_HT{
+  border: 2px;
 }
 
 .timeline h2 {

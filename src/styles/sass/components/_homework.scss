@@ -1,23 +1,50 @@
 .homework {
-  background-color: rgb(220, 222, 223);
+  background-color: $primary-green;
+  justify-content: center;
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
+  border:$border;
+  height: 70%;
   width: 40%;
   position: relative;
+  & p{
+    font-family: $vintage-type;
+    line-height: 2.4rem;
+  }
+  & a{
+    padding-top: 3rem;
+    color: $primary-dark;
+  }
 }
 
-.homework--news::after {
-  content: "NOVO!";
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.3rem 1rem;
-  border-radius: 10rem;
-  border: 1px solid gray;
-  color: gray;
-  font-size: 1.2rem;
+.weekly__test{
+  background-color: $primary-blue;
+  padding: 2.2rem;
+  border:$border;
+  height: 70%;
+  width: 40%;
+  position: relative;
+  & p{
+    font-family: $vintage-type;
+    line-height: 2.4rem;
+  }
+  & a{
+    padding-top: 3rem;
+    color: $primary-dark;
+  }
+
 }
+
+// .homework--news::after {
+//   // content: url(new_sign.svg);
+//   // height: 1rem;
+//   // width: 1rem;
+//   // transform: rotate(15deg);
+//   // position: absolute;
+//   // top: 1rem;
+//   // right: 1rem;
+//   // padding: 0.3rem 1rem;
+//   // :(
+// }
 
 .homework--attention::after {
   content: "ATENÇÃO!";

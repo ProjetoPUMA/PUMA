@@ -1,20 +1,43 @@
+.selected_page a {
+  text-decoration: underline;
+}
+
 .section__weekly {
-  gap: 15rem;
+  font-size: 2.4rem;
+  height: 50rem;
+  border: $border;
+  padding: 1rem;
+  &__inside{
+    &:first-child {
+      padding-right: 1rem;
+      border-right: $border;
+      border-right-style: dashed;
+      }
+    &:not(&:first-child){
+      padding-left: 1rem;
+    }
+  }
+
+}
+.weekly_HT{
+  border: 2px;
 }
 
 .section__weekly > div {
-  width: 50%;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .home__lists {
   overflow-x: auto;
   overflow-y: hidden;
+  height: 80%;
   width: 100%;
 }
 
 .home__lists > li {
-  min-width: 23rem !important;
-  height: 25rem !important;
+  min-width: 32rem !important;
+  height: auto !important;
 }
 
 .works__list {
@@ -22,13 +45,21 @@
 }
 
 .works__list li {
-  background-color: rgb(220, 222, 223);
+  background-color: $primary-yellow;
+  font-weight: 900;
+  font-size: 2.4rem;
   padding: 2.2rem;
-  border: 1px solid rgb(193, 195, 196);
-  border-radius: 0.8rem;
+  border: $border;
   width: 100%;
+  & a {
+    color: $primary-dark
+  }
 }
 
 .works__list li h3 {
   text-transform: uppercase;
+}
+
+.Trabalhos {
+  font-size: 2.4rem;
 }
