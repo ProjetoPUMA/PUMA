@@ -12,7 +12,11 @@ function Header() {
       <div className="header__container">
         <div className="header__title-container">
           <div className="header__logo">
-            <img src="puma_header.svg" alt="" />
+            <img
+              // src={`${location.pathname === "/PUMA/materias" || location.pathname === "/PUMA/documentos" ? "puma_subjects.svg" : location.pathname === "/PUMA/calendarios" ? "puma_calendar.svg" : "puma_header.svg"}`}
+              src="puma_header.svg"
+              alt="puma"
+            />
           </div>
           <div className="header__title">
             <img src="title_header.svg" alt="" />
@@ -37,7 +41,7 @@ function Header() {
                   location.pathname !== "/PUMA/calendarios" &&
                   location.pathname !== "/PUMA/documentos",
               })}
-              to="/PUMA"
+              to="/PUMA/"
             >
               Mural
             </Link>
