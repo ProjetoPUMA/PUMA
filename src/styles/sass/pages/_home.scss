@@ -5,6 +5,10 @@
 .section__weekly {
   font-size: 2.4rem;
   border: 3.3px solid $surface-1000;
+
+  @include media(phonexs) {
+    flex-direction: column;
+  }
 }
 .weekly_HT {
   border: 2px;
@@ -13,6 +17,10 @@
 .section__weekly > div {
   width: 50%;
   overflow: visible;
+
+  @include media(phonexs) {
+    width: 100%;
+  }
 }
 
 .weekly {
@@ -25,6 +33,10 @@
 
     &--work {
       border-left: 3.3px solid $surface-1000;
+
+      @include media(phonexs) {
+        border: none;
+      }
     }
 
     & h2 {
@@ -56,6 +68,18 @@
 
 .works__list {
   list-style: none;
+
+  @include media(phonexs) {
+    &--header {
+      flex-direction: column;
+    }
+
+    &--content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+    }
+  }
 }
 
 .works__list li {
@@ -65,6 +89,7 @@
   padding: 2.2rem;
   border: $border;
   width: 100%;
+
   & a {
     color: $primary-dark;
     font-size: 2.2rem;
@@ -150,6 +175,18 @@
     & h3 {
       font-size: 5rem;
     }
+
+    @include media(phonexs) {
+      & h3 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      & h4 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
   }
 
   &__content {
@@ -163,11 +200,24 @@
       line-height: 3.5rem;
       -webkit-text-stroke-width: 2px;
     }
+
+    @include media(phonexs) {
+      flex-direction: column;
+      align-items: center;
+
+      & p {
+        -webkit-text-stroke-width: 1px;
+      }
+    }
   }
 
   &__puma {
     height: auto;
     width: 150rem;
+
+    @include media(phonexs) {
+      width: 30rem;
+    }
 
     & img {
       width: 100%;

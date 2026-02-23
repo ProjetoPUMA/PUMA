@@ -267,7 +267,11 @@ function HomePage() {
           <div className="contact__header">
             <h4>Dúvidas? Sugestões? Quer ajudar de alguma forma?</h4>
             <h3>
-              <Link to="http://wa.me/5524988176141" target="_blank">
+              <Link
+                className="mr-4"
+                to="http://wa.me/5524988176141"
+                target="_blank"
+              >
                 Clique aqui
               </Link>
               e entre em contato agora!
