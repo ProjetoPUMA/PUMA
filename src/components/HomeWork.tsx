@@ -23,7 +23,6 @@ function HomeWork({
   fileID?: string;
 }) {
   const formatedDate = format(date, "dd/MM", { locale: ptBR });
-  console.log(news);
 
   return (
     <li
@@ -33,6 +32,16 @@ function HomeWork({
         weekly__test: works,
       })}
     >
+      {news && (
+        <div className="homework__news">
+          <img src="new_sign.svg" alt="alerta de conteúdo novo" />
+        </div>
+      )}
+      {isToday(date) && (
+        <div className="homework__attention">
+          <img src="attention_sign.svg" alt="alerta de conteúdo novo" />
+        </div>
+      )}
       <div>
         <h4>{formatedDate}</h4>
         <h3>{subject}</h3>
@@ -54,9 +63,7 @@ function HomeWork({
             ))}
           </ul>
         )}
-        {isToday(date) && (
-          <small>Expira hoje, certifique-se de entrega-la ao professor.</small>
-        )}
+        {isToday(date) && <small>!!! EXPIRA HOJE !!!</small>}
         {hasInstructions && (
           <DownloadButton fileID={fileID}>
             Baixar {works ? "conteúdo" : "enunciado"}

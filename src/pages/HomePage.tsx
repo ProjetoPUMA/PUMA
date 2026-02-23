@@ -14,6 +14,7 @@ import {
 } from "date-fns";
 import Work from "../components/Work";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [isWModalOpen, setIsWModalOpen] = useState<boolean>(false);
@@ -148,7 +149,7 @@ function HomePage() {
           )}
         </div>
       </section>
-      <section className="mt-5">
+      <section className="mt-5 mb-5">
         <div className="Trabalhos flex justify-content-between mb-5">
           <h2>Trabalhos perto do prazo:</h2>
           <h2
@@ -177,6 +178,31 @@ function HomePage() {
             ))}
           </ul>
         )}
+      </section>
+      <section className="mt-8">
+        <div className="contact">
+          <div className="contact__header">
+            <h4>Dúvidas? Sugestões? Quer ajudar de alguma forma?</h4>
+            <h3>
+              <Link to="#">Clique aqui</Link> e entre em contato agora!
+            </h3>
+          </div>
+          <div className="contact__content">
+            <div className="flex flex-column justify-content-between">
+              <p>
+                Este projeto foi feito com intuito de ajudar a acompanhar e
+                organizar-se coletivamente quanto as matérias da faculdade. O
+                seu uso, feedback e monitoração nos motiva a continuar
+                trabalhando nesta aplicação web. Caso a recepção seja forte,
+                teremos muitos mais updates pela frente!
+              </p>
+              <p>De Adler e Taís para todos os alunos da Fatec.</p>
+            </div>
+            <div className="contact__puma">
+              <img src="puma_resting.svg" alt="puma descansando" />
+            </div>
+          </div>
+        </div>
       </section>
       {isWModalOpen && (
         <Modal data={homeworks_array} setState={setIsWModalOpen} />

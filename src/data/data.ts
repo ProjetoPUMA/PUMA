@@ -152,7 +152,7 @@ export const homeworks_array = [
   },
   {
     id: 2,
-    due_date: new Date(2026, 1, 25),
+    due_date: new Date(2026, 1, 22),
     subject: "Inglês         ",
     news: false,
     desc: "Páginas 18 e 19 do American English File para a próxima aula. Copiar o texto e circular os cognatos.",
