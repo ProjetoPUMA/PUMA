@@ -175,3 +175,46 @@
     }
   }
 }
+
+.swiper__container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  height: 95%;
+  margin-bottom: 4rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: $primary-dark;
+  color: $primary-light;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $primary-dark;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: $primary-dark;
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 99% !important;
+  z-index: 15;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 1px;
+}
