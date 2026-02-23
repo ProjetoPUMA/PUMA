@@ -11,9 +11,11 @@ import {
   isAfter,
   isBefore,
   isToday,
+  subDays,
 } from "date-fns";
 import Work from "../components/Work";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [isWModalOpen, setIsWModalOpen] = useState<boolean>(false);
@@ -45,11 +47,9 @@ function HomePage() {
     );
   });
 
-  console.log(weeklyTests);
-
   const fiveDaysWork = works_array.filter((item) => {
     const dueDate = item.due_date;
-    const today = new Date();
+    const today = subDays(new Date(), 1);
     const fiveDaysFromNow = endOfDay(addDays(today, 5));
 
     return (
@@ -58,14 +58,16 @@ function HomePage() {
     );
   });
 
+  console.log(fiveDaysWork);
+
   return (
     <>
       <h1 className="timeline_title">Atualizações Importantes</h1>
       <section>
         <Timeline />
       </section>
-      <section className="mt-8 flex justify-content-between section__weekly">
-        <div className="section__weekly__inside">
+      <section className="mt-4 flex justify-content-between section__weekly">
+        <div className="weekly__container">
           <div className="flex justify-content-between mb-5">
             <h2>Tarefas da Semana</h2>
             <h3
@@ -78,7 +80,7 @@ function HomePage() {
           {weeklyHomeworks.length === 0 ? (
             <p>Nenhuma tarefa programada para esta semana</p>
           ) : (
-            <ul className="flex gap-5 home__lists">
+            <ul className="flex gap-3 home__lists">
               {weeklyHomeworks
                 .slice()
                 .sort((a, b) => {
@@ -109,7 +111,7 @@ function HomePage() {
             </ul>
           )}
         </div>
-        <div className="section__weekly__inside">
+        <div className="weekly__container weekly__container--work">
           <div className="flex justify-content-between mb-5">
             <h2 className="weekly_HT">Provas da Semana</h2>
             <h3
@@ -122,7 +124,7 @@ function HomePage() {
           {weeklyTests.length === 0 ? (
             <p>Nenhuma prova programada para esta semana</p>
           ) : (
-            <ul className="flex gap-5 home__lists">
+            <ul className="flex gap-3 home__lists">
               {weeklyTests
                 .slice()
                 .sort((a, b) => {
@@ -148,7 +150,7 @@ function HomePage() {
           )}
         </div>
       </section>
-      <section className="mt-8">
+      <section className="mt-5 mb-5">
         <div className="Trabalhos flex justify-content-between mb-5">
           <h2>Trabalhos perto do prazo:</h2>
           <h2
@@ -164,8 +166,8 @@ function HomePage() {
             dias.
           </p>
         ) : (
-          <ul className="works__list flex flex-column">
-            {works_array.map((work) => (
+          <ul className="works__list flex flex-column gap-3">
+            {fiveDaysWork.map((work) => (
               <Work
                 key={work.id}
                 date={work.due_date}
@@ -173,10 +175,40 @@ function HomePage() {
                 title={work.title}
                 news={work.news}
                 desc={work.desc}
+                hasInstructions={work.hasInstructions}
+                fileID={work.fileID}
               />
             ))}
           </ul>
         )}
+      </section>
+      <section className="mt-8">
+        <div className="contact">
+          <div className="contact__header">
+            <h4>Dúvidas? Sugestões? Quer ajudar de alguma forma?</h4>
+            <h3>
+              <Link to="http://wa.me/5524988176141" target="_blank">
+                Clique aqui
+              </Link>
+              e entre em contato agora!
+            </h3>
+          </div>
+          <div className="contact__content">
+            <div className="flex flex-column justify-content-between">
+              <p>
+                Este projeto foi feito com intuito de ajudar a acompanhar e
+                organizar-se coletivamente quanto as matérias da faculdade. O
+                seu uso, feedback e monitoração nos motiva a continuar
+                trabalhando nesta aplicação web. Caso a recepção seja forte,
+                teremos muitos mais updates pela frente!
+              </p>
+              <p>De Adler e Taís para todos os alunos da Fatec.</p>
+            </div>
+            <div className="contact__puma">
+              <img src="puma_resting.svg" alt="puma descansando" />
+            </div>
+          </div>
+        </div>
       </section>
       {isWModalOpen && (
         <Modal data={homeworks_array} setState={setIsWModalOpen} />

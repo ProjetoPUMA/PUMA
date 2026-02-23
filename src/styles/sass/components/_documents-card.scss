@@ -37,7 +37,7 @@
       transition: $transition;
 
       &:hover {
-        color: $primary-blue;
+        transform: translateY(-3px);
       }
     }
 
