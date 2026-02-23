@@ -64,7 +64,19 @@
 }
 .order {
   width: 25rem;
+
+  @include media(phonexs) {
+    width: 100%;
+  }
 }
 .section__schedule {
   margin-bottom: 10rem;
+
+  @include media(phonexs) {
+    flex-direction: column;
+  }
+}
+
+.calendar__message {
+  font-size: 2rem;
 }

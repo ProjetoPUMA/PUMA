@@ -62,5 +62,9 @@ main {
 
   & h1 {
     align-self: flex-start;
+
+    @include media(phone) {
+      flex-direction: column;
+    }
   }
 }

@@ -63,8 +63,6 @@ function HomePage() {
     );
   });
 
-  console.log(fiveDaysWork);
-
   return (
     <>
       <h1 className="timeline_title">Atualizações Importantes</h1>
