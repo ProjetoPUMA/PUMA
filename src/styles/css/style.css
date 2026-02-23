@@ -23,6 +23,23 @@
   font-family: "ZalandoSans";
   src: url(/fonts/ZalandoSans-Bold.otf);
 }
+/*
+0 - 600px:    Phone
+600 - 900px:  Tablet Portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px +:     Big desktop
+
+$breakpoint arguement choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography -> general layout -> page layout -> -> components
+
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -50,6 +67,11 @@
 
 html {
   font-size: 62.5%;
+}
+@media (max-width: 42.8125em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -84,6 +106,11 @@ main {
 .content h1 {
   align-self: flex-start;
 }
+@media (max-width: 42.8125em) {
+  .content h1 {
+    flex-direction: column;
+  }
+}
 
 .selected_page a {
   text-decoration: underline;
@@ -93,6 +120,11 @@ main {
   font-size: 2.4rem;
   border: 3.3px solid black;
 }
+@media (max-width: 28.125em) {
+  .section__weekly {
+    flex-direction: column;
+  }
+}
 
 .weekly_HT {
   border: 2px;
@@ -101,6 +133,11 @@ main {
 .section__weekly > div {
   width: 50%;
   overflow: visible;
+}
+@media (max-width: 28.125em) {
+  .section__weekly > div {
+    width: 100%;
+  }
 }
 
 .weekly__container {
@@ -112,6 +149,11 @@ main {
 }
 .weekly__container--work {
   border-left: 3.3px solid black;
+}
+@media (max-width: 28.125em) {
+  .weekly__container--work {
+    border: none;
+  }
 }
 .weekly__container h2 {
   font-size: 2.5rem;
@@ -139,6 +181,16 @@ main {
 
 .works__list {
   list-style: none;
+}
+@media (max-width: 28.125em) {
+  .works__list--header {
+    flex-direction: column;
+  }
+  .works__list--content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
 }
 
 .works__list li {
@@ -223,6 +275,16 @@ main {
 .contact__header h3 {
   font-size: 5rem;
 }
+@media (max-width: 28.125em) {
+  .contact__header h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .contact__header h4 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 .contact__content {
   display: flex;
   padding: 2rem;
@@ -234,9 +296,23 @@ main {
   line-height: 3.5rem;
   -webkit-text-stroke-width: 2px;
 }
+@media (max-width: 28.125em) {
+  .contact__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__content p {
+    -webkit-text-stroke-width: 1px;
+  }
+}
 .contact__puma {
   height: auto;
   width: 150rem;
+}
+@media (max-width: 28.125em) {
+  .contact__puma {
+    width: 30rem;
+  }
 }
 .contact__puma img {
   width: 100%;
@@ -341,9 +417,23 @@ main {
 .order {
   width: 25rem;
 }
+@media (max-width: 28.125em) {
+  .order {
+    width: 100%;
+  }
+}
 
 .section__schedule {
   margin-bottom: 10rem;
+}
+@media (max-width: 28.125em) {
+  .section__schedule {
+    flex-direction: column;
+  }
+}
+
+.calendar__message {
+  font-size: 2rem;
 }
 
 .subjects__list {
@@ -404,6 +494,12 @@ main {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 28.125em) {
+  .footer {
+    flex-direction: column;
+    font-size: 2rem;
+  }
+}
 
 .header {
   gap: 1rem;
@@ -419,6 +515,16 @@ main {
   width: 100%;
   background-color: #a2afa1;
   border: 4px solid #1b1215;
+}
+@media (max-width: 42.8125em) {
+  .header {
+    width: 100%;
+    padding-top: 0;
+  }
+  .header__container {
+    border: none;
+    border-bottom: 4px solid #1b1215;
+  }
 }
 .header__title-container {
   margin: 0 auto;
@@ -436,6 +542,15 @@ main {
   margin-left: 35rem;
   margin-top: 0.5rem;
 }
+@media (max-width: 42.8125em) {
+  .header__name {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
 .header__nav {
   font-family: "ZalandoSans", sans-serif;
   font-weight: 300;
@@ -444,6 +559,11 @@ main {
   width: 100%;
   -webkit-text-stroke-width: 1.3px;
   -webkit-text-stroke-color: black;
+}
+@media (max-width: 42.8125em) {
+  .header__nav {
+    display: none;
+  }
 }
 .header__nav ul {
   display: flex;
@@ -542,6 +662,137 @@ main {
 .header__title img {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 42.8125em) {
+  .header__menu {
+    background-color: #1b1215;
+    font-size: 6rem;
+    max-width: 8rem;
+    min-width: 8rem;
+    max-height: 8rem;
+    min-height: 8rem;
+    border-radius: 2rem;
+    color: #f9ecbf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__menu-container {
+    min-width: 12rem;
+    max-width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__logo {
+    min-width: 15rem;
+    max-width: 15rem;
+    margin-top: 0;
+  }
+  .header__title {
+    height: 11rem;
+    width: auto;
+  }
+  .header__title-container {
+    width: 95%;
+    height: auto;
+  }
+  .header__date {
+    transform: rotate(0);
+    background-image: none;
+    border: 3.3px dashed #1b1215;
+    width: 90%;
+    margin-left: 0;
+    align-items: start;
+    gap: 1rem;
+  }
+  .header__date h2 {
+    transform: rotate(0);
+    font-size: 3rem;
+    display: flex;
+    gap: 1rem;
+    text-transform: capitalize;
+  }
+  .header__date h2::after {
+    display: none;
+  }
+}
+@media (max-width: 28.125em) {
+  .header__logo {
+    min-width: 11rem;
+    max-width: 11rem;
+    margin-top: 0;
+  }
+  .header__menu {
+    max-width: 6rem;
+    min-width: 6rem;
+    max-height: 6rem;
+    min-height: 6rem;
+    font-size: 4rem;
+  }
+  .header__menu-container {
+    min-width: 9rem;
+    max-width: 9rem;
+  }
+  .header__title {
+    min-height: 11rem;
+    width: auto;
+  }
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 80%;
+}
+.nav li {
+  padding: 2rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav li:has(.active) {
+  background-color: #a2afa1;
+  border-radius: 1rem;
+}
+.nav li:has(.active) a {
+  color: #1b1215;
+}
+.nav li:has(.active) span {
+  color: #1b1215;
+}
+.nav li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #f9ecbf;
+}
+.nav li span {
+  font-family: "Lemon", sans-serif;
+  color: #f9ecbf;
+}
+.nav__container {
+  background-color: #1b1215;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 15;
+  overflow-y: unset;
+  display: flex;
+  flex-direction: column;
 }
 
 .homework {
@@ -816,6 +1067,11 @@ main {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: 5px solid #1b1215;
   gap: 2rem;
+}
+@media (max-width: 28.125em) {
+  .timeline_title {
+    display: block;
+  }
 }
 .timeline h2 {
   font-size: 2.5rem;
