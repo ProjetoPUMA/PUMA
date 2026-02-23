@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import HomeWork from "../components/HomeWork";
 import Modal from "../components/Modal";
 import Timeline from "../components/Timeline";
@@ -80,8 +85,59 @@ function HomePage() {
           {weeklyHomeworks.length === 0 ? (
             <p>Nenhuma tarefa programada para esta semana</p>
           ) : (
-            <ul className="flex gap-3 home__lists">
-              {weeklyHomeworks
+            <ul className="flex gap-3 home__lists swiper__container">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{
+                  clickable: true,
+                }}
+                slidesPerView={1}
+                spaceBetween={0}
+                breakpoints={{
+                  480: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                }}
+                onSlideChange={() => console.log("slide change")}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                {weeklyHomeworks
+                  .slice()
+                  .sort((a, b) => {
+                    const expiresTodayA = isToday(a.due_date);
+                    const expiresTodayB = isToday(b.due_date);
+
+                    if (expiresTodayA !== expiresTodayB) {
+                      return expiresTodayA ? -1 : 1;
+                    }
+
+                    if (a.news !== b.news) {
+                      return Number(b.news) - Number(a.news);
+                    }
+
+                    return a.due_date.getTime() - b.due_date.getTime();
+                  })
+                  .map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <HomeWork
+                        fileID={item.fileID}
+                        hasInstructions={item.hasInstructions}
+                        key={item.id}
+                        news={item.news}
+                        desc={item.desc}
+                        subject={item.subject}
+                        date={item.due_date}
+                      />
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
+              {/* {weeklyHomeworks
                 .slice()
                 .sort((a, b) => {
                   const expiresTodayA = isToday(a.due_date);
@@ -107,7 +163,7 @@ function HomePage() {
                     subject={item.subject}
                     date={item.due_date}
                   />
-                ))}
+                ))} */}
             </ul>
           )}
         </div>
@@ -124,28 +180,52 @@ function HomePage() {
           {weeklyTests.length === 0 ? (
             <p>Nenhuma prova programada para esta semana</p>
           ) : (
-            <ul className="flex gap-3 home__lists">
-              {weeklyTests
-                .slice()
-                .sort((a, b) => {
-                  if (a.news !== b.news) {
-                    return Number(b.news) - Number(a.news);
-                  }
+            <ul className="flex gap-3 home__lists swiper__container">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{
+                  clickable: true,
+                }}
+                slidesPerView={1}
+                spaceBetween={0}
+                breakpoints={{
+                  480: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                }}
+                onSlideChange={() => console.log("slide change")}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                {weeklyTests
+                  .slice()
+                  .sort((a, b) => {
+                    if (a.news !== b.news) {
+                      return Number(b.news) - Number(a.news);
+                    }
 
-                  return a.due_date.getTime() - b.due_date.getTime();
-                })
-                .map((item) => (
-                  <HomeWork
-                    fileID={item.fileID}
-                    hasInstructions={item.hasInstructions}
-                    works
-                    content={item.content}
-                    key={item.id}
-                    news={item.news}
-                    subject={item.subject}
-                    date={item.due_date}
-                  />
-                ))}
+                    return a.due_date.getTime() - b.due_date.getTime();
+                  })
+                  .map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <HomeWork
+                        fileID={item.fileID}
+                        hasInstructions={item.hasInstructions}
+                        works
+                        content={item.content}
+                        key={item.id}
+                        news={item.news}
+                        subject={item.subject}
+                        date={item.due_date}
+                      />
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
             </ul>
           )}
         </div>
