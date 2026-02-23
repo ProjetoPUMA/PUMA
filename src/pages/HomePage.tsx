@@ -11,6 +11,7 @@ import {
   isAfter,
   isBefore,
   isToday,
+  subDays,
 } from "date-fns";
 import Work from "../components/Work";
 import classNames from "classnames";
@@ -48,7 +49,7 @@ function HomePage() {
 
   const fiveDaysWork = works_array.filter((item) => {
     const dueDate = item.due_date;
-    const today = new Date();
+    const today = subDays(new Date(), 1);
     const fiveDaysFromNow = endOfDay(addDays(today, 5));
 
     return (
@@ -56,6 +57,8 @@ function HomePage() {
       isBefore(dueDate, fiveDaysFromNow)
     );
   });
+
+  console.log(fiveDaysWork);
 
   return (
     <>
@@ -172,6 +175,8 @@ function HomePage() {
                 title={work.title}
                 news={work.news}
                 desc={work.desc}
+                hasInstructions={work.hasInstructions}
+                fileID={work.fileID}
               />
             ))}
           </ul>
@@ -182,7 +187,10 @@ function HomePage() {
           <div className="contact__header">
             <h4>Dúvidas? Sugestões? Quer ajudar de alguma forma?</h4>
             <h3>
-              <Link to="#">Clique aqui</Link> e entre em contato agora!
+              <Link to="http://wa.me/5524988176141" target="_blank">
+                Clique aqui
+              </Link>
+              e entre em contato agora!
             </h3>
           </div>
           <div className="contact__content">

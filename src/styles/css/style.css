@@ -242,6 +242,24 @@ main {
   height: 100%;
 }
 
+.schedule__day {
+  font-size: 2rem;
+  -webkit-text-stroke-width: 1px;
+  letter-spacing: 2px;
+}
+.schedule__header h4 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: rgb(182.8079470199, 139.1523178808, 23.1920529801);
+}
+.schedule__header h2 {
+  font-size: 2.2rem;
+  -webkit-text-stroke-width: 1px;
+  letter-spacing: 1px;
+}
+.schedule__hours span {
+  font-size: 1.8rem !important;
+}
 .schedule__list {
   list-style: none;
 }
@@ -271,6 +289,9 @@ main {
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1.8rem;
+}
+.schedule__title--calendar {
+  margin-bottom: 4rem;
 }
 
 .order {
@@ -488,6 +509,10 @@ main {
   width: 40%;
   position: relative;
 }
+.homework small {
+  display: flex;
+  margin-top: 1.6rem;
+}
 .homework__news {
   position: absolute;
   top: 1rem;
@@ -500,6 +525,9 @@ main {
   width: 100%;
   height: 100%;
 }
+.homework__news--modal {
+  height: 5rem;
+}
 .homework__attention {
   position: absolute;
   top: 0rem;
@@ -510,6 +538,9 @@ main {
 .homework__attention img {
   width: 100%;
   height: 100%;
+}
+.homework__attention--modal {
+  height: 8rem;
 }
 .homework h4 {
   font-family: "Lemon", sans-serif;

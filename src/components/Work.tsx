@@ -8,12 +8,16 @@ function Work({
   title,
   news,
   desc,
+  hasInstructions,
+  fileID,
 }: {
   date: Date;
   subject: string;
   title: string;
   news: boolean;
   desc: string;
+  hasInstructions: boolean;
+  fileID: string;
 }) {
   return (
     <li>
@@ -27,7 +31,9 @@ function Work({
       </div>
       <div className="flex justify-content-between">
         <p>{desc}</p>
-        <DownloadButton>Baixar Instruções</DownloadButton>
+        {hasInstructions && (
+          <DownloadButton fileID={fileID}>Baixar Instruções</DownloadButton>
+        )}
       </div>
     </li>
   );

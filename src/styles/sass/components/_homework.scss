@@ -7,6 +7,11 @@
   width: 40%;
   position: relative;
 
+  & small {
+    display: flex;
+    margin-top: 1.6rem;
+  }
+
   &__news {
     position: absolute;
     top: 1rem;
@@ -18,6 +23,10 @@
     & img {
       width: 100%;
       height: 100%;
+    }
+
+    &--modal {
+      height: 5rem;
     }
   }
 
@@ -31,6 +40,10 @@
     & img {
       width: 100%;
       height: 100%;
+    }
+
+    &--modal {
+      height: 8rem;
     }
   }
 

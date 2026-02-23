@@ -127,6 +127,19 @@ function Modal({
                     })}
                     key={item.id}
                   >
+                    {item.news && (
+                      <div className="homework__news homework__news--modal">
+                        <img src="new_sign.svg" alt="alerta de conteúdo novo" />
+                      </div>
+                    )}
+                    {isToday(item.due_date) && (
+                      <div className="homework__attention homework__attention--modal">
+                        <img
+                          src="attention_sign.svg"
+                          alt="alerta de conteúdo novo"
+                        />
+                      </div>
+                    )}
                     <h4>{format(item.due_date, "dd/MM", { locale: ptBR })}</h4>
                     {!works ? (
                       <h2>{item.subject}</h2>

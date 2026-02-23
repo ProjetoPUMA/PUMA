@@ -76,7 +76,7 @@ function CalendarsPage() {
         {schedule.map((day, index) => (
           <div className="flex flex-column order gap-3 mt-7">
             <div key={index}>
-              <h2>{day.dayName}</h2>
+              <h2 className="schedule__day">{day.dayName}</h2>
             </div>
             <ul
               className={`schedule__list schedule__list--${index + 1} flex flex-column gap-5`}
@@ -90,12 +90,13 @@ function CalendarsPage() {
                     className={`flex flex-column gap-4 justify-content-between schedule__coontainer--${index + 1}`}
                     key={index}
                   >
-                    <div>
+                    <div className="schedule__header">
                       <h4>Prof. {cls.teacher.split(" ")[0]}</h4>
                       <h2>{cls.name}</h2>
                     </div>
                     <div className="schedule__hours">
-                      <span>{clsStart}</span> <span> - </span> <span>{clsEnd}</span>
+                      <span>{clsStart}</span> <span> - </span>{" "}
+                      <span>{clsEnd}</span>
                     </div>
                   </li>
                 );
@@ -104,7 +105,9 @@ function CalendarsPage() {
           </div>
         ))}
       </section>
-      <h1 className="schedule__title">Calendário Letivo 2026</h1>
+      <h1 className="schedule__title schedule__title--calendar">
+        Calendário Letivo 2026
+      </h1>
       <section>
         <Calendar />
       </section>

@@ -1,4 +1,28 @@
 .schedule {
+  &__day {
+    font-size: 2rem;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 2px;
+  }
+
+  &__header {
+    & h4 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: darken($primary-yellow, 30%);
+    }
+
+    & h2 {
+      font-size: 2.2rem;
+      -webkit-text-stroke-width: 1px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__hours span {
+    font-size: 1.8rem !important;
+  }
+
   &__list {
     list-style: none;
 
@@ -31,6 +55,10 @@
       text-transform: capitalize;
       font-weight: 500;
       font-size: 1.8rem;
+    }
+
+    &--calendar {
+      margin-bottom: 4rem;
     }
   }
 }
