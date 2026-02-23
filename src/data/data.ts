@@ -161,7 +161,7 @@ export const homeworks_array = [
   },
   {
     id: 3,
-    due_date: new Date(2026, 1, 25),
+    due_date: new Date(2026, 1, 21),
     subject: "Tarefa expira hoje",
     news: false,
     desc: "Essa tarefa está no último dia de seu prazo.",
@@ -231,6 +231,16 @@ export const works_array = [
   {
     id: 1,
     due_date: new Date(2026, 1, 23),
+    subject: "Matéria teste",
+    title: "Trabalho de Web",
+    news: false,
+    desc: "Essa é a descrição do trabalho",
+    hasInstructions: true,
+    fileID: "",
+  },
+  {
+    id: 2,
+    due_date: new Date(2026, 1, 21),
     subject: "Matéria teste",
     title: "Trabalho de Web",
     news: false,

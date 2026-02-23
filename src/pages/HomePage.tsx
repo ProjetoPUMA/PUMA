@@ -46,8 +46,6 @@ function HomePage() {
     );
   });
 
-  console.log(weeklyTests);
-
   const fiveDaysWork = works_array.filter((item) => {
     const dueDate = item.due_date;
     const today = new Date();
@@ -165,8 +163,8 @@ function HomePage() {
             dias.
           </p>
         ) : (
-          <ul className="works__list flex flex-column">
-            {works_array.map((work) => (
+          <ul className="works__list flex flex-column gap-3">
+            {fiveDaysWork.map((work) => (
               <Work
                 key={work.id}
                 date={work.due_date}

@@ -153,5 +153,11 @@
 // }
 
 .homework--expired {
-  color: gray;
+  color: darken($primary-light, 40%);
+  border-color: darken($primary-light, 40%) !important;
+
+  & h4,
+  & small {
+    color: darken($primary-light, 40%) !important;
+  }
 }

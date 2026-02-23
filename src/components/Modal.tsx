@@ -48,7 +48,9 @@ function Modal({
         <div className="modal__title mb-5">
           <h1>
             Todas {tests ? "as Provas" : works ? "os Trabalhos" : "as Tarefas"}
-            <h3 onClick={() => setState(false)} className="modal__close"> X </h3>
+            <h3 onClick={() => setState(false)} className="modal__close">
+              X
+            </h3>
           </h1>
           <p>
             {data.filter((item) => item.news).length !== 0
@@ -56,12 +58,13 @@ function Modal({
               : "Não hove nenhuma atualização desde a última checagem."}
           </p>
         </div>
-        <div className="flex gap-5 justify-content-center pb-5">
+        <div className="modal__filter flex gap-5 justify-content-center">
           <span
             onClick={() => {
               setShowAll(true);
               setIsExpiredClicked(false);
             }}
+            className={classNames("", { active: showAll && !isExpiredClicked })}
           >
             Todas
           </span>
@@ -70,6 +73,9 @@ function Modal({
               setIsExpiredClicked(false);
               setShowAll(false);
             }}
+            className={classNames("", {
+              active: !isExpiredClicked && !showAll,
+            })}
           >
             Em breve
           </span>
@@ -78,6 +84,7 @@ function Modal({
               setIsExpiredClicked(true);
               setShowAll(false);
             }}
+            className={classNames("", { active: isExpiredClicked })}
           >
             Expiradas
           </span>
@@ -111,7 +118,7 @@ function Modal({
                 })
                 .map((item) => (
                   <li
-                    className={classNames("modal--item", {
+                    className={classNames("modal__item", {
                       "homework--news": item.news,
                       "homework--expired":
                         isBefore(item.due_date, new Date()) &&
@@ -120,9 +127,7 @@ function Modal({
                     })}
                     key={item.id}
                   >
-                    <h4>
-                      {format(item.due_date, "dd/MM/yyyy", { locale: ptBR })}
-                    </h4>
+                    <h4>{format(item.due_date, "dd/MM", { locale: ptBR })}</h4>
                     {!works ? (
                       <h2>{item.subject}</h2>
                     ) : (
@@ -135,7 +140,7 @@ function Modal({
                     {tests ? (
                       <ul className="mb-4">
                         {item.content?.map((subject: string, index: number) => (
-                          <li key={index}>{subject}</li>
+                          <li key={index}>* {subject}</li>
                         ))}
                       </ul>
                     ) : (
@@ -146,16 +151,17 @@ function Modal({
                       </p>
                     )}
                     <div className="flex justify-content-end">
-                      {item.hasInstructions && (
-                        <DownloadButton fileID={item.fileID ?? undefined}>
-                          Baixar{" "}
-                          {tests
-                            ? "conteúdo"
-                            : works
-                              ? "instruções"
-                              : "enunciado"}
-                        </DownloadButton>
-                      )}
+                      {item.hasInstructions &&
+                        isBefore(new Date(), item.due_date) && (
+                          <DownloadButton fileID={item.fileID ?? undefined}>
+                            Baixar{" "}
+                            {tests
+                              ? "conteúdo"
+                              : works
+                                ? "instruções"
+                                : "enunciado"}
+                          </DownloadButton>
+                        )}
                     </div>
                     {isBefore(item.due_date, new Date()) &&
                     !isToday(item.due_date) ? (
@@ -178,8 +184,7 @@ function Modal({
             </p>
           )}
         </div>
-        <div className="modal__footer">
-        </div>
+        <div className="modal__footer"></div>
       </div>
     </div>
   );
