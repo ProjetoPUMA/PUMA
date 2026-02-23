@@ -64,8 +64,8 @@ function HomePage() {
       <section>
         <Timeline />
       </section>
-      <section className="mt-8 flex justify-content-between section__weekly">
-        <div className="section__weekly__inside">
+      <section className="mt-4 flex justify-content-between section__weekly">
+        <div className="weekly__container">
           <div className="flex justify-content-between mb-5">
             <h2>Tarefas da Semana</h2>
             <h3
@@ -78,7 +78,7 @@ function HomePage() {
           {weeklyHomeworks.length === 0 ? (
             <p>Nenhuma tarefa programada para esta semana</p>
           ) : (
-            <ul className="flex gap-5 home__lists">
+            <ul className="flex gap-3 home__lists">
               {weeklyHomeworks
                 .slice()
                 .sort((a, b) => {
@@ -109,7 +109,7 @@ function HomePage() {
             </ul>
           )}
         </div>
-        <div className="section__weekly__inside">
+        <div className="weekly__container weekly__container--work">
           <div className="flex justify-content-between mb-5">
             <h2 className="weekly_HT">Provas da Semana</h2>
             <h3
@@ -122,7 +122,7 @@ function HomePage() {
           {weeklyTests.length === 0 ? (
             <p>Nenhuma prova programada para esta semana</p>
           ) : (
-            <ul className="flex gap-5 home__lists">
+            <ul className="flex gap-3 home__lists">
               {weeklyTests
                 .slice()
                 .sort((a, b) => {
@@ -148,7 +148,7 @@ function HomePage() {
           )}
         </div>
       </section>
-      <section className="mt-8">
+      <section className="mt-5">
         <div className="Trabalhos flex justify-content-between mb-5">
           <h2>Trabalhos perto do prazo:</h2>
           <h2

@@ -8,11 +8,32 @@
 
 .btn-news::after {
   content: "!";
-  width: 1.5rem;
-  height: 1.5rem;
+  clip-path: polygon(
+    50% 0%,
+    63% 18%,
+    85% 6%,
+    82% 31%,
+    100% 35%,
+    89% 55%,
+    98% 80%,
+    75% 82%,
+    69% 100%,
+    50% 86%,
+    31% 100%,
+    25% 82%,
+    2% 80%,
+    11% 55%,
+    0% 35%,
+    18% 31%,
+    15% 6%,
+    37% 18%
+  );
+  width: 3rem;
+  height: 3rem;
   position: absolute;
-  background-color: black;
-  color: white;
+  background-color: $primary-dark;
+  font-size: 1.6rem;
+  color: $primary-light;
   top: -1rem;
   right: -1rem;
   display: flex;

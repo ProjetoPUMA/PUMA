@@ -20,10 +20,10 @@ function Work({
       {news && <p>NOVO!</p>}
       <div className="flex justify-content-between">
         <div>
-          <h4>{format(date, "dd/MM/yyyy", { locale: ptBR })}</h4>
+          <h4>{format(date, "dd/MM", { locale: ptBR })}</h4>
           <h3>{title}</h3>
         </div>
-        <h4>{subject}</h4>
+        <span>{subject}</span>
       </div>
       <div className="flex justify-content-between">
         <p>{desc}</p>

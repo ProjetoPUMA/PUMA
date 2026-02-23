@@ -13,7 +13,7 @@ function DownloadButton({
   const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileID}`;
 
   return (
-    <Link to={downloadUrl} className={`align-self-end ${className}`}>
+    <Link to={downloadUrl} className={`align-self-center ${className}`}>
       {children}
     </Link>
   );

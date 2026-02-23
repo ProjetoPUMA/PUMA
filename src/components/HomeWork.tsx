@@ -30,21 +30,26 @@ function HomeWork({
       className={classNames("flex flex-column gap-4 pt-5 homework", {
         "homework--news": news,
         "homework--attention": isToday(date),
-        "weekly__test": works,
+        weekly__test: works,
       })}
     >
       <div>
         <h4>{formatedDate}</h4>
         <h3>{subject}</h3>
       </div>
-      <div className="flex flex-column justify-content-between h-100">
+      <div
+        className={classNames("flex flex-column  h-100", {
+          homework__desc: !hasInstructions,
+          "justify-content-between": hasInstructions,
+        })}
+      >
         {!works ? (
           <p>{desc}</p>
         ) : (
           <ul>
             {content?.map((item, index) => (
               <li className="flex flex-column" key={index}>
-                {item}
+                * {item}
               </li>
             ))}
           </ul>

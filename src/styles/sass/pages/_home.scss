@@ -4,40 +4,54 @@
 
 .section__weekly {
   font-size: 2.4rem;
-  height: 50rem;
-  border: $border;
-  padding: 1rem;
-  &__inside{
-    &:first-child {
-      padding-right: 1rem;
-      border-right: $border;
-      border-right-style: dashed;
-      }
-    &:not(&:first-child){
-      padding-left: 1rem;
-    }
-  }
-
+  border: 3.3px solid $surface-1000;
 }
-.weekly_HT{
+.weekly_HT {
   border: 2px;
 }
 
 .section__weekly > div {
-  overflow-y: auto;
-  width: 100%;
+  width: 50%;
+  overflow: visible;
+}
+
+.weekly {
+  &__container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &--work {
+      border-left: 3.3px solid $surface-1000;
+    }
+
+    & h2 {
+      font-size: 2.5rem;
+      -webkit-text-stroke-width: 1px;
+      letter-spacing: 2px;
+    }
+
+    & .btn-all {
+      font-size: 3rem;
+      -webkit-text-stroke-width: 0.1px;
+      text-decoration: underline;
+      border: 0;
+    }
+  }
 }
 
 .home__lists {
   overflow-x: auto;
   overflow-y: hidden;
-  height: 80%;
+  height: 100%;
   width: 100%;
 }
 
 .home__lists > li {
-  min-width: 32rem !important;
-  height: auto !important;
+  min-width: 30rem;
+  height: auto;
 }
 
 .works__list {
@@ -52,7 +66,30 @@
   border: $border;
   width: 100%;
   & a {
-    color: $primary-dark
+    color: $primary-dark;
+    font-size: 2.2rem;
+  }
+
+  & h4 {
+    font-family: $lemon;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  & span {
+    font-family: $lemon;
+    font-size: 1.8rem;
+  }
+
+  & h3 {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  & p {
+    font-family: $vintage-type;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    -webkit-text-stroke-width: 1px;
   }
 }
 
@@ -61,5 +98,16 @@
 }
 
 .Trabalhos {
-  font-size: 2.4rem;
+  & h2 {
+    font-size: 2.5rem;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 2px;
+  }
+
+  & .btn-all {
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.1px;
+    text-decoration: underline;
+    border: 0;
+  }
 }
