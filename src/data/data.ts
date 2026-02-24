@@ -1,9 +1,72 @@
+// ATUALIZAÇÕES IMPORTANTES
 export const timeline_obj = {
   event: "o Kick-off Geral",
   start: new Date(2026, 2, 3),
   end: new Date(2026, 2, 6),
 };
-
+// TAREFAS SEMANAIS
+export const homeworks_array = [
+  {
+    id: 1,
+    due_date: new Date(2026, 1, 24),
+    subject: "Sistemas de Informação",
+    news: false,
+    desc: "Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.",
+    hasInstructions: true,
+    fileID: "1qo8_PeJl2j2fdisbvDrk77GMihIDI18r",
+  },
+  {
+    id: 2,
+    due_date: new Date(2026, 1, 27),
+    subject: "Inglês         ",
+    news: false,
+    desc: "Fazer resumo do Steve Jobs, e ouvir discurso do Martin Luther King.",
+    hasInstructions: false,
+    fileID: undefined,
+  },
+];
+// PROVAS SEMANAIS
+export const tests_array = [
+  {
+    id: 1,
+    due_date: new Date(2026, 1, 10),
+    subject: "Exemplo de teste",
+    news: false,
+    content: [
+      "Ainda não tivemos nenhuma prova",
+      "Esta prova irá sumir quando a primeira for anunciada"
+      // "Mas o nosso sistema precisa de um exemplo pra existir de fundo",
+      // "Se não ele não funciona",
+      // "whoops",
+    ],
+    fileID: "#",
+    hasInstructions: false,
+  },
+];
+// TRABALHOS PERTO DO PRAZO
+export const works_array = [
+  {
+    id: 1,
+    due_date: new Date(2026, 1, 23),
+    subject: "Linguagem de Programação",
+    title: "Lista de JAVA",
+    news: false,
+    desc: "Realizar os exercícios de 2 a 5 da lista proporcionada no link ao lado.",
+    hasInstructions: true,
+    fileID: "1DBvwwcFZv93C2tp2GqSOSlj8U9WGfJD2",
+  },
+  {
+    id: 2,
+    due_date: new Date(2026, 1, 21),
+    subject: "Sistemas de Informação",
+    title: "Exercícios de banco de dados",
+    news: false,
+    desc: "Realizar os exercícios de banco de dados disponibilizados nos slides.",
+    hasInstructions: false,
+    fileID: "",
+  },
+];
+// MATÉRIAS (PROFESSORES, DESCRIÇÃO, HORÁRIOS, ETC)
 export const subjects_array = [
   {
     id: 3,
@@ -139,127 +202,7 @@ export const subjects_array = [
     days: ["Sexta-feira"],
   },
 ];
-
-export const homeworks_array = [
-  {
-    id: 1,
-    due_date: new Date(2026, 1, 23),
-    subject: "Sistemas de Informação",
-    news: false,
-    desc: "Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.",
-    hasInstructions: true,
-    fileID: "1qo8_PeJl2j2fdisbvDrk77GMihIDI18r",
-  },
-  {
-    id: 2,
-    due_date: new Date(2026, 1, 24),
-    subject: "Inglês         ",
-    news: true,
-    desc: "Páginas 18 e 19 do American English File para a próxima aula. Copiar o texto e circular os cognatos.",
-    hasInstructions: false,
-    fileID: undefined,
-  },
-  {
-    id: 3,
-    due_date: new Date(2026, 1, 21),
-    subject: "Cálculo",
-    news: false,
-    desc: "Calcule com números para gerar outros números.",
-    hasInstructions: false,
-    fileID: undefined,
-  },
-  {
-    id: 4,
-    due_date: new Date(2026, 1, 24),
-    subject: "Comunicação e Expressão",
-    news: false,
-    desc: "Leia o texto sobre linguagem passado na aula passada.",
-    hasInstructions: false,
-    fileID: undefined,
-  },
-];
-
-export const tests_array = [
-  {
-    id: 4,
-    due_date: new Date(2026, 1, 25),
-    subject: "Linguagem de Programação",
-    news: false,
-    content: [
-      "Java",
-      "Java ao quadrado",
-      "Banco de dados",
-      "Banco de dados ao cubo",
-    ],
-    fileID: "#",
-    hasInstructions: false,
-  },
-  {
-    id: 8,
-    due_date: new Date(2026, 1, 25),
-    subject: "Linguagem de Programação",
-    news: false,
-    content: [
-      "Java",
-      "Java ao quadrado",
-      "Banco de dados",
-      "Banco de dados ao cubo",
-    ],
-    fileID: "#",
-    hasInstructions: false,
-  },
-  {
-    id: 3,
-    due_date: new Date(2026, 1, 22),
-    subject: "Cálculo",
-    news: false,
-    content: ["Funções", "Integradas", "Derivadas"],
-    fileID: "#",
-    hasInstructions: false,
-  },
-  {
-    id: 1,
-    due_date: new Date(2026, 1, 25),
-    subject: "Contabilidade",
-    news: false,
-    content: ["Contas", "Habilidades", "A dupla: Conta-habilidade"],
-    fileID: "#",
-    hasInstructions: false,
-  },
-  {
-    id: 2,
-    due_date: new Date(2026, 0, 16),
-    subject: "Engenharia de Software",
-    news: false,
-    content: ["Engenharia", "Banco de dados"],
-    fileID: "#",
-    hasInstructions: false,
-  },
-];
-
-export const works_array = [
-  {
-    id: 1,
-    due_date: new Date(2026, 1, 23),
-    subject: "Linguagem de Programação",
-    title: "Lista de JAVA",
-    news: false,
-    desc: "Realizar os exercícios de 2 a 5 da lista proporcionada no link ao lado.",
-    hasInstructions: true,
-    fileID: "1DBvwwcFZv93C2tp2GqSOSlj8U9WGfJD2",
-  },
-  {
-    id: 2,
-    due_date: new Date(2026, 1, 21),
-    subject: "Sistemas de Informação",
-    title: "Exercícios de banco de dados",
-    news: false,
-    desc: "Realizar os exercícios de banco de dados disponibilizados nos slides.",
-    hasInstructions: false,
-    fileID: "",
-  },
-];
-
+// DOCUMENTOS
 export const documents_array = [
   {
     id: 1,
