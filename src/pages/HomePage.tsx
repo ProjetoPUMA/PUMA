@@ -8,19 +8,15 @@ import HomeWork from "../components/HomeWork";
 import Modal from "../components/Modal";
 import Timeline from "../components/Timeline";
 import { homeworks_array, tests_array, works_array } from "../data/data";
-import {
-  addDays,
-  endOfDay,
-  getWeek,
-  getYear,
-  isAfter,
-  isBefore,
-  isToday,
-  subDays,
-} from "date-fns";
+import { isToday } from "date-fns";
 import Work from "../components/Work";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import {
+  getCloseWorks,
+  getWeeklyHomeworks,
+  getWeeklyTests,
+} from "../utils/filters";
 
 function HomePage() {
   const [isWModalOpen, setIsWModalOpen] = useState<boolean>(false);
@@ -31,37 +27,9 @@ function HomePage() {
   const hasTnews = tests_array.filter((item) => item.news).length !== 0;
   const hasWnews = works_array.filter((item) => item.news).length !== 0;
 
-  const usedHomeworks = homeworks_array.filter(
-    (item) => isAfter(item.due_date, new Date()) || isToday(item.due_date),
-  );
-  const weeklyHomeworks = usedHomeworks.filter((item) => {
-    const dueDate = item.due_date;
-    const today = new Date();
-
-    return (
-      getWeek(dueDate) == getWeek(today) && getYear(dueDate) == getYear(today)
-    );
-  });
-
-  const weeklyTests = tests_array.filter((item) => {
-    const dueDate = item.due_date;
-    const today = new Date();
-
-    return (
-      getWeek(dueDate) == getWeek(today) && getYear(dueDate) == getYear(today)
-    );
-  });
-
-  const fiveDaysWork = works_array.filter((item) => {
-    const dueDate = item.due_date;
-    const today = subDays(new Date(), 1);
-    const fiveDaysFromNow = endOfDay(addDays(today, 5));
-
-    return (
-      (isAfter(dueDate, today) || dueDate.getTime() === today.getTime()) &&
-      isBefore(dueDate, fiveDaysFromNow)
-    );
-  });
+  const weeklyHomeworks = getWeeklyHomeworks();
+  const weeklyTests = getWeeklyTests();
+  const fiveDaysWork = getCloseWorks();
 
   return (
     <>
@@ -70,7 +38,11 @@ function HomePage() {
         <Timeline />
       </section>
       <section className="mt-4 flex justify-content-between section__weekly">
-        <div className="weekly__container">
+        <div
+          className={classNames("weekly__container", {
+            "gap-1 justify-content-start": weeklyHomeworks.length === 0,
+          })}
+        >
           <div className="flex justify-content-between mb-5">
             <h2>Tarefas da Semana</h2>
             <h3
@@ -81,7 +53,9 @@ function HomePage() {
             </h3>
           </div>
           {weeklyHomeworks.length === 0 ? (
-            <p>Nenhuma tarefa programada para esta semana</p>
+            <p className="activities--null">
+              Nenhuma tarefa programada para esta semana
+            </p>
           ) : (
             <ul className="flex gap-3 home__lists swiper__container">
               <Swiper

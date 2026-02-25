@@ -1,15 +1,25 @@
+import {
+  SUBJECTS,
+  type Documents,
+  type Homework,
+  type Subjects,
+  type Tests,
+  type TimelineItem,
+  type Works,
+} from "../types/data-types";
+
 // ATUALIZAÇÕES IMPORTANTES
-export const timeline_obj = {
+export const timeline_obj: TimelineItem = {
   event: "o Kick-off Geral",
   start: new Date(2026, 2, 3),
   end: new Date(2026, 2, 6),
 };
 // TAREFAS SEMANAIS
-export const homeworks_array = [
+export const homeworks_array: Homework[] = [
   {
     id: 1,
     due_date: new Date(2026, 1, 27),
-    subject: "Inglês",
+    subject: SUBJECTS.INGLES,
     news: false,
     desc: "Fazer resumo sobre o Steve Jobs e ouvir discurso do Martin Luther King.",
     hasInstructions: false,
@@ -18,62 +28,46 @@ export const homeworks_array = [
   {
     id: 2,
     due_date: new Date(2026, 1, 26),
-    subject: "Comunicação e Expressão",
-    news: true,
+    subject: SUBJECTS.COMUNICACAO,
+    news: false,
     desc: "Fazer até o exercício 16 do arquivo de coletânea de erros. Identificar e circular o que está errado e escrever a versão correta.",
     hasInstructions: true,
     fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",
   },
+  {
+    id: 3,
+    due_date: new Date(2026, 2, 9),
+    subject: SUBJECTS.PROGRAMACAO,
+    news: true,
+    desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
+    hasInstructions: true,
+    fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
+  },
 ];
 // PROVAS SEMANAIS
-export const tests_array = [
-  {
-    id: 1,
-    due_date: new Date(2026, 1, 10),
-    subject: "Exemplo de teste",
-    news: false,
-    content: [
-      "Ainda não tivemos nenhuma prova",
-      "Esta prova irá sumir quando a primeira for anunciada",
-      // "Mas o nosso sistema precisa de um exemplo pra existir de fundo",
-      // "Se não ele não funciona",
-      // "whoops",
-    ],
-    fileID: "#",
-    hasInstructions: false,
-  },
+
+export const tests_array: Tests[] = [
+  // {
+  //   id: 1,
+  //   due_date: new Date(2026, 1, 25),
+  //   subject: SUBJECTS.CALCULO,
+  //   news: false,
+  //   hasInstructions: false,
+  //   content: ["Limites", "Derivadas", "Integrais"],
+  //   fileID: undefined,
+  // },
 ];
+
 // TRABALHOS PERTO DO PRAZO
-export const works_array = [
-  {
-    id: 1,
-    due_date: new Date(2026, 1, 23),
-    subject: "Linguagem de Programação",
-    title: "Lista de JAVA",
-    news: false,
-    desc: "Realizar os exercícios de 2 a 5 da lista proporcionada no link ao lado.",
-    hasInstructions: true,
-    fileID: "1DBvwwcFZv93C2tp2GqSOSlj8U9WGfJD2",
-  },
-  {
-    id: 2,
-    due_date: new Date(2026, 1, 21),
-    subject: "Sistemas de Informação",
-    title: "Exercícios de banco de dados",
-    news: false,
-    desc: "Realizar os exercícios de banco de dados disponibilizados nos slides.",
-    hasInstructions: false,
-    fileID: "",
-  },
-];
+export const works_array: Works[] = [];
 // MATÉRIAS (PROFESSORES, DESCRIÇÃO, HORÁRIOS, ETC)
-export const subjects_array = [
+export const subjects_array: Subjects[] = [
   {
     id: 3,
     teacher: "Nanci de Oliveira",
-    subject: "Cálculo",
+    subject: SUBJECTS.CALCULO,
     desc: "Teoria e prática de cálculo de funções, limites, derivadas e integrais",
-    link: "https://drive.google.com/drive/folders/1Bi2lptTcjr4Aa77ecE-4raAaEhKCcSN1?usp=drive_link",
+    link: "https://drive.google.com/drive/folders/1GUNBnSghGVW-74MPpeVC7U8aVpZ5rXe5?usp=drive_link",
     news: false,
     classes: [
       {
@@ -92,7 +86,7 @@ export const subjects_array = [
   {
     id: 5,
     teacher: "Claudio Etelvino de Lima",
-    subject: "Sistemas de Informação",
+    subject: SUBJECTS.SISTEMAS,
     desc: "Focada na prática da API e na aprendizagem de banco de dados",
     link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
     news: false,
@@ -108,9 +102,9 @@ export const subjects_array = [
   {
     id: 7,
     teacher: "Merlúcia Gavião",
-    subject: "Inglês",
+    subject: SUBJECTS.INGLES,
     desc: "Aulas sobre proficiência na lingua inglesa.",
-    link: "https://drive.google.com/drive/folders/1tHTnSA6ZFSl6ytK3QJOJMWCoWAYQ9wJf?usp=drive_link",
+    link: "https://drive.google.com/drive/folders/1i1aUhlBeaFfaUoQSB5xmKjTyp9WtqZf2?usp=drive_link",
     news: false,
     classes: [
       {
@@ -124,10 +118,10 @@ export const subjects_array = [
   {
     id: 4,
     teacher: "Eliane Penha Mergulhão Dias",
-    subject: "Comunicação e Expressão",
+    subject: SUBJECTS.COMUNICACAO,
     desc: "Prática de redação e gêneros textuais",
     link: "https://drive.google.com/drive/folders/1fOLTfmABRKk0e_6M1ypwZTJooRjGfMvw?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "tue",
@@ -145,9 +139,9 @@ export const subjects_array = [
   {
     id: 1,
     teacher: "Indefinido",
-    subject: "Engenharia de Software I",
+    subject: SUBJECTS.ENGENHARIA,
     desc: "Aula sobre conceitos de banco de dados junto com a parte do cliente das API (PO)",
-    link: "https://drive.google.com/drive/folders/1_OgFnkUL8DfG4twlTBzIjzt5bYWPxeMf?usp=drive_link",
+    link: "https://drive.google.com/drive/folders/1nspG39hKYTwjb1oQ4awnSkhfV1NGl_X8?usp=drive_link",
     news: false,
     classes: [
       {
@@ -166,10 +160,10 @@ export const subjects_array = [
   {
     id: 2,
     teacher: "Juliana Fornin Pasquini Martinez",
-    subject: "Linguagem de Programação",
+    subject: SUBJECTS.PROGRAMACAO,
     desc: "Focada na aprendizagem da linguagem JAVA e da integração de sistemas CRUD com banco de dados",
-    link: "https://drive.google.com/drive/folders/1ZRFhcHtuXjg3m25ohmVwfDRFy4T5H59Z?usp=drive_link",
-    news: false,
+    link: "https://drive.google.com/drive/folders/1_ARLUTlrSCJ-JJ2F14ASwWXJBcggZqmy?usp=drive_link",
+    news: true,
     classes: [
       {
         day: "mon",
@@ -188,7 +182,7 @@ export const subjects_array = [
   {
     id: 6,
     teacher: "Dercy Felix da Silva",
-    subject: "Contabilidade",
+    subject: SUBJECTS.CONTABILIDADE,
     desc: "Conteúdo aborda conceitos de contabilidade, como representações gráficas de balanço patrimonial",
     link: "https://drive.google.com/drive/folders/1wju7D3JPGN_tOTYnX_Ixeds6s1DXCI0Z?usp=drive_link",
     news: false,
@@ -203,7 +197,7 @@ export const subjects_array = [
   },
 ];
 // DOCUMENTOS
-export const documents_array = [
+export const documents_array: Documents[] = [
   {
     id: 1,
     name: "Novo Regulamento das Fatecs",
