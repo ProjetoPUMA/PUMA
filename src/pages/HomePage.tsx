@@ -135,37 +135,14 @@ function HomePage() {
                     </SwiperSlide>
                   ))}
               </Swiper>
-              {/* {weeklyHomeworks
-                .slice()
-                .sort((a, b) => {
-                  const expiresTodayA = isToday(a.due_date);
-                  const expiresTodayB = isToday(b.due_date);
-
-                  if (expiresTodayA !== expiresTodayB) {
-                    return expiresTodayA ? -1 : 1;
-                  }
-
-                  if (a.news !== b.news) {
-                    return Number(b.news) - Number(a.news);
-                  }
-
-                  return a.due_date.getTime() - b.due_date.getTime();
-                })
-                .map((item) => (
-                  <HomeWork
-                    fileID={item.fileID}
-                    hasInstructions={item.hasInstructions}
-                    key={item.id}
-                    news={item.news}
-                    desc={item.desc}
-                    subject={item.subject}
-                    date={item.due_date}
-                  />
-                ))} */}
             </ul>
           )}
         </div>
-        <div className="weekly__container weekly__container--work">
+        <div
+          className={classNames("weekly__container weekly__container--work", {
+            "gap-1 justify-content-start": weeklyTests.length === 0,
+          })}
+        >
           <div className="flex justify-content-between mb-5">
             <h2 className="weekly_HT">Provas da Semana</h2>
             <h3
@@ -176,7 +153,9 @@ function HomePage() {
             </h3>
           </div>
           {weeklyTests.length === 0 ? (
-            <p>Nenhuma prova programada para esta semana</p>
+            <p className="activities--null">
+              Nenhuma prova programada para esta semana
+            </p>
           ) : (
             <ul className="flex gap-3 home__lists swiper__container">
               <Swiper
@@ -239,7 +218,7 @@ function HomePage() {
           </h2>
         </div>
         {fiveDaysWork.length === 0 ? (
-          <p className="Trabalhos">
+          <p className="activities--null">
             Nenhum trabalho com prazo de entrega entre hoje e os próximos 5
             dias.
           </p>

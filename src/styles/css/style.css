@@ -362,6 +362,10 @@ main {
   bottom: 1px;
 }
 
+.activities--null {
+  font-size: 1.8rem;
+}
+
 .schedule__day {
   font-size: 2rem;
   -webkit-text-stroke-width: 1px;

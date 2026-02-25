@@ -8,21 +8,21 @@ export const timeline_obj = {
 export const homeworks_array = [
   {
     id: 1,
-    due_date: new Date(2026, 1, 24),
-    subject: "Sistemas de Informação",
+    due_date: new Date(2026, 1, 27),
+    subject: "Inglês",
     news: false,
-    desc: "Tarefa em grupo: Design Thinking; Discutir ideias e elaborar um protótipo no Figma para apresentar ao professor.",
-    hasInstructions: true,
-    fileID: "1qo8_PeJl2j2fdisbvDrk77GMihIDI18r",
+    desc: "Fazer resumo sobre o Steve Jobs e ouvir discurso do Martin Luther King.",
+    hasInstructions: false,
+    fileID: undefined,
   },
   {
     id: 2,
-    due_date: new Date(2026, 1, 27),
-    subject: "Inglês         ",
-    news: false,
-    desc: "Fazer resumo do Steve Jobs, e ouvir discurso do Martin Luther King.",
-    hasInstructions: false,
-    fileID: undefined,
+    due_date: new Date(2026, 1, 26),
+    subject: "Comunicação e Expressão",
+    news: true,
+    desc: "Fazer até o exercício 16 do arquivo de coletânea de erros. Identificar e circular o que está errado e escrever a versão correta.",
+    hasInstructions: true,
+    fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",
   },
 ];
 // PROVAS SEMANAIS
@@ -34,7 +34,7 @@ export const tests_array = [
     news: false,
     content: [
       "Ainda não tivemos nenhuma prova",
-      "Esta prova irá sumir quando a primeira for anunciada"
+      "Esta prova irá sumir quando a primeira for anunciada",
       // "Mas o nosso sistema precisa de um exemplo pra existir de fundo",
       // "Se não ele não funciona",
       // "whoops",
@@ -126,8 +126,8 @@ export const subjects_array = [
     teacher: "Eliane Penha Mergulhão Dias",
     subject: "Comunicação e Expressão",
     desc: "Prática de redação e gêneros textuais",
-    link: "https://drive.google.com/drive/folders/1hkbTPX6UFCEpDCjW8eN00TzKBgzKCFWx?usp=sharing",
-    news: false,
+    link: "https://drive.google.com/drive/folders/1fOLTfmABRKk0e_6M1ypwZTJooRjGfMvw?usp=drive_link",
+    news: true,
     classes: [
       {
         day: "tue",

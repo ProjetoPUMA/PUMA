@@ -179,7 +179,7 @@ function Modal({
                     {isBefore(item.due_date, new Date()) &&
                     !isToday(item.due_date) ? (
                       <small>
-                        Essa atividade já passou de sua de vencimento.
+                        Essa atividade já passou de sua data de vencimento.
                       </small>
                     ) : (
                       isToday(item.due_date) && (
