@@ -45,9 +45,9 @@ function Modal({
         <div className="modal__title mb-5">
           <h1>
             Todas {tests ? "as Provas" : works ? "os Trabalhos" : "as Tarefas"}
-            <h3 onClick={() => setState(false)} className="modal__close">
+            <span onClick={() => setState(false)} className="modal__close">
               X
-            </h3>
+            </span>
           </h1>
           <p>
             {data.filter((item) => item.news).length !== 0
