@@ -39,18 +39,15 @@ function Modal({
       ? data
       : notExpired_array;
 
-  console.log("ta expirado", isExpiredClicked);
-  console.log("mostrando todos", showAll);
-
   return (
-    <div className="modal__background">
-      <div className="modal__container">
+    <div className="modal__background" onClick={() => setState(false)}>
+      <div className="modal__container" onClick={(e) => e.stopPropagation()}>
         <div className="modal__title mb-5">
           <h1>
             Todas {tests ? "as Provas" : works ? "os Trabalhos" : "as Tarefas"}
-            <h3 onClick={() => setState(false)} className="modal__close">
+            <span onClick={() => setState(false)} className="modal__close">
               X
-            </h3>
+            </span>
           </h1>
           <p>
             {data.filter((item) => item.news).length !== 0
@@ -193,7 +190,9 @@ function Modal({
             </ul>
           ) : (
             <p className="modal__message">
-              Não temos nenhuma {tests ? "prova" : "atividade"} marcada ainda!
+              {isExpiredClicked && expired_array.length === 0
+                ? `Não temos nenhuma ${tests ? "prova" : "atividade"} expirada!`
+                : `Não temos nenhuma ${tests ? "prova" : "atividade"} marcada ainda!`}
             </p>
           )}
         </div>

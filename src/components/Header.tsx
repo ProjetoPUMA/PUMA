@@ -3,7 +3,7 @@ import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header() {
   const today = new Date();
@@ -12,6 +12,14 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const todayWeekday = format(today, "EEE", { locale: ptBR });
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isMenuOpen]);
 
   return (
     <header className="header">
@@ -109,7 +117,7 @@ function Header() {
               <div className="header__menu-container">
                 <div
                   className="header__menu"
-                  onClick={() => setIsMenuOpen(true)}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <i className="bx bx-x" />
                 </div>
@@ -129,23 +137,31 @@ function Header() {
                   to="/PUMA/"
                 >
                   Mural
+                  <span>01</span>
                 </Link>
-                <span>01</span>
               </li>
               <li onClick={() => setIsMenuOpen(false)}>
-                <NavLink to="/PUMA/materias">Matérias</NavLink>
-                <span>02</span>
+                <NavLink className="header__item--mobile" to="/PUMA/materias">
+                  Matérias <span>02</span>
+                </NavLink>
               </li>
               <li onClick={() => setIsMenuOpen(false)}>
-                <NavLink to="/PUMA/calendarios">Horários</NavLink>
-                <span>03</span>
+                <NavLink to="/PUMA/calendarios">
+                  Horários <span>03</span>
+                </NavLink>
               </li>
               <li onClick={() => setIsMenuOpen(false)}>
-                <NavLink to="/PUMA/documentos">Documentos</NavLink>
-                <span>04</span>
+                <NavLink to="/PUMA/documentos">
+                  Documentos <span>04</span>
+                </NavLink>
               </li>
             </ul>
           </nav>
+          <div className="nav__footer">
+            <div className="nav__footer-container">
+              <img src="colors_footer.svg" alt="cores do site" />
+            </div>
+          </div>
         </div>
       )}
     </header>

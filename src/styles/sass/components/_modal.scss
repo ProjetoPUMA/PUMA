@@ -11,6 +11,10 @@
     top: 0;
     left: 0;
     z-index: 10;
+
+    & main {
+      overflow-y: hidden;
+    }
   }
 
   &__filter {
@@ -47,7 +51,11 @@
       font-family: $lemon;
       margin-bottom: 1rem;
 
-      & h3 {
+      @include media(phonexs) {
+        flex-direction: row;
+      }
+
+      & span {
         background-color: $primary-dark;
         color: $primary-light;
         width: 3rem;
@@ -81,6 +89,11 @@
       list-style: none;
       width: 90%;
       margin: auto;
+    }
+
+    @include media(phonexs) {
+      height: 70rem;
+      width: 100%;
     }
   }
 
@@ -118,6 +131,7 @@
   &__message {
     width: 90%;
     text-align: center;
+    margin: auto;
   }
 
   &__item {

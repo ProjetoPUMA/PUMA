@@ -6,6 +6,11 @@
   height: 85%;
   position: relative;
 
+  @include media(phonexs) {
+    border: none;
+    border-bottom: 3.3px solid $surface-1000;
+  }
+
   & small {
     display: flex;
     margin-top: 1.6rem;
@@ -68,6 +73,11 @@
       font-family: $vintage-type;
       line-height: 2.2rem;
       -webkit-text-stroke-width: 1px;
+      min-width: 10rem !important;
+
+      & li {
+        min-width: 100rem !important;
+      }
     }
 
     & small {

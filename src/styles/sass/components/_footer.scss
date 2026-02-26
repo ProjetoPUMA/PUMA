@@ -8,6 +8,12 @@
   font-weight: 600;
   font-size: 1.5rem;
 
+  & p {
+    @include media(phonexs) {
+      text-align: center;
+    }
+  }
+
   &__img-container {
     height: 3rem;
   }

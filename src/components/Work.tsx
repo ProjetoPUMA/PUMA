@@ -17,7 +17,7 @@ function Work({
   news: boolean;
   desc: string;
   hasInstructions: boolean;
-  fileID: string;
+  fileID?: string;
 }) {
   return (
     <li>
