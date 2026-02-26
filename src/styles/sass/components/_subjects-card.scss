@@ -32,6 +32,10 @@
   &__news {
     font-size: 1.6rem !important;
   }
+
+  &__text {
+    align-self: flex-start;
+  }
 }
 
 .subjects__container {
@@ -46,11 +50,16 @@
     background-color: $primary-pink;
 
     & .subjects {
-      &__header h2 {
-        padding: 2rem 0 0 2.2rem;
-        -webkit-text-stroke-width: 1px;
-        margin-bottom: 0;
-        letter-spacing: 3px;
+      &__header {
+        & h2 {
+          padding: 2rem 0 0 2.2rem;
+          -webkit-text-stroke-width: 1px;
+          margin-bottom: 0;
+          letter-spacing: 3px;
+        }
+        &--phone h4 {
+          padding-left: 2rem;
+        }
       }
 
       &__info {
@@ -78,11 +87,27 @@
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23000000FF' stroke-width='6' stroke-dasharray='32' stroke-dashoffset='8' stroke-linecap='square'/%3e%3c/svg%3e");
 
     & .subjects {
-      &__header h2 {
-        background-color: $primary-light;
-        border-top: 4px solid $primary-sat-blue;
-        border-bottom: 4px solid $primary-sat-blue;
-        padding: 1rem 1rem 1rem 2.2rem;
+      &__header {
+        & h2 {
+          background-color: $primary-light;
+          border-top: 4px solid $primary-sat-blue;
+          border-bottom: 4px solid $primary-sat-blue;
+          padding: 1rem 1rem 1rem 2.2rem;
+        }
+
+        &--phone {
+          background-color: $primary-light;
+          border-top: 4px solid $primary-sat-blue;
+          border-bottom: 4px solid $primary-sat-blue;
+          padding: 1rem 1rem 0rem 2.2rem;
+          padding-bottom: 1rem;
+
+          & h2 {
+            background-color: none;
+            padding: 0;
+            border: none;
+          }
+        }
       }
 
       &__info {
@@ -104,9 +129,11 @@
     border: 3.3px solid $surface-1000;
 
     & .subjects {
-      &__header h2 {
-        border-top: 4px solid $primary-red;
-        border-bottom: 4px solid $primary-red;
+      &__header {
+        &--phone {
+          border-top: 4px solid $primary-red;
+          border-bottom: 4px solid $primary-red;
+        }
       }
     }
   }

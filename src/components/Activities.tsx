@@ -8,6 +8,7 @@ import { isToday } from "date-fns";
 import classNames from "classnames";
 import type { Dispatch } from "react";
 import type { Homework, Tests } from "../types/data-types";
+import { useMediaQuery } from "react-responsive";
 
 type ActivitiesProps =
   | {
@@ -24,12 +25,15 @@ type ActivitiesProps =
     };
 
 function Activities({ tests, setModalOpen, hasNews, data }: ActivitiesProps) {
+  const isPhone = useMediaQuery({ query: "(max-width:  42.8125em)" });
+
   return (
     <div
       className={classNames("weekly__container", {
         "gap-1 justify-content-start": data.length === 0,
         "weekly__container--work": tests,
         "weekly__container--lonely": data.length === 1,
+        "weekly__container--phone": isPhone,
       })}
     >
       <div className="flex justify-content-between mb-5">

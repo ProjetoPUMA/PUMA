@@ -50,6 +50,10 @@
     & p {
       font-size: 1.6rem;
       width: 60%;
+
+      @include media(phone) {
+        width: 100%;
+      }
     }
 
     & img {

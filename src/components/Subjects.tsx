@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 function Subjects({
@@ -18,6 +20,7 @@ function Subjects({
   id: number;
 }) {
   const new_ID = String(id);
+  const isPhone = useMediaQuery({ query: "(max-width:  42.8125em)" });
 
   return (
     <li className={`subjects__container subjects__container--${new_ID}`}>
@@ -25,17 +28,33 @@ function Subjects({
         <div className="subjects__header flex flex-column gap-1">
           <div className="flex w-100 justify-content-between subjects__info">
             <h4>{teacher}</h4>
-            <h4>
-              {days[0]} {days.length > 1 ? `| ${days[1]}` : ""}
-            </h4>
+            {!isPhone && (
+              <h4>
+                {days[0]} {days.length > 1 ? `| ${days[1]}` : ""}
+              </h4>
+            )}
           </div>
-          <h2>{subject}</h2>
+          {!isPhone ? (
+            <h2>{subject}</h2>
+          ) : (
+            <div className="flex flex-column mb-6 subjects__header--phone">
+              <h2>{subject}</h2>
+              <h4>
+                {days[0]} {days.length > 1 ? `| ${days[1]}` : ""}
+              </h4>
+            </div>
+          )}
         </div>
         <div className="subjects__desc">
           <div
             className={`flex flex-column  align-items-start ${news ? "mb-3" : ""}`}
           >
-            <div className="flex justify-content-between align-items-end w-100">
+            <div
+              className={classNames("flex justify-content-between  w-100", {
+                "align-items-center flex-column gap-5": isPhone,
+                "align-items-end": !isPhone,
+              })}
+            >
               <p className="subjects__text ">{desc}</p>
               <Link className="subjects__link" target="_blank" to={link ?? ""}>
                 Acessar conteúdo

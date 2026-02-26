@@ -31,30 +31,34 @@ function Timeline() {
   return (
     <div className="timeline">
       <div className="inner_border">
-          <h2>
-            Tempo restante até o {!hasStarted ? "começo" : "fim"} d
-            {timeline_obj.event}
-          </h2>
-          <span>
-            {weeks !== 0
-              ? `${weeks} semanas |`
-              : weeks === undefined
-                ? "0 semanas |"
-                : null}
-            {days !== 0 ? `${days} dias |` : days === undefined ? "0 dias |" : null}
-            {timeRemaning.hours !== 0
-              ? ` ${timeRemaning.hours} horas`
-              : timeRemaning.hours === undefined
-                ? "0 horas"
-                : null}
-          </span>
-          <small>
-            {hasStarted
-              ? `Término em ${format(timeline_obj.end, "dd/MM/yyyy", { locale: ptBR })}`
-              : `Início em ${format(timeline_obj.start, "dd/MM/yyyy", { locale: ptBR })}`}
-          </small>
-        </div>
+        <h2>
+          Tempo restante até o {!hasStarted ? "começo" : "fim"} d
+          {timeline_obj.event}
+        </h2>
+        <span>
+          {weeks !== 0 && weeks !== undefined
+            ? `${weeks} semana(s) |`
+            : weeks === undefined
+              ? "0 semanas |"
+              : null}
+          {days !== 0 && days !== undefined
+            ? `${days} dias |`
+            : days === undefined
+              ? "0 dias |"
+              : null}
+          {timeRemaning.hours !== 0 && timeRemaning.hours !== undefined
+            ? ` ${timeRemaning.hours} horas`
+            : timeRemaning.hours === undefined
+              ? "0 horas"
+              : null}
+        </span>
+        <small>
+          {hasStarted
+            ? `Término em ${format(timeline_obj.end, "dd/MM/yyyy", { locale: ptBR })}`
+            : `Início em ${format(timeline_obj.start, "dd/MM/yyyy", { locale: ptBR })}`}
+        </small>
       </div>
+    </div>
   );
 }
 
