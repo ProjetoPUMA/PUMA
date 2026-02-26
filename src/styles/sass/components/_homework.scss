@@ -68,6 +68,11 @@
       font-family: $vintage-type;
       line-height: 2.2rem;
       -webkit-text-stroke-width: 1px;
+      min-width: 10rem !important;
+
+      & li {
+        min-width: 100rem !important;
+      }
     }
 
     & small {

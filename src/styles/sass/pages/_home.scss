@@ -58,11 +58,10 @@
   overflow-x: auto;
   overflow-y: hidden;
   height: 100%;
-  width: 100%;
 }
 
 .home__lists > li {
-  min-width: 30rem;
+  min-width: 30rem !important;
   height: auto;
 }
 
@@ -228,6 +227,7 @@
 
 .swiper__container {
   width: 100%;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -271,4 +271,13 @@
 
 .activities--null {
   font-size: 1.8rem;
+}
+
+.weekly__container--lonely .swiper__container {
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.weekly__container--lonely .swiper-slide {
+  min-width: 30rem !important;
 }

@@ -171,11 +171,10 @@ main {
   overflow-x: auto;
   overflow-y: hidden;
   height: 100%;
-  width: 100%;
 }
 
 .home__lists > li {
-  min-width: 30rem;
+  min-width: 30rem !important;
   height: auto;
 }
 
@@ -321,6 +320,7 @@ main {
 
 .swiper__container {
   width: 100%;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -364,6 +364,15 @@ main {
 
 .activities--null {
   font-size: 1.8rem;
+}
+
+.weekly__container--lonely .swiper__container {
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.weekly__container--lonely .swiper-slide {
+  min-width: 30rem !important;
 }
 
 .schedule__day {
@@ -860,6 +869,10 @@ main {
   font-family: "VintageTypist", sans-serif;
   line-height: 2.2rem;
   -webkit-text-stroke-width: 1px;
+  min-width: 10rem !important;
+}
+.homework__desc ul li {
+  min-width: 100rem !important;
 }
 .homework__desc small {
   font-size: 1.6rem;
@@ -921,6 +934,9 @@ main {
   left: 0;
   z-index: 10;
 }
+.modal__background main {
+  overflow-y: hidden;
+}
 .modal__filter {
   background-color: #f9ecbf;
   padding: 1rem;
@@ -951,6 +967,11 @@ main {
   font-size: 2.5rem;
   font-family: "Lemon", sans-serif;
   margin-bottom: 1rem;
+}
+@media (max-width: 28.125em) {
+  .modal__title h1 {
+    flex-direction: row;
+  }
 }
 .modal__title h1 h3 {
   background-color: #1b1215;
@@ -983,6 +1004,12 @@ main {
   width: 90%;
   margin: auto;
 }
+@media (max-width: 28.125em) {
+  .modal__container {
+    height: 70rem;
+    width: 100%;
+  }
+}
 .modal__close {
   cursor: pointer;
 }
@@ -1011,6 +1038,7 @@ main {
 .modal__message {
   width: 90%;
   text-align: center;
+  margin: auto;
 }
 .modal__item {
   position: relative;

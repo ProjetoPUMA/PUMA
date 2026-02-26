@@ -46,20 +46,11 @@ export const homeworks_array: Homework[] = [
 ];
 // PROVAS SEMANAIS
 
-export const tests_array: Tests[] = [
-  // {
-  //   id: 1,
-  //   due_date: new Date(2026, 1, 25),
-  //   subject: SUBJECTS.CALCULO,
-  //   news: false,
-  //   hasInstructions: false,
-  //   content: ["Limites", "Derivadas", "Integrais"],
-  //   fileID: undefined,
-  // },
-];
+export const tests_array: Tests[] = [];
 
 // TRABALHOS PERTO DO PRAZO
 export const works_array: Works[] = [];
+
 // MATÉRIAS (PROFESSORES, DESCRIÇÃO, HORÁRIOS, ETC)
 export const subjects_array: Subjects[] = [
   {

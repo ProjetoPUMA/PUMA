@@ -63,7 +63,11 @@ function HomeWork({
             ))}
           </ul>
         )}
-        {isToday(date) && <small>!!! EXPIRA HOJE !!!</small>}
+        {isToday(date) && (
+          <small>
+            {!works ? "!!! EXPIRA HOJE !!!" : "BOA SORTE NA PROVA!"}
+          </small>
+        )}
         {hasInstructions && (
           <DownloadButton fileID={fileID}>
             Baixar {works ? "conteúdo" : "enunciado"}
