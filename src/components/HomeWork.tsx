@@ -32,16 +32,15 @@ function HomeWork({
         weekly__test: works,
       })}
     >
-      {news && (
-        <div className="homework__news">
-          <img src="new_sign.svg" alt="alerta de conteúdo novo" />
-        </div>
-      )}
-      {isToday(date) && (
+      {isToday(date) ? (
         <div className="homework__attention">
           <img src="attention_sign.svg" alt="alerta de conteúdo novo" />
         </div>
-      )}
+      ) : news ? (
+        <div className="homework__news">
+          <img src="new_sign.svg" alt="alerta de conteúdo novo" />
+        </div>
+      ) : null}
       <div>
         <h4>{formatedDate}</h4>
         <h3>{subject}</h3>

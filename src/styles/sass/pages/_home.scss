@@ -68,6 +68,14 @@
   height: auto;
 }
 
+.works__desc {
+  width: 80%;
+
+  @include media(phone) {
+    width: 100%;
+  }
+}
+
 .works__list {
   list-style: none;
 

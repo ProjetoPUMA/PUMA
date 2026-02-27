@@ -7,6 +7,14 @@
   width: 100%;
 }
 
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
 @font-face {
   font-family: "KottaOne";
   src: url(/fonts/KottaOne-Regular.ttf);
@@ -179,6 +187,15 @@ main {
 .home__lists > li {
   min-width: 30rem !important;
   height: auto;
+}
+
+.works__desc {
+  width: 80%;
+}
+@media (max-width: 42.8125em) {
+  .works__desc {
+    width: 100%;
+  }
 }
 
 .works__list {
@@ -1101,7 +1118,7 @@ main {
 }
 @media (max-width: 28.125em) {
   .modal__container {
-    height: 70rem;
+    height: 95rem;
     width: 100%;
   }
 }
@@ -1613,6 +1630,15 @@ main {
   background-color: #eece79;
   background-image: none;
   border: 3.3px solid black;
+}
+.subjects__container--2 .subjects__header h2 {
+  border-top: 4px solid #ea6169;
+  border-bottom: 4px solid #ea6169;
+}
+@media (max-width: 42.8125em) {
+  .subjects__container--2 .subjects__header h2 {
+    border: none;
+  }
 }
 .subjects__container--2 .subjects__header--phone {
   border-top: 4px solid #ea6169;

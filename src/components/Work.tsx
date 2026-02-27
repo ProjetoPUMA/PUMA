@@ -4,6 +4,7 @@ import DownloadButton from "./DownloadButton";
 
 function Work({
   date,
+  hasDate,
   subject,
   title,
   news,
@@ -12,6 +13,7 @@ function Work({
   fileID,
 }: {
   date: Date;
+  hasDate?: boolean;
   subject: string;
   title: string;
   news: boolean;
@@ -24,13 +26,17 @@ function Work({
       {news && <p>NOVO!</p>}
       <div className="flex justify-content-between works__list--header">
         <div>
-          <h4>{format(date, "dd/MM", { locale: ptBR })}</h4>
+          <h4>
+            {!hasDate
+              ? "Sem data definida"
+              : format(date, "dd/MM", { locale: ptBR })}
+          </h4>
           <h3>{title}</h3>
         </div>
         <span>{subject}</span>
       </div>
       <div className="flex justify-content-between works__list--content">
-        <p>{desc}</p>
+        <p className="works__desc">{desc}</p>
         {hasInstructions && (
           <DownloadButton fileID={fileID}>Baixar Instruções</DownloadButton>
         )}
