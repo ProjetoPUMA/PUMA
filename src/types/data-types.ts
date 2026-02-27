@@ -20,6 +20,7 @@ export interface Homework {
   id: number;
   due_date: Date;
   subject: SubjectType;
+  hasDate?: boolean | undefined;
   news: boolean;
   desc: string;
   hasInstructions: boolean;
@@ -30,6 +31,7 @@ export interface Tests {
   id: number;
   due_date: Date;
   subject: SubjectType;
+  hasDate?: boolean | undefined;
   news: boolean;
   content: string[];
   hasInstructions: boolean;

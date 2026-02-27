@@ -29,7 +29,7 @@ export const homeworks_array: Homework[] = [
     id: 2,
     due_date: new Date(2026, 1, 26),
     subject: SUBJECTS.COMUNICACAO,
-    news: true,
+    news: false,
     desc: "Fazer até o exercício 16 do arquivo de coletânea de erros. Identificar e circular o que está errado e escrever a versão correta.",
     hasInstructions: true,
     fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",

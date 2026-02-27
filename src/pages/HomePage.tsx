@@ -103,7 +103,7 @@ function HomePage() {
       <section className="mt-8">
         <Link
           className="contact__container"
-          to="http://wa.me/5524988176141"
+          to="https://forms.gle/feKmFNbXEWpZNcAq9"
           target="_blank"
         >
           <div className="contact">

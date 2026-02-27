@@ -139,9 +139,11 @@ function Modal({ data, tests, setState, works }: ModalProps) {
                     ) : null}
 
                     <h4>
-                      {"hasDate" in item && item.hasDate
+                      {item.hasDate
                         ? format(item.due_date, "dd/MM", { locale: ptBR })
-                        : "Sem data definida"}
+                        : item.hasDate == undefined
+                          ? format(item.due_date, "dd/MM", { locale: ptBR })
+                          : "Sem data definida"}
                     </h4>
                     {!works ? (
                       <h2>{item.subject}</h2>
