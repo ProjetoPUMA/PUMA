@@ -87,13 +87,14 @@ function HomePage() {
             {fiveDaysWork.map((work) => (
               <Work
                 key={work.id}
-                date={work.due_date}
+                date={work?.due_date}
                 subject={work.subject}
                 title={work.title}
                 news={work.news}
                 desc={work.desc}
                 hasInstructions={work.hasInstructions}
                 fileID={work.fileID}
+                hasDate={work.hasDate}
               />
             ))}
           </ul>
@@ -129,13 +130,28 @@ function HomePage() {
         </Link>
       </section>
       {isHomeWorkModalOpen && (
-        <Modal data={homeworks_array} setState={setIsHomeWorkModalOpen} />
+        <Modal
+          data={homeworks_array}
+          tests={false}
+          works={false}
+          setState={setIsHomeWorkModalOpen}
+        />
       )}
       {isTestsModalOpen && (
-        <Modal data={tests_array} tests setState={setIsTestsModalOpen} />
+        <Modal
+          data={tests_array}
+          tests={true}
+          works={false}
+          setState={setIsTestsModalOpen}
+        />
       )}
       {isWorkModalOpen && (
-        <Modal data={works_array} works setState={setIsWorkModalOpen} />
+        <Modal
+          data={works_array}
+          tests={false}
+          works={true}
+          setState={setIsWorkModalOpen}
+        />
       )}
     </>
   );

@@ -11,7 +11,7 @@ import {
 // ATUALIZAÇÕES IMPORTANTES
 export const timeline_obj: TimelineItem = {
   event: "o Kick-off Geral",
-  start: new Date(2026, 2, 3),
+  start: new Date(2026, 2, 5),
   end: new Date(2026, 2, 6),
 };
 // TAREFAS SEMANAIS
@@ -29,27 +29,61 @@ export const homeworks_array: Homework[] = [
     id: 2,
     due_date: new Date(2026, 1, 26),
     subject: SUBJECTS.COMUNICACAO,
-    news: false,
+    news: true,
     desc: "Fazer até o exercício 16 do arquivo de coletânea de erros. Identificar e circular o que está errado e escrever a versão correta.",
     hasInstructions: true,
     fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",
   },
-  {
-    id: 3,
-    due_date: new Date(2026, 2, 9),
-    subject: SUBJECTS.PROGRAMACAO,
-    news: true,
-    desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
-    hasInstructions: true,
-    fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
-  },
+  // {
+  //   id: 3,
+  //   due_date: new Date(2026, 2, 9),
+  //   subject: SUBJECTS.PROGRAMACAO,
+  //   news: true,
+  //   desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
+  //   hasInstructions: true,
+  //   fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
+  // },
 ];
 // PROVAS SEMANAIS
 
 export const tests_array: Tests[] = [];
 
 // TRABALHOS PERTO DO PRAZO
-export const works_array: Works[] = [];
+export const works_array: Works[] = [
+  {
+    id: 1,
+    hasDate: false,
+    due_date: new Date(2026, 1, 28),
+    subject: SUBJECTS.SISTEMAS,
+    title: "Atividade Avaliativa 1",
+    news: true,
+    desc: "Atividade prática para transformar os dados dos arquivos de exel em banco de dados conceituais. Faça o diagrama de entidade e relacionamento dos exemplos 1 (DRE 2019), 3 (Estoque), 4 (SAC) e 5 (Logística).",
+    hasInstructions: true,
+    fileID: "1bfIPHJAiCCUH-dZxghpvxyfe_WDUetEF",
+  },
+  {
+    id: 2,
+    hasDate: false,
+    due_date: new Date(2026, 2, 9),
+    subject: SUBJECTS.CALCULO,
+    title: "Lista 01",
+    news: false,
+    desc: "Fazer todos os exercícios da lista 1 parte 1. Link de download ao lado.",
+    hasInstructions: true,
+    fileID: "1XqvtQRpDMAAdygctWT4y3Hi8MAtBGxjY",
+  },
+  {
+    id: 3,
+    hasDate: true,
+    due_date: new Date(2026, 2, 9),
+    subject: SUBJECTS.PROGRAMACAO,
+    title: "Lista Prática 01",
+    news: true,
+    desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
+    hasInstructions: true,
+    fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
+  },
+];
 
 // MATÉRIAS (PROFESSORES, DESCRIÇÃO, HORÁRIOS, ETC)
 export const subjects_array: Subjects[] = [
@@ -80,7 +114,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.SISTEMAS,
     desc: "Focada na prática da API e na aprendizagem de banco de dados",
     link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
-    news: false,
+    news: true,
     classes: [
       {
         day: "thu",
@@ -115,10 +149,15 @@ export const subjects_array: Subjects[] = [
     news: false,
     classes: [
       {
-        day: "tue",
-        start: "10:55",
-        end: "12:35",
+        day: "mon",
+        start: "07:10",
+        end: "08:50",
       },
+      // {
+      //   day: "tue",
+      //   start: "10:55",
+      //   end: "12:35",
+      // },
       {
         day: "thu",
         start: "10:55",
@@ -135,11 +174,11 @@ export const subjects_array: Subjects[] = [
     link: "https://drive.google.com/drive/folders/1nspG39hKYTwjb1oQ4awnSkhfV1NGl_X8?usp=drive_link",
     news: false,
     classes: [
-      {
-        day: "mon",
-        start: "07:10",
-        end: "08:50",
-      },
+      // {
+      //   day: "mon",
+      //   start: "07:10",
+      //   end: "08:50",
+      // },
       {
         day: "tue",
         start: "07:10",

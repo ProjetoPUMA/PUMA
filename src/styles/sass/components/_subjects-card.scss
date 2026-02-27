@@ -130,6 +130,15 @@
 
     & .subjects {
       &__header {
+        & h2 {
+          border-top: 4px solid $primary-red;
+          border-bottom: 4px solid $primary-red;
+
+          @include media(phone) {
+            border: none;
+          }
+        }
+
         &--phone {
           border-top: 4px solid $primary-red;
           border-bottom: 4px solid $primary-red;

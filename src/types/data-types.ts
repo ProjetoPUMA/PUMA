@@ -38,6 +38,7 @@ export interface Tests {
 
 export interface Works {
   id: number;
+  hasDate?: boolean;
   due_date: Date;
   subject: SubjectType;
   title: string;

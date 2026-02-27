@@ -8,7 +8,8 @@ function CalendarsPage() {
 
   const roomInfo = {
     room: "107",
-    lab: "402",
+    lab1: "402",
+    lab2: "409",
   };
 
   const daysWeek = [
@@ -64,7 +65,8 @@ function CalendarsPage() {
         Horários
         <div className="flex gap-5">
           <span>Sala de Aula: {roomInfo.room}</span>
-          <span>Laboratório: {roomInfo.lab}</span>
+          <span>Laboratório Sistemas: {roomInfo.lab1}</span>
+          <span>Laboratório Programação: {roomInfo.lab2}</span>
         </div>
       </h1>
       {/* <div className="flex justify-content-between mb-8">

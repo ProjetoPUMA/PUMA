@@ -1,30 +1,31 @@
 import { format, isBefore, isToday } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import DownloadButton from "./DownloadButton";
-import { useState } from "react";
+import { useState, type Dispatch } from "react";
 import classNames from "classnames";
+import type { Homework, Tests, Works } from "../types/data-types";
 
-function Modal({
-  data,
-  tests,
-  setState,
-  works,
-}: {
-  data: {
-    id: number;
-    due_date: Date;
-    subject: string;
-    news: boolean;
-    desc?: string;
-    content?: string[];
-    hasInstructions?: boolean;
-    fileID?: string;
-    title?: string;
-  }[];
-  tests?: boolean;
-  setState: React.Dispatch<React.SetStateAction<boolean>>;
-  works?: boolean;
-}) {
+type ModalProps =
+  | {
+      works: true;
+      tests: false;
+      data: Works[];
+      setState: Dispatch<React.SetStateAction<boolean>>;
+    }
+  | {
+      tests: true;
+      works: false;
+      data: Tests[];
+      setState: Dispatch<React.SetStateAction<boolean>>;
+    }
+  | {
+      tests: false;
+      works: false;
+      data: Homework[];
+      setState: Dispatch<React.SetStateAction<boolean>>;
+    };
+
+function Modal({ data, tests, setState, works }: ModalProps) {
   const [isExpiredClicked, setIsExpiredClicked] = useState<boolean>(false);
   const [showAll, setShowAll] = useState<boolean>(true);
   const expired_array = data.filter(
@@ -124,40 +125,47 @@ function Modal({
                     })}
                     key={item.id}
                   >
-                    {item.news && (
-                      <div className="homework__news homework__news--modal">
-                        <img src="new_sign.svg" alt="alerta de conteúdo novo" />
-                      </div>
-                    )}
-                    {isToday(item.due_date) && (
+                    {isToday(item.due_date) ? (
                       <div className="homework__attention homework__attention--modal">
                         <img
                           src="attention_sign.svg"
                           alt="alerta de conteúdo novo"
                         />
                       </div>
-                    )}
-                    <h4>{format(item.due_date, "dd/MM", { locale: ptBR })}</h4>
+                    ) : item.news ? (
+                      <div className="homework__news homework__news--modal">
+                        <img src="new_sign.svg" alt="alerta de conteúdo novo" />
+                      </div>
+                    ) : null}
+
+                    <h4>
+                      {"hasDate" in item && item.hasDate
+                        ? format(item.due_date, "dd/MM", { locale: ptBR })
+                        : "Sem data definida"}
+                    </h4>
                     {!works ? (
                       <h2>{item.subject}</h2>
                     ) : (
                       <>
                         <h3>{item.subject}</h3>
-                        <h2>{item.title}</h2>
+                        <h2>{"title" in item && item.title}</h2>
                       </>
                     )}
 
                     {tests ? (
                       <ul className="mb-4">
-                        {item.content?.map((subject: string, index: number) => (
-                          <li key={index}>* {subject}</li>
-                        ))}
+                        {"content" in item &&
+                          item.content?.map(
+                            (subject: string, index: number) => (
+                              <li key={index}>* {subject}</li>
+                            ),
+                          )}
                       </ul>
                     ) : (
                       <p
                         className={`${isBefore(item.due_date, new Date()) ? "mb-0" : "mb-4"}`}
                       >
-                        {item.desc}
+                        {"desc" in item && item.desc}
                       </p>
                     )}
                     <div className="flex justify-content-end">
