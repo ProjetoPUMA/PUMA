@@ -34,15 +34,15 @@ export const homeworks_array: Homework[] = [
     hasInstructions: true,
     fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",
   },
-  // {
-  //   id: 3,
-  //   due_date: new Date(2026, 2, 9),
-  //   subject: SUBJECTS.PROGRAMACAO,
-  //   news: true,
-  //   desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
-  //   hasInstructions: true,
-  //   fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
-  // },
+  {
+    id: 3,
+    due_date: new Date(2026, 2, 5),
+    subject: SUBJECTS.COMUNICACAO,
+    news: true,
+    desc: "Ler o texto no arquivo fornecido e escrever um resumo para cada parágrafo. A professora perguntará a respeito para alunos sorteados.",
+    hasInstructions: true,
+    fileID: "11imT_j9P2qB2tsB9qsDrKTXx4ce6MDAOo",
+  },
 ];
 // PROVAS SEMANAIS
 
@@ -56,7 +56,7 @@ export const works_array: Works[] = [
     due_date: new Date(2026, 2, 6),
     subject: SUBJECTS.SISTEMAS,
     title: "Atividade Avaliativa 1",
-    news: true,
+    news: false,
     desc: "Atividade prática para transformar os dados dos arquivos de exel em banco de dados conceituais. Faça o diagrama de entidade e relacionamento dos exemplos 1 (DRE 2019), 3 (Estoque), 4 (SAC) e 5 (Logística).",
     hasInstructions: true,
     fileID: "1bfIPHJAiCCUH-dZxghpvxyfe_WDUetEF",
@@ -78,7 +78,7 @@ export const works_array: Works[] = [
     due_date: new Date(2026, 2, 9),
     subject: SUBJECTS.PROGRAMACAO,
     title: "Lista Prática 01",
-    news: true,
+    news: false,
     desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
     hasInstructions: true,
     fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
@@ -114,7 +114,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.SISTEMAS,
     desc: "Focada na prática da API e na aprendizagem de banco de dados",
     link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "thu",
@@ -149,15 +149,10 @@ export const subjects_array: Subjects[] = [
     news: false,
     classes: [
       {
-        day: "mon",
-        start: "07:10",
-        end: "08:50",
+        day: "tue",
+        start: "10:55",
+        end: "12:35",
       },
-      // {
-      //   day: "tue",
-      //   start: "10:55",
-      //   end: "12:35",
-      // },
       {
         day: "thu",
         start: "10:55",
@@ -174,11 +169,11 @@ export const subjects_array: Subjects[] = [
     link: "https://drive.google.com/drive/folders/1nspG39hKYTwjb1oQ4awnSkhfV1NGl_X8?usp=drive_link",
     news: false,
     classes: [
-      // {
-      //   day: "mon",
-      //   start: "07:10",
-      //   end: "08:50",
-      // },
+      {
+        day: "mon",
+        start: "07:10",
+        end: "08:50",
+      },
       {
         day: "tue",
         start: "07:10",
@@ -193,7 +188,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.PROGRAMACAO,
     desc: "Focada na aprendizagem da linguagem JAVA e da integração de sistemas CRUD com banco de dados",
     link: "https://drive.google.com/drive/folders/1_ARLUTlrSCJ-JJ2F14ASwWXJBcggZqmy?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "mon",
