@@ -42,3 +42,56 @@
   border-radius: 50%;
   padding: 1rem;
 }
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: 3px solid $surface-1000;
+  text-transform: uppercase;
+  font-family: $kotta-one;
+  font-size: 1.8rem;
+  -webkit-text-stroke-width: 1px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  &--dark {
+    background-color: $primary-dark;
+    color: $primary-light;
+  }
+
+  &--light {
+    background-color: $primary-light;
+    color: $primary-dark;
+  }
+
+  &--blue {
+    background-color: $primary-blue;
+  }
+  &--red {
+    background-color: $primary-red;
+  }
+
+  &--yellow {
+    background-color: $primary-yellow;
+  }
+
+  &--pink {
+    background-color: $primary-pink;
+  }
+
+  &--green {
+    background-color: $primary-green;
+  }
+
+  &--sat-green {
+    background-color: $primary-sat-green;
+  }
+
+  &--sat-blue {
+    background-color: $primary-sat-blue;
+  }
+}

@@ -53,7 +53,7 @@ export const works_array: Works[] = [
   {
     id: 1,
     hasDate: false,
-    due_date: new Date(2026, 1, 28),
+    due_date: new Date(2026, 2, 6),
     subject: SUBJECTS.SISTEMAS,
     title: "Atividade Avaliativa 1",
     news: true,
@@ -64,7 +64,7 @@ export const works_array: Works[] = [
   {
     id: 2,
     hasDate: false,
-    due_date: new Date(2026, 2, 9),
+    due_date: new Date(2026, 2, 6),
     subject: SUBJECTS.CALCULO,
     title: "Lista 01",
     news: false,

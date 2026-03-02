@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import SubjectsPage from "./pages/SubjectsPage";
 import DocumentsPage from "./pages/DocumentsPage";
 import CalendarsPage from "./pages/CalendarsPage";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="documentos" element={<DocumentsPage />} />
         <Route path="calendarios" element={<CalendarsPage />} />
       </Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
