@@ -10,7 +10,10 @@ function DefaultLayout() {
       </section>
       <footer className="footer">
         <div className="footer__img-container">
-          <img src="colors_footer.svg" alt="paleta de cores do site" />
+          <img
+            src={`${import.meta.env.BASE_URL}colors_footer.svg`}
+            alt="paleta de cores do site"
+          />
         </div>
         <p>©Projeto P.U.M.A. 2026 | Todos os direitos reservados</p>
       </footer>

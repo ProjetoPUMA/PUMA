@@ -1667,6 +1667,10 @@ main {
   overflow: hidden;
 }
 
+.subjects {
+  text-decoration: none;
+  color: #1b1215;
+}
 .subjects__header h2 {
   font-size: 4rem;
   font-weight: 600;

@@ -63,6 +63,7 @@ export interface Subjects {
     end: string;
   }[];
   days: string[];
+  url: string;
 }
 
 export interface Documents {

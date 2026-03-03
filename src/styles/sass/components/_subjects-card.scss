@@ -1,4 +1,7 @@
 .subjects {
+  text-decoration: none;
+  color: $primary-dark;
+
   &__header {
     & h2 {
       font-size: 4rem;

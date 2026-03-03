@@ -107,6 +107,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Terça-feira", "Quarta-feira"],
+    url: "calculo",
   },
   {
     id: 5,
@@ -123,6 +124,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Quinta-feira"],
+    url: "sistemas",
   },
   {
     id: 7,
@@ -139,6 +141,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Sexta-feira"],
+    url: "ingles",
   },
   {
     id: 4,
@@ -160,6 +163,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Terça-feira", "Quinta-feira"],
+    url: "comunicacao",
   },
   {
     id: 1,
@@ -181,6 +185,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Segunda-feira", "Terça-feira"],
+    url: "engenharia",
   },
   {
     id: 2,
@@ -202,6 +207,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Segunda-feira", "Quarta-feira"],
+    url: "programacao",
   },
 
   {
@@ -219,6 +225,7 @@ export const subjects_array: Subjects[] = [
       },
     ],
     days: ["Sexta-feira"],
+    url: "contabilidade",
   },
 ];
 // DOCUMENTOS

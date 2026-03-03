@@ -8,8 +8,8 @@ function Subjects({
   subject,
   desc,
   news,
-  link,
   id,
+  url,
 }: {
   teacher: string;
   days: string[];
@@ -18,6 +18,7 @@ function Subjects({
   news: boolean;
   link?: string;
   id: number;
+  url: string;
 }) {
   const new_ID = String(id);
   const isPhone = useMediaQuery({ query: "(max-width:  42.8125em)" });
@@ -56,8 +57,11 @@ function Subjects({
               })}
             >
               <p className="subjects__text ">{desc}</p>
-              <Link className="subjects__link" target="_blank" to={link ?? ""}>
-                Acessar conteúdo
+              <Link
+                className="subjects__link"
+                to={`/PUMA/materias/mural/${url}`}
+              >
+                Acessar
               </Link>
             </div>
             {news && (

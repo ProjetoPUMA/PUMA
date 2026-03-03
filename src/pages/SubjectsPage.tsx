@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Subjects from "../components/Subjects";
 import { subjects_array } from "../data/data";
 
@@ -18,9 +19,11 @@ function SubjectsPage() {
               days={item.days}
               link={item.link}
               id={item.id}
+              url={item.url}
             />
           ))}
       </ul>
+      <Outlet />
     </section>
   );
 }

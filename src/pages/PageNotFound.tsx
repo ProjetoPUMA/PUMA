@@ -8,7 +8,10 @@ function PageNotFound() {
     <main className="dotted">
       <div className="not-found not-found__container">
         <div className="not-found__img-container">
-          <img src="colors_footer.svg" alt="puma confuso" />
+          <img
+            src={`${import.meta.env.BASE_URL}colors_footer.svg`}
+            alt="puma confuso"
+          />
         </div>
         <div className="not-found__header">
           <h1>404</h1>
@@ -16,7 +19,10 @@ function PageNotFound() {
         </div>
         <div className="not-found__content">
           <div className="not-found__content-img">
-            <img src="puma_resting.svg" alt="puma confuso" />
+            <img
+              src={`${import.meta.env.BASE_URL}puma_resting.svg`}
+              alt="puma confuso"
+            />
           </div>
           <p>
             Lamentamos o ocorrido, por favor, clique no botão abaixo para voltar

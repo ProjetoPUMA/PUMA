@@ -27,10 +27,16 @@ function Header() {
         {!isPhone ? (
           <div className="header__title-container">
             <div className="header__logo">
-              <img src="puma_header.svg" alt="puma" />
+              <img
+                src={`${import.meta.env.BASE_URL}puma_header.svg`}
+                alt="puma"
+              />
             </div>
             <div className="header__title">
-              <img src="title_header.svg" alt="tótulo do site" />
+              <img
+                src={`${import.meta.env.BASE_URL}title_header.svg`}
+                alt="rótulo do site"
+              />
             </div>
             <div className="header__date">
               <span>Data:</span>
@@ -41,10 +47,16 @@ function Header() {
           <div>
             <div className="header__title-container">
               <div className="header__logo">
-                <img src="puma_header.svg" alt="puma" />
+                <img
+                  src={`${import.meta.env.BASE_URL}puma_header.svg`}
+                  alt="puma"
+                />
               </div>
               <div className="header__title">
-                <img src="title_header.svg" alt="título do site" />
+                <img
+                  src={`${import.meta.env.BASE_URL}title_header.svg`}
+                  alt="título do site"
+                />
               </div>
               <div className="header__menu-container">
                 <div
@@ -86,7 +98,8 @@ function Header() {
                 active:
                   location.pathname !== "/PUMA/materias" &&
                   location.pathname !== "/PUMA/calendarios" &&
-                  location.pathname !== "/PUMA/documentos",
+                  location.pathname !== "/PUMA/documentos" &&
+                  !location.pathname.includes("/PUMA/materias/"),
               })}
               to="/PUMA/"
             >
@@ -109,10 +122,16 @@ function Header() {
           <div>
             <div className="header__title-container">
               <div className="header__logo">
-                <img src="puma_header.svg" alt="puma" />
+                <img
+                  src={`${import.meta.env.BASE_URL}puma_header.svg`}
+                  alt="puma"
+                />
               </div>
               <div className="header__title">
-                <img src="puma_inverted.svg" alt="título do site" />
+                <img
+                  src={`${import.meta.env.BASE_URL}puma_inverted.svg`}
+                  alt="título do site"
+                />
               </div>
               <div className="header__menu-container">
                 <div
@@ -159,7 +178,7 @@ function Header() {
           </nav>
           <div className="nav__footer">
             <div className="nav__footer-container">
-              <img src="colors_footer.svg" alt="cores do site" />
+              <img src="/colors_footer.svg" alt="cores do site" />
             </div>
           </div>
         </div>
