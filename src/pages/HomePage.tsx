@@ -12,6 +12,11 @@ import {
 import Activities from "../components/Activities";
 import { useMediaQuery } from "react-responsive";
 import classNames from "classnames";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { SwiperSlide, Swiper } from "swiper/react";
 
 function HomePage() {
   const [isWorkModalOpen, setIsWorkModalOpen] = useState<boolean>(false);
@@ -77,26 +82,68 @@ function HomePage() {
             Ver tudo&gt;&gt;
           </h2>
         </div>
-        {fiveDaysWork.length === 0 ? (
-          <p className="activities--null">
-            Nenhum trabalho com prazo de entrega entre hoje e os próximos 5
-            dias.
-          </p>
+        {!isPhone ? (
+          fiveDaysWork.length === 0 ? (
+            <p className="activities--null">
+              Nenhum trabalho com prazo de entrega entre hoje e os próximos 5
+              dias.
+            </p>
+          ) : (
+            <ul className="works__list flex flex-column gap-3">
+              {fiveDaysWork.map((work) => (
+                <Work
+                  key={work.id}
+                  date={work?.due_date}
+                  subject={work.subject}
+                  title={work.title}
+                  news={work.news}
+                  desc={work.desc}
+                  hasInstructions={work.hasInstructions}
+                  fileID={work.fileID}
+                  hasDate={work.hasDate}
+                />
+              ))}
+            </ul>
+          )
         ) : (
           <ul className="works__list flex flex-column gap-3">
-            {fiveDaysWork.map((work) => (
-              <Work
-                key={work.id}
-                date={work?.due_date}
-                subject={work.subject}
-                title={work.title}
-                news={work.news}
-                desc={work.desc}
-                hasInstructions={work.hasInstructions}
-                fileID={work.fileID}
-                hasDate={work.hasDate}
-              />
-            ))}
+            <Swiper
+              modules={[Navigation, Pagination]}
+              navigation
+              pagination={{
+                clickable: true,
+              }}
+              observer={true}
+              observeParents={true}
+              parallax={true}
+              slidesPerView={1}
+              spaceBetween={10}
+              breakpoints={{
+                480: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+              }}
+            >
+              {fiveDaysWork.map((work) => (
+                <SwiperSlide key={work.id}>
+                  <Work
+                    date={work?.due_date}
+                    subject={work.subject}
+                    title={work.title}
+                    news={work.news}
+                    desc={work.desc}
+                    hasInstructions={work.hasInstructions}
+                    fileID={work.fileID}
+                    hasDate={work.hasDate}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </ul>
         )}
       </section>

@@ -27,15 +27,13 @@ function Work({
       <div className="flex justify-content-between works__list--header">
         <div>
           <h4>
-            {!hasDate
-              ? "Sem data definida"
-              : format(date, "dd/MM", { locale: ptBR })}
+            {!hasDate ? "Sem data" : format(date, "dd/MM", { locale: ptBR })}
           </h4>
           <h3>{title}</h3>
         </div>
         <span>{subject}</span>
       </div>
-      <div className="flex justify-content-between works__list--content">
+      <div className="flex  works__list--content">
         <p className="works__desc">{desc}</p>
         {hasInstructions && (
           <DownloadButton fileID={fileID}>Baixar Instruções</DownloadButton>

@@ -63,7 +63,7 @@ function CalendarsPage() {
     <>
       <h1 className="schedule__title flex justify-content-between align-items-center">
         Horários
-        <div className="flex gap-5">
+        <div className="flex gap-5 schedule__room">
           <span>Sala de Aula: {roomInfo.room}</span>
           <span>Laboratório Sistemas: {roomInfo.lab1}</span>
           <span>Laboratório Programação: {roomInfo.lab2}</span>

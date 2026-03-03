@@ -21,6 +21,17 @@
       -webkit-text-stroke: 1px;
     }
   }
+
+  &--3 {
+    background-color: $primary-pink;
+    border-radius: 0;
+
+    & .documents__title {
+      background-color: $primary-red;
+      border-bottom: 3px solid $surface-1000;
+      color: $primary-dark;
+    }
+  }
 }
 
 .documents {

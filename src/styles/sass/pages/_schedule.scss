@@ -1,4 +1,12 @@
 .schedule {
+  &__room {
+    @include media(phonexs) {
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem 0;
+    }
+  }
+
   &__day {
     font-size: 2rem;
     -webkit-text-stroke-width: 1px;

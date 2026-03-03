@@ -29,7 +29,7 @@
 }
 @font-face {
   font-family: "ZalandoSans";
-  src: url(/fonts/ZalandoSans-Bold.otf);
+  src: url(/fonts/ZalandoSans-Bold.ttf);
 }
 /*
 0 - 600px:    Phone
@@ -202,6 +202,9 @@ main {
   list-style: none;
 }
 @media (max-width: 28.125em) {
+  .works__list .swiper {
+    height: 43rem;
+  }
   .works__list--header {
     flex-direction: column;
   }
@@ -209,6 +212,19 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.6rem;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 28.125em) and (max-width: 28.125em) {
+  .works__list--content {
+    flex-grow: 1;
+    align-items: center;
+  }
+  .works__list--content p {
+    margin-top: 2.5rem;
+  }
+  .works__list--content a {
+    margin-top: auto;
   }
 }
 
@@ -219,6 +235,17 @@ main {
   padding: 2.2rem;
   border: 3.3px solid #1b1215;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 28.125em) {
+  .works__list li {
+    width: auto;
+    border: none;
+    border-bottom: 3.3px solid black;
+    min-height: 85%;
+  }
 }
 .works__list li a {
   color: #1b1215;
@@ -346,6 +373,7 @@ main {
   .swiper {
     border: 3.3px solid black;
     height: 35rem;
+    width: 100%;
   }
 }
 
@@ -458,6 +486,13 @@ main {
   border: none;
 }
 
+@media (max-width: 28.125em) {
+  .schedule__room {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+  }
+}
 .schedule__day {
   font-size: 2rem;
   -webkit-text-stroke-width: 1px;
@@ -1578,6 +1613,15 @@ main {
 .documents__container--2 .documents__title {
   letter-spacing: 1px;
   -webkit-text-stroke: 1px;
+}
+.documents__container--3 {
+  background-color: #f1c4ad;
+  border-radius: 0;
+}
+.documents__container--3 .documents__title {
+  background-color: #ea6169;
+  border-bottom: 3px solid black;
+  color: #1b1215;
 }
 
 .documents__body {

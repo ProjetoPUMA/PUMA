@@ -235,4 +235,10 @@ export const documents_array: Documents[] = [
     desc: "Informação sobre todos os eventos do ano letivo de 2026",
     fileID: "1-CU17PzYKXjhzS-O81nne747Kx2eAQQt",
   },
+  {
+    id: 3,
+    name: "Procedimento para Uso de Notebook em Salas Ambientes",
+    desc: "Informação sobre o procedimento para solicitar o uso de notebook em salas ambientes",
+    fileID: "1AdOeeZ4gzUvW-yVzgmUsUIBgPN1TaOP4",
+  },
 ];
