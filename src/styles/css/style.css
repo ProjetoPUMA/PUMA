@@ -788,8 +788,6 @@ main {
   margin-top: 1.5rem;
   font-size: 2rem;
   width: 100%;
-  -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: black;
 }
 @media (max-width: 42.8125em) {
   .header__nav {
