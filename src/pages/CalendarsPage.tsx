@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { subjects_array } from "../data/data";
 import BusModal from "../components/BusModal";
-import Calendar from "../components/Calendar";
+import CalendarComponent from "../components/CalendarComponent";
 
 function CalendarsPage() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -111,7 +111,7 @@ function CalendarsPage() {
         Calendário Letivo 2026
       </h1>
       <section>
-        <Calendar />
+        <CalendarComponent />
       </section>
       {isModalOpen && <BusModal setState={setIsModalOpen} />}
     </>
