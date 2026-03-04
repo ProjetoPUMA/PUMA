@@ -38,7 +38,7 @@ export const homeworks_array: Homework[] = [
     id: 3,
     due_date: new Date(2026, 2, 5),
     subject: SUBJECTS.COMUNICACAO,
-    news: true,
+    news: false,
     desc: "Ler o texto no arquivo fornecido e escrever um resumo para cada parágrafo. A professora perguntará a respeito para alunos sorteados.",
     hasInstructions: true,
     fileID: "11imT_j9P2qB2tsB9qsDrKTXx4ce6MDAOo",
@@ -79,9 +79,20 @@ export const works_array: Works[] = [
     subject: SUBJECTS.PROGRAMACAO,
     title: "Lista Prática 01",
     news: false,
-    desc: "Fazer todos os exercícos da lista do arquivo prática01. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
+    desc: "Fazer todos os exercícos da lista do arquivo prática 1. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
     hasInstructions: true,
     fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
+  },
+  {
+    id: 3,
+    hasDate: true,
+    due_date: new Date(2026, 2, 16),
+    subject: SUBJECTS.PROGRAMACAO,
+    title: "Lista Prática 02",
+    news: true,
+    desc: "Fazer todos os exercícos da lista do arquivo prática 2. Pode ser feito em dupla ou individualmente.",
+    hasInstructions: true,
+    fileID: "1zs3mKo-LyHNIB4hRzIp-IDIRRs1VpwK2",
   },
 ];
 
@@ -114,7 +125,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.SISTEMAS,
     desc: "Focada na prática da API e na aprendizagem de banco de dados",
     link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
-    news: false,
+    news: true,
     classes: [
       {
         day: "thu",
