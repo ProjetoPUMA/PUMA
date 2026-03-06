@@ -10,39 +10,39 @@ import {
 
 // ATUALIZAÇÕES IMPORTANTES
 export const timeline_obj: TimelineItem = {
-  event: "o Kick-off Geral",
-  start: new Date(2026, 2, 5),
-  end: new Date(2026, 2, 6),
+  event: "a Construção do Backlog do Produto / Planning",
+  start: new Date(2026, 2, 9),
+  end: new Date(2026, 2, 13),
 };
 // TAREFAS SEMANAIS
 export const homeworks_array: Homework[] = [
-  {
-    id: 1,
-    due_date: new Date(2026, 1, 27),
-    subject: SUBJECTS.INGLES,
-    news: false,
-    desc: "Fazer resumo sobre o Steve Jobs e ouvir discurso do Martin Luther King.",
-    hasInstructions: false,
-    fileID: undefined,
-  },
-  {
-    id: 2,
-    due_date: new Date(2026, 1, 26),
-    subject: SUBJECTS.COMUNICACAO,
-    news: false,
-    desc: "Fazer até o exercício 16 do arquivo de coletânea de erros. Identificar e circular o que está errado e escrever a versão correta.",
-    hasInstructions: true,
-    fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",
-  },
-  {
-    id: 3,
-    due_date: new Date(2026, 2, 5),
-    subject: SUBJECTS.COMUNICACAO,
-    news: false,
-    desc: "Ler o texto no arquivo fornecido e escrever um resumo para cada parágrafo. A professora perguntará a respeito para alunos sorteados.",
-    hasInstructions: true,
-    fileID: "11imT_j9P2qB2tsB9qsDrKTXx4ce6MDAOo",
-  },
+  // {
+  //   id: 1,
+  //   due_date: new Date(2026, 1, 27),
+  //   subject: SUBJECTS.INGLES,
+  //   news: false,
+  //   desc: "Fazer resumo sobre o Steve Jobs e ouvir discurso do Martin Luther King.",
+  //   hasInstructions: false,
+  //   fileID: undefined,
+  // },
+  // {
+  //   id: 2,
+  //   due_date: new Date(2026, 1, 26),
+  //   subject: SUBJECTS.COMUNICACAO,
+  //   news: false,
+  //   desc: "Fazer até o exercício 16 do arquivo de coletânea de erros. Identificar e circular o que está errado e escrever a versão correta.",
+  //   hasInstructions: true,
+  //   fileID: "16qKiWClbqNmfAgWWVXt86LEt7Ywryz4Z",
+  // },
+  // {
+  //   id: 3,
+  //   due_date: new Date(2026, 2, 5),
+  //   subject: SUBJECTS.COMUNICACAO,
+  //   news: false,
+  //   desc: "Ler o texto no arquivo fornecido e escrever um resumo para cada parágrafo. A professora perguntará a respeito para alunos sorteados.",
+  //   hasInstructions: true,
+  //   fileID: "11imT_j9P2qB2tsB9qsDrKTXx4ce6MDAOo",
+  // },
 ];
 // PROVAS SEMANAIS
 
@@ -53,7 +53,7 @@ export const works_array: Works[] = [
   {
     id: 1,
     hasDate: false,
-    due_date: new Date(2026, 2, 6),
+    due_date: new Date(2026, 2, 11),
     subject: SUBJECTS.SISTEMAS,
     title: "Atividade Avaliativa 1",
     news: false,
@@ -64,9 +64,9 @@ export const works_array: Works[] = [
   {
     id: 2,
     hasDate: false,
-    due_date: new Date(2026, 2, 6),
+    due_date: new Date(2026, 2, 11),
     subject: SUBJECTS.CALCULO,
-    title: "Lista 01",
+    title: "Lista 1 - Parte 1",
     news: false,
     desc: "Fazer todos os exercícios da lista 1 parte 1. Link de download ao lado.",
     hasInstructions: true,
@@ -89,10 +89,21 @@ export const works_array: Works[] = [
     due_date: new Date(2026, 2, 16),
     subject: SUBJECTS.PROGRAMACAO,
     title: "Lista Prática 02",
-    news: true,
+    news: false,
     desc: "Fazer todos os exercícos da lista do arquivo prática 2. Pode ser feito em dupla ou individualmente.",
     hasInstructions: true,
     fileID: "1zs3mKo-LyHNIB4hRzIp-IDIRRs1VpwK2",
+  },
+  {
+    id: 4,
+    hasDate: false,
+    due_date: new Date(2026, 2, 16),
+    subject: SUBJECTS.CALCULO,
+    title: "Lista 1 - Parte 2",
+    news: true,
+    desc: "Fazer todos os exercícios da parte 2. Deixe suas resoluções da lista 1 e 2 salvas em algum lugar, pois a professora passará dando visto.",
+    hasInstructions: true,
+    fileID: "1RnQI-D9-H78HXbxYX3oVMEmrtar74SKU",
   },
 ];
 
@@ -104,7 +115,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.CALCULO,
     desc: "Teoria e prática de cálculo de funções, limites, derivadas e integrais",
     link: "https://drive.google.com/drive/folders/1GUNBnSghGVW-74MPpeVC7U8aVpZ5rXe5?usp=drive_link",
-    news: false,
+    news: true,
     classes: [
       {
         day: "tue",
@@ -125,7 +136,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.SISTEMAS,
     desc: "Focada na prática da API e na aprendizagem de banco de dados",
     link: "https://drive.google.com/drive/folders/1oQeFwaASaBoN360Cep0Ydqoh9kW50Exq?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "thu",
