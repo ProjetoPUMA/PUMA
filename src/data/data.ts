@@ -10,9 +10,9 @@ import {
 
 // ATUALIZAÇÕES IMPORTANTES
 export const timeline_obj: TimelineItem = {
-  event: "a Construção do Backlog do Produto / Planning",
-  start: new Date(2026, 2, 9),
-  end: new Date(2026, 2, 13),
+  event: "a Sprint 1",
+  start: new Date(2026, 2, 16),
+  end: new Date(2026, 4, 5),
 };
 // TAREFAS SEMANAIS
 export const homeworks_array: Homework[] = [
@@ -43,6 +43,33 @@ export const homeworks_array: Homework[] = [
   //   hasInstructions: true,
   //   fileID: "11imT_j9P2qB2tsB9qsDrKTXx4ce6MDAOo",
   // },
+  {
+    id: 1,
+    due_date: new Date(2026, 2, 20),
+    subject: SUBJECTS.INGLES,
+    news: true,
+    desc: "Fazer um resumo a respeito deste vídeo: https://youtu.be/fBnAMUkNM2k?si=T_wnpw5ZU58K_awg",
+    hasInstructions: false,
+    fileID: undefined,
+  },
+  {
+    id: 2,
+    due_date: new Date(2026, 2, 20),
+    subject: SUBJECTS.CONTABILIDADE,
+    news: true,
+    desc: "Atividade pendente do dia em que o professor faltou. Necessário fazê-la para garantir presença do dia.",
+    hasInstructions: true,
+    fileID: "1w2Tv6tY1stZiInAo1x7n_Sra-cGYUYsZ",
+  },
+  {
+    id: 3,
+    due_date: new Date(2026, 2, 16),
+    subject: SUBJECTS.COMUNICACAO,
+    news: false,
+    desc: "Fazer os exercícios 3 e 4 para a próxima aula.",
+    hasInstructions: true,
+    fileID: "1UQlR-0KDcpMTHKgD69EB7DTnrGBhtAa_",
+  },
 ];
 // PROVAS SEMANAIS
 
@@ -72,17 +99,17 @@ export const works_array: Works[] = [
     hasInstructions: true,
     fileID: "1XqvtQRpDMAAdygctWT4y3Hi8MAtBGxjY",
   },
-  {
-    id: 3,
-    hasDate: true,
-    due_date: new Date(2026, 2, 9),
-    subject: SUBJECTS.PROGRAMACAO,
-    title: "Lista Prática 01",
-    news: false,
-    desc: "Fazer todos os exercícos da lista do arquivo prática 1. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
-    hasInstructions: true,
-    fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
-  },
+  // {
+  //   id: 3,
+  //   hasDate: true,
+  //   due_date: new Date(2026, 2, 9),
+  //   subject: SUBJECTS.PROGRAMACAO,
+  //   title: "Lista Prática 01",
+  //   news: false,
+  //   desc: "Fazer todos os exercícos da lista do arquivo prática 1. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
+  //   hasInstructions: true,
+  //   fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
+  // },
   {
     id: 3,
     hasDate: true,
@@ -100,7 +127,7 @@ export const works_array: Works[] = [
     due_date: new Date(2026, 2, 16),
     subject: SUBJECTS.CALCULO,
     title: "Lista 1 - Parte 2",
-    news: true,
+    news: false,
     desc: "Fazer todos os exercícios da parte 2. Deixe suas resoluções da lista 1 e 2 salvas em algum lugar, pois a professora passará dando visto.",
     hasInstructions: true,
     fileID: "1RnQI-D9-H78HXbxYX3oVMEmrtar74SKU",
@@ -115,7 +142,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.CALCULO,
     desc: "Teoria e prática de cálculo de funções, limites, derivadas e integrais",
     link: "https://drive.google.com/drive/folders/1GUNBnSghGVW-74MPpeVC7U8aVpZ5rXe5?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "tue",
@@ -152,7 +179,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.INGLES,
     desc: "Aulas sobre proficiência na lingua inglesa.",
     link: "https://drive.google.com/drive/folders/1i1aUhlBeaFfaUoQSB5xmKjTyp9WtqZf2?usp=drive_link",
-    news: false,
+    news: true,
     classes: [
       {
         day: "fri",
@@ -170,10 +197,15 @@ export const subjects_array: Subjects[] = [
     link: "https://drive.google.com/drive/folders/1fOLTfmABRKk0e_6M1ypwZTJooRjGfMvw?usp=drive_link",
     news: false,
     classes: [
+      // {
+      //   day: "tue",
+      //   start: "10:55",
+      //   end: "12:35",
+      // },
       {
-        day: "tue",
-        start: "10:55",
-        end: "12:35",
+        day: "mon",
+        start: "07:10",
+        end: "08:50",
       },
       {
         day: "thu",
@@ -191,11 +223,11 @@ export const subjects_array: Subjects[] = [
     link: "https://drive.google.com/drive/folders/1nspG39hKYTwjb1oQ4awnSkhfV1NGl_X8?usp=drive_link",
     news: false,
     classes: [
-      {
-        day: "mon",
-        start: "07:10",
-        end: "08:50",
-      },
+      // {
+      //   day: "mon",
+      //   start: "07:10",
+      //   end: "08:50",
+      // },
       {
         day: "tue",
         start: "07:10",
@@ -232,7 +264,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.CONTABILIDADE,
     desc: "Conteúdo aborda conceitos de contabilidade, como representações gráficas de balanço patrimonial",
     link: "https://drive.google.com/drive/folders/1wju7D3JPGN_tOTYnX_Ixeds6s1DXCI0Z?usp=drive_link",
-    news: false,
+    news: true,
     classes: [
       {
         day: "fri",
