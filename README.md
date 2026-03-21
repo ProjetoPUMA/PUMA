@@ -27,6 +27,17 @@ A iniciativa surgiu pela ausência de uma plataforma arquitetada para os alunos 
 
 <br>
 
+## 🚀 Próximos Objetivos <a id="objetivos"></a>
+- Realocar os dados para um servidor local;
+- Transformar a aplicação majoritariamente FrontEnd em um sistema que consome endpoints com o uso de API Rest;
+- Criar funcionalidade para envio de conteúdos pelo próprio site;
+- Automatizar componentes para que sua atualização não seja mais manual e sim automática;
+- Refatorar e otimizar o código já feito;
+- Implementar temas diferentes (claro, escuro, etc)
+
+<br>
+
+
 ## 💻 Tecnologias Utilizadas <a id="tecnologias"></a>
 <h4 align="center">
   <img src="https://img.shields.io/badge/sass-%20%23CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" >
@@ -64,5 +75,6 @@ A iniciativa surgiu pela ausência de uma plataforma arquitetada para os alunos 
   </table>
 </div>
 
+<sub>P.U.M.A · 2º ADS · Fatec SJC · 2026-1</sub>
 
 
