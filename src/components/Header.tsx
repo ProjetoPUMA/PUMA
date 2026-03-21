@@ -12,6 +12,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const todayWeekday = format(today, "EEE", { locale: ptBR });
+  console.log(todayWeekday);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -66,8 +67,15 @@ function Header() {
           </h2>
           <div className="header__date header__date--phone">
             <span>Data:</span>
-            <h2>
-              {todayWeekday}-feira,
+            <h2
+              className={classNames({
+                "flex w-100 justify-content-between":
+                  todayWeekday === "sábado" || todayWeekday === "domingo",
+              })}
+            >
+              {todayWeekday !== "sábado" && todayWeekday !== "domingo"
+                ? `${todayWeekday}-feira`
+                : `${todayWeekday}`}
               <span>{format(today, "dd/MM", { locale: ptBR })}</span>
             </h2>
           </div>
