@@ -109,6 +109,11 @@ function HomePage() {
               ))}
             </ul>
           )
+        ) : fiveDaysWork.length === 0 ? (
+          <p className="activities--null">
+            Nenhum trabalho com prazo de entrega entre hoje e os próximos 5
+            dias.
+          </p>
         ) : (
           <ul className="works__list flex flex-column gap-3">
             <Swiper
