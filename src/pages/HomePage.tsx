@@ -17,6 +17,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { SwiperSlide, Swiper } from "swiper/react";
+import Drivers from "../components/Drivers";
 
 function HomePage() {
   const [isWorkModalOpen, setIsWorkModalOpen] = useState<boolean>(false);
@@ -50,6 +51,9 @@ function HomePage() {
       <h1 className="timeline_title">Atualizações Importantes</h1>
       <section>
         <Timeline />
+      </section>
+      <section className="mt-4">
+        <Drivers />
       </section>
       <section
         className={classNames(

@@ -16,6 +16,12 @@ export interface TimelineItem {
   end: Date;
 }
 
+export interface Drivers {
+  subject: SubjectType;
+  desc: string;
+  link: string;
+}
+
 export interface Homework {
   id: number;
   due_date: Date;

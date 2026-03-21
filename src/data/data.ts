@@ -1,6 +1,7 @@
 import {
   SUBJECTS,
   type Documents,
+  type Drivers,
   type Homework,
   type Subjects,
   type Tests,
@@ -14,6 +15,20 @@ export const timeline_obj: TimelineItem = {
   start: new Date(2026, 2, 16),
   end: new Date(2026, 4, 5),
 };
+
+export const drivers: Drivers[] = [
+  {
+    subject: SUBJECTS.PROGRAMACAO,
+    desc: "Envio das atividades de prática - Carregue seus arquivos na respectiva pasta e seja feliz!",
+    link: "https://drive.google.com/drive/folders/1cq6itPlikjgTdRdZCayXTPeSAo_9de2f",
+  },
+  {
+    subject: SUBJECTS.CALCULO,
+    desc: "Envio das listas de atividades - Crie uma pasta com seu nome, carregue suas listas e seja feliz!",
+    link: "https://drive.google.com/drive/folders/1WV_FI7_O5XjmnXL8yj-miiP-jjKlUSkL",
+  },
+];
+
 // TAREFAS SEMANAIS
 export const homeworks_array: Homework[] = [
   // {

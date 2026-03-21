@@ -2044,4 +2044,41 @@ main {
   background-color: transparent;
 }
 
+.drivers {
+  background-color: #fff3d3;
+  padding: 1.6rem 2.5rem 2.5rem 6rem;
+  border: 3.3px solid #1b1215;
+  border-radius: 5px;
+  background: radial-gradient(circle, #f9ecbf 10px, #1b1215 11px, transparent 12px) -66rem 50%/100% 45px, linear-gradient(#fff3d3 0%, transparent), linear-gradient(transparent, #fff3d3 95%), repeating-linear-gradient(#1b1215, #1b1215 2px, transparent 2px, transparent 48px), #fff3d3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.drivers h1 {
+  font-weight: 900;
+  -webkit-text-stroke: 1px;
+}
+.drivers ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+}
+.drivers h2 {
+  font-size: 2.5rem;
+  color: #3c8f94;
+  -webkit-text-stroke: 1px;
+  margin-bottom: 5px;
+}
+.drivers li a {
+  font-size: 1.8rem;
+  color: #1b1215;
+  font-weight: 900;
+  margin-left: 2rem;
+  transition: all 0.2s ease;
+}
+.drivers li a:hover {
+  margin-left: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

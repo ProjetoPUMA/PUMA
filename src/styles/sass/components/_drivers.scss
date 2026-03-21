@@ -1,0 +1,58 @@
+.drivers {
+  background-color: $primary-light-2;
+  padding: 1.6rem 2.5rem 2.5rem 6rem;
+  border: 3.3px solid $primary-dark;
+  border-radius: 5px;
+  background:
+    radial-gradient(
+        circle,
+        $primary-light 10px,
+        $primary-dark 11px,
+        transparent 12px
+      ) -66rem
+      50% / 100% 45px,
+    linear-gradient($primary-light-2 0%, transparent),
+    linear-gradient(transparent, $primary-light-2 95%),
+    repeating-linear-gradient(
+      $primary-dark,
+      $primary-dark 2px,
+      transparent 2px,
+      transparent 48px
+    ),
+    $primary-light-2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  & h1 {
+    font-weight: 900;
+    -webkit-text-stroke: 1px;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: none;
+  }
+
+  & h2 {
+    font-size: 2.5rem;
+    color: $primary-sat-blue;
+    -webkit-text-stroke: 1px;
+    margin-bottom: 5px;
+  }
+
+  & li a {
+    font-size: 1.8rem;
+    color: $primary-dark;
+    font-weight: 900;
+    margin-left: 2rem;
+    transition: $transition;
+
+    &:hover {
+      margin-left: 0;
+    }
+  }
+}
