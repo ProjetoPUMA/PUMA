@@ -1246,7 +1246,7 @@ main {
 }
 @media (max-width: 28.125em) {
   .modal__container {
-    height: 95rem;
+    height: 80rem;
     width: 100%;
   }
 }
@@ -2050,6 +2050,13 @@ main {
   border: 3.3px solid #1b1215;
   border-radius: 5px;
   background: radial-gradient(circle, #f9ecbf 10px, #1b1215 11px, transparent 12px) -66rem 50%/100% 45px, linear-gradient(#fff3d3 0%, transparent), linear-gradient(transparent, #fff3d3 95%), repeating-linear-gradient(#1b1215, #1b1215 2px, transparent 2px, transparent 48px), #fff3d3;
+}
+@media (max-width: 28.125em) {
+  .drivers {
+    background: radial-gradient(circle, #f9ecbf 10px, #1b1215 11px, transparent 12px) -18rem 50%/100% 50px, linear-gradient(#fff3d3 0%, transparent), linear-gradient(transparent, #fff3d3 95%), repeating-linear-gradient(#1b1215, #1b1215 2px, transparent 2px, transparent 48px), #fff3d3;
+  }
+}
+.drivers {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
