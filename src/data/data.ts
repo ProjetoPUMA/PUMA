@@ -60,35 +60,50 @@ export const homeworks_array: Homework[] = [
   // },
   {
     id: 1,
-    due_date: new Date(2026, 2, 20),
+    due_date: new Date(2026, 3, 3),
     subject: SUBJECTS.INGLES,
-    news: true,
+    news: false,
     desc: "Fazer um resumo a respeito deste vídeo: https://youtu.be/fBnAMUkNM2k?si=T_wnpw5ZU58K_awg",
     hasInstructions: false,
     fileID: undefined,
   },
   {
     id: 2,
-    due_date: new Date(2026, 2, 20),
+    due_date: new Date(2026, 3, 3),
     subject: SUBJECTS.CONTABILIDADE,
-    news: true,
+    news: false,
     desc: "Atividade pendente do dia em que o professor faltou. Necessário fazê-la para garantir presença do dia.",
     hasInstructions: true,
     fileID: "1w2Tv6tY1stZiInAo1x7n_Sra-cGYUYsZ",
   },
   {
     id: 3,
-    due_date: new Date(2026, 2, 16),
+    due_date: new Date(2026, 2, 24),
     subject: SUBJECTS.COMUNICACAO,
-    news: false,
-    desc: "Fazer os exercícios 3 e 4 para a próxima aula.",
-    hasInstructions: true,
-    fileID: "1UQlR-0KDcpMTHKgD69EB7DTnrGBhtAa_",
+    news: true,
+    desc: "Fazer o resumo e/ou citar obras. Último exércico do material da tarefa passada.",
+    hasInstructions: false,
+    fileID: "",
   },
 ];
 // PROVAS SEMANAIS
 
-export const tests_array: Tests[] = [];
+export const tests_array: Tests[] = [
+  {
+    id: 1,
+    due_date: new Date(2026, 2, 30),
+    subject: SUBJECTS.PROGRAMACAO,
+    news: true,
+    content: [
+      "Todas as práticas até a número 3;",
+      "Como fazer uma classe;",
+      "Getters, Setters e Constructors;",
+      "Testes de mesa;",
+      "Vetores;",
+    ],
+    hasInstructions: false,
+  },
+];
 
 // TRABALHOS PERTO DO PRAZO
 export const works_array: Works[] = [
@@ -104,48 +119,15 @@ export const works_array: Works[] = [
     fileID: "1bfIPHJAiCCUH-dZxghpvxyfe_WDUetEF",
   },
   {
-    id: 2,
-    hasDate: false,
-    due_date: new Date(2026, 2, 11),
-    subject: SUBJECTS.CALCULO,
-    title: "Lista 1 - Parte 1",
-    news: false,
-    desc: "Fazer todos os exercícios da lista 1 parte 1. Link de download ao lado.",
-    hasInstructions: true,
-    fileID: "1XqvtQRpDMAAdygctWT4y3Hi8MAtBGxjY",
-  },
-  // {
-  //   id: 3,
-  //   hasDate: true,
-  //   due_date: new Date(2026, 2, 9),
-  //   subject: SUBJECTS.PROGRAMACAO,
-  //   title: "Lista Prática 01",
-  //   news: false,
-  //   desc: "Fazer todos os exercícos da lista do arquivo prática 1. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
-  //   hasInstructions: true,
-  //   fileID: "1TdWlW4CRzVubVAY6M_VomjcM8QgUKew6",
-  // },
-  {
     id: 3,
     hasDate: true,
-    due_date: new Date(2026, 2, 16),
+    due_date: new Date(2026, 2, 27),
     subject: SUBJECTS.PROGRAMACAO,
-    title: "Lista Prática 02",
+    title: "Lista Prática 03",
     news: false,
-    desc: "Fazer todos os exercícos da lista do arquivo prática 2. Pode ser feito em dupla ou individualmente.",
+    desc: "Fazer todos os exercícos da lista do arquivo prática 3. Pode ser feito em dupla e deve ser entregue como um arquivo compactado.",
     hasInstructions: true,
-    fileID: "1zs3mKo-LyHNIB4hRzIp-IDIRRs1VpwK2",
-  },
-  {
-    id: 4,
-    hasDate: false,
-    due_date: new Date(2026, 2, 16),
-    subject: SUBJECTS.CALCULO,
-    title: "Lista 1 - Parte 2",
-    news: false,
-    desc: "Fazer todos os exercícios da parte 2. Deixe suas resoluções da lista 1 e 2 salvas em algum lugar, pois a professora passará dando visto.",
-    hasInstructions: true,
-    fileID: "1RnQI-D9-H78HXbxYX3oVMEmrtar74SKU",
+    fileID: "1JMwc2oD9-DDK4CZR0vxd5QpaB7RbJhy7",
   },
 ];
 
@@ -194,7 +176,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.INGLES,
     desc: "Aulas sobre proficiência na lingua inglesa.",
     link: "https://drive.google.com/drive/folders/1i1aUhlBeaFfaUoQSB5xmKjTyp9WtqZf2?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "fri",
@@ -210,17 +192,12 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.COMUNICACAO,
     desc: "Prática de redação e gêneros textuais",
     link: "https://drive.google.com/drive/folders/1fOLTfmABRKk0e_6M1ypwZTJooRjGfMvw?usp=drive_link",
-    news: false,
+    news: true,
     classes: [
-      // {
-      //   day: "tue",
-      //   start: "10:55",
-      //   end: "12:35",
-      // },
       {
-        day: "mon",
-        start: "07:10",
-        end: "08:50",
+        day: "tue",
+        start: "10:55",
+        end: "12:35",
       },
       {
         day: "thu",
@@ -232,17 +209,17 @@ export const subjects_array: Subjects[] = [
   },
   {
     id: 1,
-    teacher: "Indefinido",
+    teacher: "Glidárcio",
     subject: SUBJECTS.ENGENHARIA,
     desc: "Aula sobre conceitos de banco de dados junto com a parte do cliente das API (PO)",
     link: "https://drive.google.com/drive/folders/1nspG39hKYTwjb1oQ4awnSkhfV1NGl_X8?usp=drive_link",
     news: false,
     classes: [
-      // {
-      //   day: "mon",
-      //   start: "07:10",
-      //   end: "08:50",
-      // },
+      {
+        day: "mon",
+        start: "07:10",
+        end: "08:50",
+      },
       {
         day: "tue",
         start: "07:10",
@@ -256,8 +233,8 @@ export const subjects_array: Subjects[] = [
     teacher: "Juliana Fornin Pasquini Martinez",
     subject: SUBJECTS.PROGRAMACAO,
     desc: "Focada na aprendizagem da linguagem JAVA e da integração de sistemas CRUD com banco de dados",
-    link: "https://drive.google.com/drive/folders/1_ARLUTlrSCJ-JJ2F14ASwWXJBcggZqmy?usp=drive_link",
-    news: false,
+    link: "https://drive.google.com/drive/folders/1jH_uAu8OUfli-nLrBiDpCqhr2dfOhdms",
+    news: true,
     classes: [
       {
         day: "mon",
@@ -279,7 +256,7 @@ export const subjects_array: Subjects[] = [
     subject: SUBJECTS.CONTABILIDADE,
     desc: "Conteúdo aborda conceitos de contabilidade, como representações gráficas de balanço patrimonial",
     link: "https://drive.google.com/drive/folders/1wju7D3JPGN_tOTYnX_Ixeds6s1DXCI0Z?usp=drive_link",
-    news: true,
+    news: false,
     classes: [
       {
         day: "fri",
