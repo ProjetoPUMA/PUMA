@@ -13,7 +13,7 @@ import {
 export const timeline_obj: TimelineItem = {
   event: "a Sprint 1",
   start: new Date(2026, 2, 16),
-  end: new Date(2026, 4, 5),
+  end: new Date(2026, 3, 5),
 };
 
 export const drivers: Drivers[] = [
