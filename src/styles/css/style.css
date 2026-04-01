@@ -2088,4 +2088,31 @@ main {
   margin-left: 0;
 }
 
+.warning {
+  background-color: #eece79;
+  border: 3.3px solid #1b1215;
+}
+.warning__header {
+  background: linear-gradient(45deg, #1b1215 25%, #eece79 25%, #eece79 50%, #1b1215 50%, #1b1215 75%, #eece79 75%, #eece79 100%);
+  background-size: 40px 40px;
+  height: 2rem;
+  border-bottom: 3.3px solid #1b1215;
+}
+.warning__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.2rem;
+}
+.warning__content p {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.warning span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  -webkit-text-stroke: 0.5px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -18,6 +18,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { SwiperSlide, Swiper } from "swiper/react";
 import Drivers from "../components/Drivers";
+import Warnings from "../components/Warnings";
 
 function HomePage() {
   const [isWorkModalOpen, setIsWorkModalOpen] = useState<boolean>(false);
@@ -48,7 +49,8 @@ function HomePage() {
 
   return (
     <>
-      <h1 className="timeline_title">Atualizações Importantes</h1>
+      <Warnings message="Estamos tendo problemas com o gmail e acesso ao drive puma (por isso erros para abrir o material e arquivos). Já estamos tentando resolver!" />
+      <h1 className="timeline_title mt-4">Atualizações Importantes</h1>
       <section>
         <Timeline />
       </section>

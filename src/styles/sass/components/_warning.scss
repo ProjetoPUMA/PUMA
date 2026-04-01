@@ -1,0 +1,38 @@
+.warning {
+  background-color: $primary-yellow;
+  border: 3.3px solid $primary-dark;
+  &__header {
+    background: linear-gradient(
+      45deg,
+      $primary-dark 25%,
+      $primary-yellow 25%,
+      $primary-yellow 50%,
+      $primary-dark 50%,
+      $primary-dark 75%,
+      $primary-yellow 75%,
+      $primary-yellow 100%
+    );
+    background-size: 40px 40px;
+    height: 2rem;
+    border-bottom: 3.3px solid $primary-dark;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1.2rem;
+
+    & p {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  & span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    -webkit-text-stroke: 0.5px;
+  }
+}
